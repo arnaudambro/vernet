@@ -1,0 +1,12 @@
+<svg viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="child-head" stroke="#000000">
+            <circle id="head" cx="6.608" cy="6.491" r="5.825"></circle>
+            <path d="M4.666,5.666 L3.372,5.666" id="eye-left"></path>
+            <path d="M9.843,5.666 L8.549,5.666" id="eye-right"></path>
+            <path d="M7.902,8.432 C7.902,9.14693261 7.32243261,9.7265 6.6075,9.7265 C5.89256739,9.7265 5.313,9.14693261 5.313,8.432" id="smile"></path>
+            <path d="M11.786,3.255 C10.9834284,3.66473685 10.0979717,3.88601552 9.197,3.902 C7.76963836,3.89597383 6.61402617,2.74036164 6.608,1.313 L6.608,0.666" id="hair-right"></path>
+            <path d="M1.43,3.255 C2.23257162,3.66473685 3.11802831,3.88601552 4.019,3.902 C5.44636164,3.89597383 6.60197383,2.74036164 6.608,1.313 L6.608,0.666" id="hair-left"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+@media all and (min-width: $mobile-break) {
+
+  .slideshow-rooms {
+
+
+    &-container {
+
+
+    }
+
+    &__headline {
+    }
+    &__tagline {
+    }
+    &__arrow--container {
+      &-right {
+      }
+      &-left {
+      }
+      > .arrow > svg {
+      }
+    }
+    &__content {
+
+      &--container {
+
+      }
+
+    }
+    &__card {
+
+
+
+      &--picture {
+        &-prestige { 
+        }
+        &-deluxe { 
+        }
+        &-superior { 
+        }
+        &-presidential { 
+        }
+        &-prestige-suite { 
+        }
+        &-executive { 
+        }
+      }
+
+      &--headline {
+        text-align: start;
+      }
+
+      &--description {
+
+      }
+      &__button {
+        &--book {
+        }
+        &--rooms {
+        }
+      }
+    }
+
+  }
+
+}

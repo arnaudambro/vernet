@@ -1,0 +1,11 @@
+<svg viewBox="0 0 93 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="angle-up" >
+            <g transform="translate(9.000000, 6.000000)" id="Line" stroke-linecap="square">
+                <path d="M19.2598846,-5.90811691 L19.2598846,44.0918831" transform="translate(19.259885, 19.091883) rotate(45.000000) translate(-19.259885, -19.091883) " class="to-stroke"></path>
+                <path d="M29.6152237,19.0918831 L79.6152237,19.0918831" transform="translate(54.615224, 19.091883) rotate(45.000000) translate(-54.615224, -19.091883) " class="to-stroke"></path>
+            </g>
+            <rect id="background" x="0.5" y="0.5" width="92" height="51"></rect>
+        </g>
+    </g>
+</svg>

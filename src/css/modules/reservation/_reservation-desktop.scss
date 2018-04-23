@@ -1,0 +1,277 @@
+@media all and (min-width: $desktop-break) {
+
+  .header__reservation {
+
+    /* z-index: $zReservation; // JS */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: $headerReservationContainerBg;
+
+    height: 100%;
+    // width: 100%;
+
+
+    &__outer-container {
+
+      -ms-grid-row: 4;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
+
+
+      height: 100%;
+      // width: $reservationWidth;
+      width: 100%;
+      position: relative;
+      pointer-events: auto;
+
+      &.fixed-out-of-wrapper {
+        visibility: hidden;
+        height: auto;
+        .header__reservation__inner-container {
+          /* z-index: $zReservation; // JS */
+          height: $reservationUIContainerHeight;
+          transform: translate3d(0, 0, 0);
+          top: $reservationUIContainerHeightNegative;
+          transition: all $reservationAppearDuration cubic-bezier(0.25,0.8,0.5,1);
+          &.translated {
+            transform: translate3d(0, $stickyMenuDesktopTop, 0);
+          }
+        }
+        .header__reservation {
+          align-items: flex-end;
+
+        }
+        .headline-reservation {
+          display: none;
+        }
+      }
+
+    }
+    &__inner-container {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .headline-reservation {
+      margin-top: -10px;
+      display: inline-block;
+      width: 90%;
+      grid-area: headline;
+      > .avantages {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+
+
+  .ui-container {
+
+    pointer-events: none;
+    z-index: $zHeaderReservationContainer;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+
+    padding-top: $reservationPaddingY;
+    padding-bottom: $reservationPaddingY;
+    width: $reservationUIContainerWidth;
+    display: -ms-grid;
+    display: grid;
+    align-content: start;
+
+    -ms-grid-columns: $inputCheckWidthDesktop $reservationGridColumnGap $inputCheckWidthDesktop $reservationGridColumnGap $inputSelectWidth $reservationGridColumnGap $inputCheckWidthDesktop;
+    grid-template-columns: $inputCheckWidthDesktop $inputCheckWidthDesktop $inputSelectWidth $inputCheckWidthDesktop;
+    -ms-grid-rows: 
+    $reservationLabelHeight
+    $reservationGridRowGap
+    $inputHeight;
+    grid-template-rows: 
+    $reservationLabelHeight
+    $inputHeight;
+    height: $reservationUIContainerHeight;
+    /* transition: color $reservationAppearDuration linear, transform $reservationAppearDuration cubic-bezier(0.25,0.8,0.5,1);  */
+    transition: transform $reservationAppearDuration cubic-bezier(0.25,0.8,0.5,1); 
+
+    grid-column-gap: $reservationGridColumnGap;
+    grid-row-gap: $reservationGridRowGap;
+    grid-template-areas: 
+    'checkinlabel         checkoutlabel     roomlabel        booklabel'
+    'checkininput         checkoutinput     roomselect       bookbutton'
+    'headline             headline          headline         headline';
+
+    /*&.fixed{
+     $Xtranslation: clc(($desktopMaxBodyWidth - $reservationWidth) / 2 + $reservationMarginRight); //TO COMMENT - defined in JS
+     $Ytranslation: 0; 
+      transform: translate3d($Xtranslation, $Ytranslation, 0);
+      position: fixed;
+      margin-right: auto;
+      margin-left: auto;
+      width: $reservationWidth;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: $defaultFontColor; 
+      > .input {
+        border-color: $buttonBgColor;
+      }
+      } */
+      &.fixed-out-of-wrapper {
+        z-index: $zindexMenuOnTop;
+        * {
+          z-index: $zindexHamburgerOnTop;
+        }
+        visibility: visible;
+        // border: 1px solid #000;
+        // order: 2;
+        /* margin-right: calc(50vw - $desktopMaxBodyWidth / 2 + 20px); //20px parce que le premier élément du menu est a à peu près 20px de margin-left */
+        margin-right: calc(50vw - 1140px / 2 + 20px); /*20px parce que le premier élément du menu est a à peu près 20px de margin-left*/
+
+
+        color: $defaultFontColor; 
+        > .input {
+          border-color: $buttonBgColor;
+        }
+      }
+
+      &__background-on-scroll {
+        display: none;
+        z-index: $zMenu;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        left: 0;
+        height: $reservationUIContainerHeight;
+        transition: all $reservationAppearDuration cubic-bezier(0.25,0.8,0.5,1);
+        /*opacity: 0;*/
+        background-color: $reservationOnScrollBg;
+
+        // display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+        /*align-content: center;*/
+        /* pointer-events: none; */
+        /*transform: translate3d(0, $reservationUIContainerHeight, 0);*/
+
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 10000;
+
+        .hotel-logo-half {
+          pointer-events: auto;
+          /* margin-left: calc(50vw - $desktopMaxBodyWidth / 2 + 20px); // 20px parce que le premier élément du menu est a à peu près 20px de margin-left */
+          margin-left: calc(50vw - 1140px / 2 + 20px); // 20px parce que le premier élément du menu est a à peu près 20px de margin-left
+          background-size: 90%;
+          background-image: url('../img/logos/vernet-logo-half-black@2x.png');
+        }
+        &.fixed-out-of-wrapper {
+          display: flex;
+          z-index: $zHeaderReservationContent;
+          position: absolute;
+          top: $reservationUIContainerHeightNegative;
+          transform: translate3d(0, 0, 0);
+          justify-content: space-between;
+          /* padding-left: calc(50vw - $desktopMaxBodyWidth / 2 + 20px); // 20px parce que le premier élément du menu est a à peu près 20px de margin-left */
+          padding-left: calc(50vw - 1140px / 2 + 20px); // 20px parce que le premier élément du menu est a à peu près 20px de margin-left
+          /* padding-right: calc(50vw - $desktopMaxBodyWidth / 2 + 20px); // 20px parce que le premier élément du menu est a à peu près 20px de margin-left */
+          padding-right: calc(50vw - 1140px / 2 + 20px); // 20px parce que le premier élément du menu est a à peu près 20px de margin-left
+          .hotel-logo-half {
+            margin: 0;
+            order: 1;
+          }
+          &.translated {
+            transform: translate3d(0, $stickyMenuDesktopTop, 0);
+          }
+
+        }
+      }
+      &__backup {
+        height: $reservationUIContainerHeight;
+        width: $reservationWidth;
+        /*opacity: 0;*/
+        &.fixed {
+          /*opacity: 1;*/
+        }
+      }
+      .label {
+        display: inline-block;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: center;
+align-self: center;
+        &__checkin {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+
+          grid-area: checkinlabel;
+        }
+        &__checkout {
+          -ms-grid-row: 1;
+          -ms-grid-column: 3;
+
+          grid-area: checkoutlabel;
+        }
+        &__room {
+          -ms-grid-row: 1;
+          -ms-grid-column: 5;
+
+          grid-area: roomlabel;
+        }
+      }
+
+      .input {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border: 1px solid transparent;
+        transition: border $reservationAppearDuration cubic-bezier(0.25,0.8,0.5,1);
+        pointer-events: auto;
+        z-index: 1000000;
+        * {
+          z-index: 1000000;
+        }
+        position: relative;
+        &__check {
+          justify-content: flex-start;
+        }
+        &__checkin {
+          -ms-grid-row: 3;
+          -ms-grid-column: 1;
+          grid-area: checkininput;
+        }      
+        &__checkout {
+          -ms-grid-row: 3;
+          -ms-grid-column: 3;
+          grid-area: checkoutinput;
+        }
+
+
+        &__room-adults-children {
+          -ms-grid-row: 3;
+          -ms-grid-column: 5;
+          grid-area: roomselect;   
+          /* padding-right: calc(($inputHeight - $uiContainerFontSizeDesktop) / 2); */
+          padding-right: calc((45px - 0.6875rem) / 2);
+          justify-content: flex-end;
+        }
+      }
+
+
+      .button__book {
+        -ms-grid-row: 3;
+        -ms-grid-column: 7;
+        grid-area: bookbutton;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+  }

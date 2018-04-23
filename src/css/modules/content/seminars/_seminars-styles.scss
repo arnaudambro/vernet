@@ -1,0 +1,82 @@
+.check-seminars {
+  .no-seminars {
+    display: none;
+  }
+}
+
+
+.seminars {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__header--reservation-hotel {
+    display: none;
+  }
+  &__header--reservation-restaurant {
+    grid-area: reservation;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > * {
+      flex-shrink: 0;
+    }
+    > :first-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  
+  &__head {
+    &--pic {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  } 
+
+  &__introduction {
+    
+    &--descpicture {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+    }
+    &--headline {
+
+    }
+    &--description {
+      font-family: $textContent;
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  } 
+
+
+  &__note {
+    background-color: $offersBgColor;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > * {
+      width: $tabBodyWidth;
+      max-width: 85%;
+    }
+    &--headline {
+      max-width: 425px;
+    }
+    &--text {
+      font-family: $textContent;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+
+}

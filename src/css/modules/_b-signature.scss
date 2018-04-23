@@ -1,0 +1,118 @@
+.b-signature {
+  z-index: $zindexMenuOnTop;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: $bSignatureBgColor;
+  color: $bSignatureColor;
+  opacity: 0;
+  transition: opacity $bSignatureTransDur ease-in-out $hamTransDuration;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__close-button {
+
+    margin-bottom: 15vh;
+    margin-top: 5vh;
+    height: $buttonSide;
+    width: $buttonSide;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 50%;
+    
+    &--cross {
+      height: 0px;
+      width: $crossSide;
+      border-bottom: 1px solid $bSignatureColor;
+    }
+
+    &--left-cross {
+      transform: rotate(45deg)
+    }
+    &--right-cross {
+      transform: rotate(-45deg)
+    }
+  }
+
+  &__headline {
+    margin-bottom: 8vh;
+  }
+
+  &__hotels {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 200px;
+    margin-bottom: 6vh;
+    > * {
+      height: 100%;
+      width: 145px;
+      display: flex;
+      justify-content: center;     
+    }
+    
+    &--hotel {
+      background-position: center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+
+      &-bel-ami { background-image: url('../img/b-signature/bel-ami.png') }
+      &-sers { background-image: url('../img/b-signature/sers.png') }
+      &-edouard-7 { background-image: url('../img/b-signature/edouard-7.png') }
+      &-vernet { background-image: url('../img/b-signature/vernet.png'); margin: 1px 15px 0 }
+      &-montalembert { background-image: url('../img/b-signature/montalembert.png') }
+      &-bretesche { background-image: url('../img/b-signature/bretesche.png') }
+      &-manapany { background-image: url('../img/b-signature/manapany.png') }
+    }
+  }
+
+  &__labels {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 60px;
+    > * {
+      height: 100%;
+      width: 145px;
+      display: flex;
+      justify-content: center;     
+    }
+    
+    &--label {
+      background-position: center center;
+      background-size: contains;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+
+      &-world-hotels-deluxe { background-image: url('../img/b-signature/world-hotels-deluxe.png') }
+      &-world-hotels-first-class { background-image: url('../img/b-signature/world-hotels-first-class.png') }
+      &-design-hotels { background-image: url('../img/b-signature/design-hotels.png') }
+      &-preferred { background-image: url('../img/b-signature/preferred.png') }
+      &-relais-chateaux { background-image: url('../img/b-signature/relais-chateaux.png') }
+    }
+  }
+}

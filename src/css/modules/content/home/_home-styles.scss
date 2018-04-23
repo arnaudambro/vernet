@@ -1,0 +1,141 @@
+.check-home {
+  .no-home {
+    display: none;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  &__hotel-introduction {
+    &--tagline {
+    }
+    &--pic {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  } 
+
+  &__hotel-location {
+    
+    &--descpicture {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+    }
+    &--headline {
+
+    }
+    &--tagline {
+
+    }
+    &--map-pin {
+      > svg {
+         height: $pinHeight;
+         .to-fill {
+           fill: $pinColor;
+         }
+       }
+    }
+    &--map {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-transform: translate3d(0,0,0);
+      backface-visibility: hidden;
+      overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+      position: relative;
+      .iframe-mask {
+        z-index: 10000000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      iframe {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  } 
+
+
+  &__hotel-rooms {
+    
+    &--descpicture {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    &--headline {
+
+    }
+    &--tagline {
+
+    }
+  } 
+
+  &__bar {
+    
+    &--descpictures {
+
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    &--headline {
+
+    }
+    &--tagline {
+
+    }
+    &--descpicture2 {
+
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__restaurant {
+    &--descpicture {
+
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      flex-direction: column;
+      :first-child {
+        margin-bottom: 10px;
+      }
+    }
+    &--headline {
+
+    }
+    &--tagline {
+
+    }
+    &--description {
+      &--buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //align-content: center;
+        
+      }
+    }
+  }
+
+}

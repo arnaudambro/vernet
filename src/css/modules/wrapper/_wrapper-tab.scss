@@ -1,0 +1,42 @@
+@media all and (min-width: $mobile-break) {
+
+  .wrapper {
+
+    /*********VARIABLES**********/
+
+
+    /**********GRID SETUP************/
+    grid-template-columns: 40px $hamWidth1575 1fr $hamWidth1575 40px;
+    grid-template-rows: 
+    $topHeightTab
+    $menuHeightTab
+    calc((100vh - 35px - 35px - 45px - 65px ) * 0.35)
+    $sloganHeightTab 
+    calc((100vh - 35px - 35px - 45px - 65px ) * 0.15)
+    $reservationHeightTab
+    calc((100vh - 35px - 35px - 45px - 65px ) * 0.5)
+    1fr
+    $footerTopHeightTab
+    $footerBottomHeightTab
+    /* calc($companyLogoHeight + 30px) */
+    $companyLogoHeightWithMargin
+    $topHeightInBottomTab; 
+
+
+    grid-template-areas: 
+    'top             top                  top                  top                   top'
+    'marginLeft      menu                 hotellogo1           calendar              marginRight'
+    'blank3          blank3               blank3               blank3                blank3'
+    'slogan          slogan               slogan               slogan                slogan'
+    'blank4          blank4               blank4               blank4                blank4'
+    'reservation     reservation          reservation          reservation           reservation'
+    'blank5          blank5               blank5               blank5                blank5'
+    'content         content              content              content               content'
+    'blank6          details              details              social                blank7'
+    'legal           legal                legal                legal                 legal'
+    'companylogo     companylogo          companylogo          companylogo           companylogo'
+    'infos           infos                infos                infos                 infos';
+  }
+
+
+}

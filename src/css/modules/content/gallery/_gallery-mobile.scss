@@ -1,0 +1,82 @@
+.gallery {
+
+  &__background {
+      // background-image: url('../img/gallery/hero.png');
+  }
+
+  &__content {
+
+    &--filter {
+
+      &-title {
+
+      }
+
+      &-checkboxes {
+
+        > :not(:last-child) {
+
+        }
+      }
+      &-checkbox-items {
+
+      }
+      &-checkbox {
+
+
+        &.active > * {
+
+        }
+        
+        > * {
+
+        }
+      }
+      &-label {
+
+      }
+    }
+
+    &--cards {
+      
+    }
+
+    &--card {
+
+      &-title {
+
+      }
+      &-button {
+
+      }
+      &-pic, &-mask {
+
+      }
+      &-mask {
+
+      }
+      &-pic {
+
+      }
+
+      &:hover > .gallery__content--card-title, 
+      &:hover > .gallery__content--card-button,
+      &:hover > .gallery__content--card-mask, {
+
+      }
+
+      // &.card-1 > .gallery__content--card-pic { background-image: url(../img/gallery/card-1.png);}
+      // &.card-2 > .gallery__content--card-pic { background-image: url(../img/gallery/card-2.png);}
+      // &.card-3 > .gallery__content--card-pic { background-image: url(../img/gallery/card-3.png);}
+      // &.card-4 > .gallery__content--card-pic { background-image: url(../img/gallery/card-4.png);}
+      // &.card-5 > .gallery__content--card-pic { background-image: url(../img/gallery/card-5.png);}
+      // &.card-6 > .gallery__content--card-pic { background-image: url(../img/gallery/card-6.png);}
+      // &.card-7 > .gallery__content--card-pic { background-image: url(../img/gallery/card-7.png);}
+      // &.card-8 > .gallery__content--card-pic { background-image: url(../img/gallery/card-8.png);}
+      // &.card-9 > .gallery__content--card-pic { background-image: url(../img/gallery/card-9.png);}
+      // &.card-10 > .gallery__content--card-pic { background-image: url(../img/gallery/card-10.png);}
+    }
+
+  }
+
+}

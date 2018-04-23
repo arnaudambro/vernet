@@ -1,0 +1,47 @@
+@media all and (min-width: $desktop-break) {
+  .wrapper {
+
+    /*********VARIABLES**********/
+
+
+
+    /**********GRID SETUP************/
+    // grid-template-columns: 1fr minmax(50px, 150px) calc($reservationWidth * 0.2) calc($reservationWidth * 0.6) calc($reservationWidth * 0.2) minmax(50px, 150px) 1fr;
+    -ms-grid-columns: 1fr minmax(50px, 150px) calc(900px * 0.2) calc(900px * 0.6) calc(900px * 0.2) minmax(50px, 150px) 1fr;
+    grid-template-columns: 1fr minmax(50px, 150px) calc(900px * 0.2) calc(900px * 0.6) calc(900px * 0.2) minmax(50px, 150px) 1fr;
+    -ms-grid-rows: 
+      $topHeightDesktop 
+      $menuHeightDesktop 
+      minmax($sloganMinHeightDesktop, calc((100vh - 164px - 64px - 200px) * 310 / 660)) 
+      $reservationHeightDesktop
+      minmax($carnetMinHeightDesktop, calc((100vh - 164px - 64px - 200px) * 200 / 660))
+      minmax($calltoscrollMinHeightDesktop, calc((100vh - 164px - 64px - 200px) * 150 / 660))
+      1fr
+      $footerTopHeightDesktop
+      $topHeightDesktop;
+
+    grid-template-rows: 
+      $topHeightDesktop 
+      $menuHeightDesktop 
+      minmax($sloganMinHeightDesktop, calc((100vh - 164px - 64px - 200px) * 310 / 660)) 
+      $reservationHeightDesktop
+      minmax($carnetMinHeightDesktop, calc((100vh - 164px - 64px - 200px) * 200 / 660))
+      minmax($calltoscrollMinHeightDesktop, calc((100vh - 164px - 64px - 200px) * 150 / 660))
+      1fr
+      $footerTopHeightDesktop
+      $topHeightDesktop;
+
+    grid-template-areas: 
+    'marginLeft1     companylogo          hotellogo1            hotellogo1            hotellogo1            infos             marginRight1'
+    'menu            menu                 menu                  menu                  menu                  menu              menu'
+    'marginLeft      blank1               slogan                slogan                slogan                popcompare       marginRight'
+    'marginLeft      blank2               reservation           reservation           reservation           blank3            marginRight'
+    'marginLeft      blank4               carnet                carnet                carnet                blank5            marginRight'
+    'marginLeft      blank6               calltoscroll          calltoscroll          calltoscroll          blank7            marginRight'
+    'content         content              content               content               content               content           content'
+    'blank15         blank8               details               details               social                blank9            blank20'
+    'legal           legal                legal                 legal                 legal                 legal             legal';
+  }
+
+
+}

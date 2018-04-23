@@ -1,0 +1,41 @@
+détail design langue
+détail date-picker
+détail select
+
+slideshow en home qu restaurant impacte sur quoi ?
+
+
+
+CORRECTIONS
+
+
+HEADER 
+// Les gros titres dans le header ne sont pas centrés
+// Header décalé sur tout le site : recentrer le B-signature
+// version mobile: bouton call-to-action trop bas
+
+GÉNÉRAL
+// background V 
+//images en <img> pour les rendre dynamiques + alt
+//tests de présence JS avant exécution
+//cinémagraphes
+//bug cinemagraphs sur grands écrans
+//paragraphes avec fond blanchis lorsque background gris
+
+HOME
+// bouton check-in trop serré
+
+RÉSERVATION
+// espacer les 5 avantages listés
+// Safari: tout est décalé vers le bas, voir copie écran
+
+ROOMS
+// le bouton tout en bas réserver à l'hôtel est trop large
+
+STICKY HEADER
+//la partie haute du menu est alignée à gauche, alors que la partie basse est centrée
+//fond doré disparait sur iPad quand on scroll ?
+//bug sur tout petits écrans
+
+GALLERIE
+//tout est décalé

@@ -1,0 +1,18 @@
+.newsletter {
+
+  width: 100%;
+  &__headline {
+  }
+  &__tagline {
+    font-family: $textContent;
+  }
+  &__form {
+  }
+  &__input {
+    height: $inputHeight; 
+    border: 1px solid #000;
+    max-width: 345px;
+  }
+  &__button {
+  }
+}

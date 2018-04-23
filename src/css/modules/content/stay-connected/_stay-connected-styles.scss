@@ -1,0 +1,125 @@
+.stay-connected {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  // height: 735px;
+  width: $desktopMaxBodyWidth;
+  &__social {
+    text-align: center;
+    vertical-align: text-top;
+    font-family: $stayConnectedSocial;
+    font-size: 1.25rem;
+    > * {
+      display: inline-block;
+    }
+    > :first-child {
+      margin-right: 15px;
+    }
+  }
+
+  &__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 250px 250px 250px 250px;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 250px 250px;
+    -ms-grid-rows: 250px 250px;
+    // grid-gap: 15px;
+    flex-grow: 0;
+
+    &--card {
+      height: calc(100% - 15px);
+      width: calc(100% - 15px);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__card1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  &__card2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  &__card3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  &__card4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  
+  &__card5 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  &__card6 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  &__card7 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  &__card8 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  
+  &__card9 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  &__card10 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  &__card11 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  &__card12 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  
+  &__card13 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  &__card14 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  &__card15 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  &__card16 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  
+  &__card17 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  &__card18 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  &__card19 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  &__card20 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  
+
+}

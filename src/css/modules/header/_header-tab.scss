@@ -1,0 +1,99 @@
+@media all and (min-width: $mobile-break) {
+
+  .header {
+//     min-height: 800px;
+//     &__content {
+//     }
+
+//     &__back {
+//       background-image: url('../img/home/hero.png');
+//     }
+
+//     &__mask {
+//     }
+
+//     &__top {
+
+//       &--company {
+//         width: 100px;
+//         margin-left: 8vw;
+//       }
+//       &--company-logo, &--company-logo:after {
+//         background-image: url('../img/logos/b-signature.png');
+//       }
+
+
+//       &--hotel-logo {
+//         background-image: url('../img/logos/vernet-logo-half-white.png');
+//         &.hotel-logo-full { display: none }
+//       }
+
+//       &--infos {
+//         margin-right: 8vw;
+
+//         > div {
+//         }
+//         &-phone > .span {
+//         }
+//         > div > :first-child {
+//           margin-right: 5px;
+//         }
+//         > :not(:last-child) {
+//           margin-right: 20px;
+//         }
+//         .fa-phone {
+//         }
+//         .fa-phone, .fa-clock {
+//         }
+//       }
+//     }
+
+    &__slogan {
+//       margin-bottom: 50px;
+      > .span {
+        font-size: 1.4375rem;
+      }
+    }
+
+//     &__carnet {
+
+//       .span {
+//       }
+//       :first-child {
+//       }
+//       :last-child {
+//         em {
+//         }
+//       }
+//     }
+
+//     &__call-to-scroll {
+
+//       &--text {
+//       }
+//       &--divider {
+//         margin-top: 15%;
+//       }
+//     }
+//   }
+
+
+//   nav {
+//     &.js-is-sticky {
+//       top: 0;
+//     }
+//     &.js-is-stuck {
+//       bottom: 0;
+//     }
+//     ul {
+
+//       li {
+        
+//         &:not(:last-child) {
+//           margin-right: 40px;
+//         }
+//       }
+//     }
+  }
+  
+}

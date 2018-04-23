@@ -1,0 +1,89 @@
+.calendar-for-datepicker > svg {
+  width: $calendarWidth;
+  height: $calendarHeight;
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.bed > svg {
+  height: $inputHeightDiv3;
+  width: $inputHeightDiv2;
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.person > svg {
+  height: $inputHeightDiv2;
+  width: $inputHeightDiv2;
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.child-head > svg {
+  height: $inputHeightDiv4;
+  width: $inputHeightDiv2;
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.angle-up-icon > svg {
+  height: $inputHeightDiv4;
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.shower > svg {
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.terrasse > svg {
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.m2 > svg {
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}
+
+.personsx2 > svg {
+  .to-stroke {
+    stroke: $buttonBgColor;
+  }
+  .to-fill {
+    fill: $buttonBgColor;
+  }
+}

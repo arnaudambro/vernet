@@ -1,0 +1,21 @@
+.seminars {
+
+  &__background {
+      // background-image: url('../img/seminars/hero.png');
+  }
+
+
+  &__introduction {
+    &--descpicture {
+      // background-image: url('../img/seminars/intro.png');
+      background-position: center bottom;
+    }
+    &--headline {
+
+    }
+    &--description {
+      width: 90%;
+      
+    }
+  } 
+}

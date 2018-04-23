@@ -1,0 +1,304 @@
+.check-gallery {
+  .no-gallery {
+    display: none;
+  }
+}
+
+
+/*------------------------------------*/
+/*2 COLUMNS*/
+/*------------------------------------*/
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+
+
+  &__content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    width: 100%;
+    font-family: $textContent;
+    font-weight: 700;
+
+
+
+
+    &--filter {
+
+      display: none;
+
+      &-title {
+        font-size: 1.25rem;;
+      }
+
+      &-checkboxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        > :not(:last-child) {
+          margin-right: 25px;
+        }
+      }
+      &-checkbox-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      &-checkbox {
+        border: 1px solid #95989A;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.active > * {
+          display: block;
+          font-size: 10px;
+        }
+        
+        > * {
+          display: none;
+        }
+      }
+      &-label {
+        font-size: 0.75rem;
+        text-transform: capitalize;
+      }
+    }
+
+    &--cards {
+      /* width: calc(100vw - 2 * $galleryGap); */
+      width: calc(100vw - 2 * 20px);
+      max-width: $desktopMaxBodyWidth;
+      margin-left: auto;
+      margin-right: auto;
+
+      display: -ms-grid;
+      display: grid;
+      // grid-gap: $galleryGap;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    &--card {
+      border: 1px solid #000;
+
+      /* height: calc(50vw - 1.5 * $galleryGap / 1.618); */
+      /* width: calc(50vw - 1.5 * $galleryGap); */
+      height: calc((50vw - 1.5 * 20px) / 1.618);
+      width: calc(50vw - 1.5 * 20px);
+      max-width: $galleryCardMaxWidth;
+      margin-left: $galleryGap;
+      margin-top: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: $textContent;
+      position: relative;
+      &-title {
+        font-size: 1.25rem;
+        color: $white;
+        text-transform: uppercase;
+        z-index: $zHeaderContent;
+        transition: opacity 0.25s linear;
+        opacity: 0;
+      }
+      &-button {
+        z-index: $zHeaderContent;
+        transition: opacity 0.25s linear;
+        opacity: 0;
+      }
+      &-pic, &-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      &-mask {
+        z-index: $zGalleryCardMask;
+        background-color: $headerMaskColor;
+        transition: opacity 0.25s linear;
+        opacity: 0;
+      }
+      &-pic {
+        z-index: $zGalleryCard;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      &:hover > .gallery__content--card-title, 
+      &:hover > .gallery__content--card-button,
+      &:hover > .gallery__content--card-mask, {
+        opacity: 1;
+      }
+
+
+    }
+
+  }
+
+}
+
+
+/*------------------------------------*/
+/*1 COLUMN*/
+/*------------------------------------*/
+/*
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+
+
+  &__content {
+
+
+
+    width: 100%;
+    font-family: $textContent;
+    font-weight: 700;
+
+
+
+
+    &--filter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-title {
+        font-size: 1.25rem;;
+      }
+
+      &-checkboxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        > :not(:last-child) {
+          margin-right: 25px;
+        }
+      }
+      &-checkbox-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      &-checkbox {
+        border: 1px solid #95989A;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.active > * {
+          display: block;
+          font-size: 10px;
+        }
+        
+        > * {
+          display: none;
+        }
+      }
+      &-label {
+        font-size: 0.75rem;
+        text-transform: capitalize;
+      }
+    }
+
+    &--cards {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    &--card {
+      margin: 50px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      height: calc(50vw - 1.5 * 20px / 1.5);
+      width: calc(50vw - 1.5 * 20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: $textContent;
+      position: relative;
+      &-title {
+        font-size: 1.25rem;
+        color: $white;
+        text-transform: uppercase;
+        z-index: $zHeaderContent;
+        transition: opacity 0.25s linear;
+        opacity: 0;
+      }
+      &-button {
+        z-index: $zHeaderContent;
+        transition: opacity 0.25s linear;
+        opacity: 0;
+      }
+      &-pic, &-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      &-mask {
+        z-index: $zGalleryCardMask;
+        background-color: $headerMaskColor;
+        transition: opacity 0.25s linear;
+        opacity: 0;
+      }
+      &-pic {
+        z-index: $zGalleryCard;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      &:hover > .gallery__content--card-title, 
+      &:hover > .gallery__content--card-button,
+      &:hover > .gallery__content--card-mask, {
+        opacity: 1;
+      }
+
+
+    }
+
+  }
+
+}
+*/

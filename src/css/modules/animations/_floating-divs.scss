@@ -1,0 +1,32 @@
+.floating_div {
+  height: 100%;
+  width: 100%;
+  transition: none;
+  /* transform: translate3d(0, $translateY, 0); */
+  background-position: center bottom;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media all and (min-width: $desktop-break) {
+    height: $floatingDivHeight;
+    transform: translate3d(0, $initTranslate, 0);
+  }
+  &__parent {
+    height: 100%;
+    height: $floatingDivHeight;
+    width: 100%;
+    align-items: flex-end;
+    // background: none !important;
+    // border: 3px solid #F00;
+      
+    // display: flex;
+      
+    &--parent {
+      // display: flex;
+      // background: none !important;
+      // border: 3px solid #00F;
+      overflow: hidden
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@media all and (min-width: $mobile-break) {
+  .footer {
+
+    &__content {
+    }
+
+    &__top {
+
+      &--hotel-details {
+        -ms-grid-column-align: start;
+        justify-self: start;
+      }
+
+      &--hotel-logo {
+        background-image: url('../img/logos/vernet-logo-full-black.png');
+      }
+
+      &--hotel-address {
+        padding-left: 50px;
+        > .span {
+          margin-bottom: 0.75em;
+        }
+      }
+
+      &--social {
+        height: 125px;
+        width: 125px;
+        -ms-grid-column-align: end;
+justify-self: end;
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &-logos > * {
+          margin-right: 30px;
+        }
+
+        &-logos > .last-logo {
+          margin-right: 0;
+        }
+        
+        &-design-hotels-logo {
+          background-image: url('../img/logos/design-hotels.png');
+        }
+      }
+    }
+
+    &__bottom {
+      .mentions-legales {
+        border-right: 1px solid $footerBottomFontColor;
+        padding-right: 12px;
+        font-size: 0.75rem;
+      }
+      .hiring { 
+        border-right: 1px solid $footerBottomFontColor;
+        padding-right: 12px;
+        padding-left: 10px;
+        font-size: 0.75rem;
+      }
+      .copyright-large {
+        display: inline-block;
+        border-right: 1px solid $footerBottomFontColor;
+        padding-right: 12px;
+        padding-left: 10px;
+        font-size: 0.75rem;
+      }
+      .copyright-small {
+        display: none;
+      }
+      .press {
+        padding-left: 10px;
+        font-size: 0.75rem;
+      }
+    }
+
+  }
+
+}

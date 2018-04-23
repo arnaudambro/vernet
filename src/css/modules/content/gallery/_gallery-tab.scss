@@ -1,0 +1,85 @@
+@media all and (min-width: $mobile-break) {
+  .gallery {
+
+    &__background {
+        // background-image: url('../img/gallery/hero@2x.png');
+    }
+
+    &__content {
+
+      &--filter {
+
+        &-title {
+
+        }
+
+        &-checkboxes {
+
+          > :not(:last-child) {
+
+          }
+        }
+        &-checkbox-items {
+
+        }
+        &-checkbox {
+
+
+          &.active > * {
+
+          }
+          
+          > * {
+
+          }
+        }
+        &-label {
+
+        }
+      }
+
+      &--cards {
+        
+      }
+
+      &--card {
+
+        &-title {
+
+        }
+        &-button {
+
+        }
+        &-pic, &-mask {
+
+        }
+        &-mask {
+
+        }
+        &-pic {
+
+        }
+
+        &:hover > .gallery__content--card-title, 
+        &:hover > .gallery__content--card-button,
+        &:hover > .gallery__content--card-mask, {
+
+        }
+
+        // &.card-1 > .gallery__content--card-pic { background-image: url(../img/gallery/card-1@2x.png);}
+        // &.card-2 > .gallery__content--card-pic { background-image: url(../img/gallery/card-2@2x.png);}
+        // &.card-3 > .gallery__content--card-pic { background-image: url(../img/gallery/card-3@2x.png);}
+        // &.card-4 > .gallery__content--card-pic { background-image: url(../img/gallery/card-4@2x.png);}
+        // &.card-5 > .gallery__content--card-pic { background-image: url(../img/gallery/card-5@2x.png);}
+        // &.card-6 > .gallery__content--card-pic { background-image: url(../img/gallery/card-6@2x.png);}
+        // &.card-7 > .gallery__content--card-pic { background-image: url(../img/gallery/card-7@2x.png);}
+        // &.card-8 > .gallery__content--card-pic { background-image: url(../img/gallery/card-8@2x.png);}
+        // &.card-9 > .gallery__content--card-pic { background-image: url(../img/gallery/card-9@2x.png);}
+        // &.card-10 > .gallery__content--card-pic { background-image: url(../img/gallery/card-10@2x.png);}
+      }
+
+    }
+
+  }
+
+}

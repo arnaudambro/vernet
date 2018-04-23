@@ -1,0 +1,86 @@
+.footer {
+
+  &__content {
+    font-family: $footerFontFamily;
+    z-index: $zFooterContent;
+    font-size: 0.75rem;
+  }
+
+  &__top {
+
+    &--hotel-details {
+      grid-area: details;
+      -ms-grid-column-align: start;
+      justify-self: start;
+      -ms-grid-row-align: center;
+align-self: center;
+      display: flex;
+      
+      justify-content: center;
+      align-items: center;
+      //align-content: center;
+      
+    }
+
+    &--hotel-logo {
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--hotel-address {
+      > .span {
+        display: block;
+        margin-bottom: 0.75em;
+        line-height: 1em;
+      }
+    }
+
+    &--social {
+
+      grid-area: social;
+      -ms-grid-row-align: center;
+align-self: center;
+
+      display: flex;
+
+      &-logos > * {
+        font-size: 1.25rem;
+      }
+
+      &-logos > .last-logo {
+      }
+      
+      &-design-hotels-logo {
+
+        height: 36px;
+        width: 166px;
+        max-height: 36px;
+        max-width: 166px;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__bottom {
+    grid-area: legal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    color: $footerBottomFontColor;
+    background-color: $footerBottomBgColor;
+
+    .span {
+      display: inline-block;
+    }
+
+  }
+
+}

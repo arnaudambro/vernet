@@ -1,0 +1,16 @@
+<svg viewBox="0 0 28 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="persons-x2">
+            <g id="2-persons" stroke="#000000" stroke-width="0.75">
+                <path d="M5,29.7 L5,19.3" id="Line_114" stroke-linejoin="round"></path>
+                <circle id="Ellipse_3" stroke-linejoin="round" cx="5.9" cy="3.3" r="2.3"></circle>
+                <path d="M2.7,29.7 L2.7,17.9 L0.9,17.9 L0.9,10.6 C0.88886767,9.74794325 1.22243357,8.92752662 1.82498009,8.32498009 C2.42752662,7.72243357 3.24794325,7.38886767 4.1,7.4 L7.7,7.4 C8.55205675,7.38886767 9.37247338,7.72243357 9.97501991,8.32498009 C10.5775664,8.92752662 10.9111323,9.74794325 10.9,10.6 L10.9,17.9 L9,17.9 L9,29.7" id="Path_117"></path>
+            </g>
+            <g id="x-2" transform="translate(14.000000, 8.000000)" font-size="10" font-family="Roboto-Regular, Roboto" fill="#000000" font-weight="normal">
+                <text>
+                    <tspan x="0.648" y="9.436">x 2</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,305 @@
+
+@media all and (min-width: $desktop-break)  {
+
+  .grid-layout-1 {
+
+    display: -ms-grid;
+    display: grid;
+    max-width: $desktopMaxBodyWidth;
+    width: 100%;
+    height: $layoutWholeHeightGL1D;
+    -ms-grid-columns: 1.7fr 2.45fr 1.25fr 1fr 3.15fr 1.65fr 2.25fr 2.5fr;
+    grid-template-columns: 1.7fr 2.45fr 1.25fr 1fr 3.15fr 1.65fr 2.25fr 2.5fr;
+    -ms-grid-rows: 
+    1.7fr
+    2.5fr
+    2.8fr
+    1fr
+    1.4fr
+    7.0fr
+    2.5fr
+    $beforeLastRowGL1D
+    $lastRowGL1D;
+    grid-template-rows: 
+    1.7fr
+    2.5fr
+    2.8fr
+    1fr
+    1.4fr
+    7.0fr
+    2.5fr
+    $beforeLastRowGL1D
+    $lastRowGL1D;
+
+    grid-template-areas: 
+    'picture1    picture1       picture1       picture1         picture1      blank0       topdivider    time1'
+    'picture1    picture1       picture1       picture1         picture1      blank2       headline      headline'
+    'picture1    picture1       picture1       picture1         picture1      blank3       tagline       tagline'
+    'picture1    picture1       picture1       picture1         picture1      blank4       button        blank5'
+    'blank6      blank7         blank8         blank9           blank10       blank11      blank12       blank13'
+    'blank14     description    description    blank15          picture2      picture2     picture2      picture2'
+    'blank16     blank          blank          blank17          picture2      picture2     picture2      picture2'
+    'blank18     blank          blank          blank19          coordinates   coordinates  coordinates   coordinates'
+    'blank23     blank24        bottomdivider  bottomdivider    blank25       blank26      blank27       blank28';
+  }
+
+  .grid-layout-1.home__bar {
+    height: $layoutWholeHeightGL1DBar;
+    -ms-grid-rows: 
+    1.7fr
+    2.5fr
+    2.8fr
+    1fr
+    1.4fr
+    7.0fr
+    2.5fr
+    $beforeLastRowGL1DBar
+    $lastRowGL1DBar;
+    grid-template-rows: 
+    1.7fr
+    2.5fr
+    2.8fr
+    1fr
+    1.4fr
+    7.0fr
+    2.5fr
+    $beforeLastRowGL1DBar
+    $lastRowGL1DBar;
+  }
+
+  .grid-layout-2 {
+
+    display: -ms-grid;
+    display: grid;
+    height: $layoutWholeHeightGL2D;
+    -ms-grid-columns: 1fr $tabBodyWidthDiv2 $tabBodyWidthDiv2 1fr;
+    grid-template-columns: 1fr $tabBodyWidthDiv2 $tabBodyWidthDiv2 1fr;
+    grid-template-rows:
+    1fr
+    1.2fr
+    1fr
+    1.4fr
+    8.9fr;
+    -ms-grid-rows:
+    1fr
+    1.2fr
+    1fr
+    1.4fr
+    8.9fr;
+    grid-template-areas: 
+    'blank1          time2                blank3              blank4'
+    'blank5          headline             description         blank6'
+    'blank7          tagline              description         blank8'
+    'blank9          blank10              blank11             blank12'
+    'picture1        picture1             picture2            picture2';
+  }
+
+
+  .grid-layout-3 {
+
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: $layoutWholeHeightGL3D;
+
+    -ms-grid-columns: 1fr 6fr 1fr 7fr 3fr;
+    grid-template-columns: 1fr 6fr 1fr 7fr 3fr;
+    grid-template-rows: 
+    2.1fr
+    1.0fr
+    1.1fr
+    5.7fr
+    2.7fr
+    3.6fr;
+    -ms-grid-rows:
+    2.1fr
+    1.0fr
+    1.1fr
+    5.7fr
+    2.7fr
+    3.6fr;
+
+
+    grid-template-areas: 
+    'time2            headline          blank1            blank2          blank3'
+    'blank4           tagline           blank5            blank6          blank7'
+    'blank8           blank9            blank10           blank11         blank12'
+    'descpicture      descpicture       descpicture       descpicture     blank13'
+    'descpicture      descpicture       descpicture       descpicture     blank14'
+    'blank15          controls           blank17           blank18         blank19';
+  }
+
+
+  .grid-layout-4 {
+
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: $layoutWholeHeightGL4D;
+
+    /* grid-template-columns: 1fr calc($desktopMaxBodyWidth * 480 / 1140) calc($desktopMaxBodyWidth * 220 / 1140) calc($desktopMaxBodyWidth * 180 / 1140) calc($desktopMaxBodyWidth * 260 / 1140) 1fr; */
+    -ms-grid-columns: 1fr calc(1140px * 480 / 1140) calc(1140px * 220 / 1140) calc(1140px * 180 / 1140) calc(1140px * 260 / 1140) 1fr;
+    grid-template-columns: 1fr calc(1140px * 480 / 1140) calc(1140px * 220 / 1140) calc(1140px * 180 / 1140) calc(1140px * 260 / 1140) 1fr;
+    grid-template-rows: 
+    3.25fr
+    1fr
+    1.3125fr
+    1.625fr
+    2.25fr
+    1.25fr
+    1.5fr
+    2fr;
+    -ms-grid-rows:
+    3.25fr
+    1fr
+    1.3125fr
+    1.625fr
+    2.25fr
+    1.25fr
+    1.5fr
+    2fr;
+
+
+    grid-template-areas: 
+    'blank00            comment               comment                blank01            blank02          blank03'
+    'blank04            comment               comment                blank05            controls         blank06'
+    'blank07            blank09               picture                picture            picture          blank10'
+    'blank11            divider               picture                picture            picture          blank13'
+    'blank14            headline              picture                picture            picture          blank16'
+    'blank17            tagline               blank18                blank19            blank20          blank21'
+    'blank22            description1          description2           description2       description2      blank24'
+    'blank25            buttons               buttons                blank27            blank28          blank29'
+  }
+
+
+  .grid-layout-5 {
+    display: -ms-grid;
+    display: grid;
+    max-width: $desktopMaxBodyWidth;
+    width: 100%;
+    height: $layoutWholeHeightGL5D;
+    -ms-grid-columns: 9.5fr 1fr 2fr 3fr 3.5fr;
+    grid-template-columns: 9.5fr 1fr 2fr 3fr 3.5fr;
+    grid-template-rows: 
+    1.7fr
+    2.5fr
+    2.8fr
+    1fr;
+    -ms-grid-rows:
+    1.7fr
+    2.5fr
+    2.8fr
+    1fr;
+
+    grid-template-areas: 
+    'picture1      legend           blank0       topdivider    blank1'
+    'picture1      legend           blank2       headline      headline'
+    'picture1      legend           blank3       description   description'
+    'picture1      legend           blank4       button        blank5';
+  }
+
+  .grid-layout-5-tall {
+    display: -ms-grid;
+    display: grid;
+    max-width: $desktopMaxBodyWidth;
+    width: 100%;
+    height: $layoutWholeHeightGL5tD;
+    /* grid-template-columns: 8fr 2.5fr 11.4fr 1fr; */ //bugging
+    -ms-grid-columns: calc(1140px * 8 / (8 + 2.5 + 11.4 + 1)) calc(1140px * 2.5 / (8 + 2.5 + 11.4 + 1)) calc(1140px * 11.4 / (8 + 2.5 + 11.4 + 1)) calc(1140px * 1 / (8 + 2.5 + 11.4 + 1));
+    grid-template-columns: calc(1140px * 8 / (8 + 2.5 + 11.4 + 1)) calc(1140px * 2.5 / (8 + 2.5 + 11.4 + 1)) calc(1140px * 11.4 / (8 + 2.5 + 11.4 + 1)) calc(1140px * 1 / (8 + 2.5 + 11.4 + 1));
+    grid-template-rows: 
+    3fr
+    1.625fr
+    0.625fr
+    3.625fr
+    1.75fr
+    1fr;
+    -ms-grid-rows:
+    3fr
+    1.625fr
+    0.625fr
+    3.625fr
+    1.75fr
+    1fr;
+
+    grid-template-areas: 
+    'topdivider    blank0              picture       legend'
+    'headline      blank1              picture       legend'
+    'tagline       blank2              picture       legend'
+    'description   blank3              picture       legend'
+    'button        blank4              picture       legend'
+    'blank5        blank6              controls      blank7'
+  }
+
+
+  .grid-layout-rooms-left {
+
+    display: -ms-grid;
+    display: grid;
+    height: $layoutWholeHeightGLRD;
+    width: 100%;
+    -ms-grid-columns: 1fr 390px 170px 170px 390px 1fr;
+    grid-template-columns: 1fr 390px 170px 170px 390px 1fr;
+    grid-template-rows: 
+    2.5fr
+    1fr
+    5fr
+    1.25fr
+    1.25fr
+    1.125fr
+    3.75fr;
+    -ms-grid-rows:
+    2.5fr
+    1fr
+    5fr
+    1.25fr
+    1.25fr
+    1.125fr
+    3.75fr;
+
+    grid-template-areas: 
+    'pictures         pictures           pictures         blank4            blank                 blank11'
+    'pictures         pictures           pictures         divider           headline              blank12'
+    'pictures         pictures           pictures         blank6            description           blank13'
+    'pictures         pictures           pictures         blank7            features              blank14'
+    'pictures         pictures           pictures         blank8            blank2                blank15'
+    'pictures         pictures           pictures         blank9            button                blank16'
+    'pictures         pictures           pictures         blank10           blank3                blank17';
+  }
+
+  .grid-layout-rooms-right {
+
+    display: -ms-grid;
+    display: grid;
+    height: $layoutWholeHeightGLRD;
+    width: 100%;
+    -ms-grid-columns: 1fr 390px 170px 170px 390px 1fr;
+    grid-template-columns: 1fr 390px 170px 170px 390px 1fr;
+    grid-template-rows: 
+    2.5fr
+    1fr
+    5fr
+    1.25fr
+    1.25fr
+    1.125fr
+    3.75fr;
+    -ms-grid-rows:
+    2.5fr
+    1fr
+    5fr
+    1.25fr
+    1.25fr
+    1.125fr
+    3.75fr;
+
+    grid-template-areas: 
+    'blank11         blank           blank4             pictures         pictures           pictures'
+    'blank12         headline        divider            pictures         pictures           pictures'
+    'blank13         description     blank6             pictures         pictures           pictures'
+    'blank14         features        blank7             pictures         pictures           pictures'
+    'blank15         blank2          blank8             pictures         pictures           pictures'
+    'blank16         button          blank9             pictures         pictures           pictures'
+    'blank17         blank3          blank10            pictures         pictures           pictures';
+  }
+
+}

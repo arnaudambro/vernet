@@ -1,0 +1,33 @@
+.back-to-top {
+  border-bottom: 1px solid $borderColor;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__text {
+
+    font-family: $textContent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    
+  }
+
+  &__button {
+    cursor: pointer;
+    margin-bottom: 10px;
+    .angle-up-icon > svg {
+      height: 1.5rem;
+      .to-stroke {
+        stroke-width: 6;
+        stroke-linecap: square;
+        stroke-linejoin: square;
+      }
+      .to-fill {
+        
+      }
+    }
+  }
+  
+}

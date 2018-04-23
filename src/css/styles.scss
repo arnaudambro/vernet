@@ -1,0 +1,125 @@
+
+/**** GLOBAL ******/
+
+@import "fonts/font-faces-DIN";
+@import "fonts/font-faces-Playfair";
+
+
+@import "variables/lengths";
+@import "variables/z-indexes";
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/durations";
+
+
+@import "modules/reset";
+@import "modules/svg-icons";
+@import "modules/base";
+@import "modules/menu-hamburger";
+@import "modules/buttons-and-forms";
+@import "modules/hotel-logo";
+@import "modules/datepicker";
+
+@import "modules/b-signature";
+@import "modules/loading";
+@import "modules/back-to-top";
+@import "modules/cinemagraph";
+
+
+@import "modules/wrapper/wrapper-styles";
+@import "modules/wrapper/wrapper-mobile";
+@import "modules/wrapper/wrapper-tab";
+@import "modules/wrapper/wrapper-desktop";
+
+/******* HEADER AND FOOTER AND MODULES **********/
+
+@import "modules/header/header-styles";
+@import "modules/header/header-mobile";
+@import "modules/header/header-tab";
+@import "modules/header/header-desktop";
+
+@import "modules/footer/footer-styles";
+@import "modules/footer/footer-mobile";
+@import "modules/footer/footer-tab";
+@import "modules/footer/footer-desktop";
+
+@import "modules/reservation/reservation-styles";
+@import "modules/reservation/reservation-mobile";
+@import "modules/reservation/reservation-tab";
+@import "modules/reservation/reservation-desktop";
+
+@import "modules/content/slideshow-offers/slideshow-offers-styles";
+@import "modules/content/slideshow-offers/slideshow-offers-mobile";
+@import "modules/content/slideshow-offers/slideshow-offers-tab";
+@import "modules/content/slideshow-offers/slideshow-offers-desktop";
+
+@import "modules/content/slideshow-menu/slideshow-menu-styles";
+@import "modules/content/slideshow-menu/slideshow-menu-mobile";
+@import "modules/content/slideshow-menu/slideshow-menu-tab";
+@import "modules/content/slideshow-menu/slideshow-menu-desktop";
+
+@import "modules/content/slideshow-grid/slideshow-grid-styles";
+@import "modules/content/slideshow-grid/slideshow-grid-mobile";
+@import "modules/content/slideshow-grid/slideshow-grid-tab";
+@import "modules/content/slideshow-grid/slideshow-grid-desktop";
+
+@import "modules/content/slideshow-rooms/slideshow-rooms-styles";
+@import "modules/content/slideshow-rooms/slideshow-rooms-mobile";
+@import "modules/content/slideshow-rooms/slideshow-rooms-tab";
+@import "modules/content/slideshow-rooms/slideshow-rooms-desktop";
+
+@import "modules/content/newsletter/newsletter-styles";
+@import "modules/content/newsletter/newsletter-mobile";
+@import "modules/content/newsletter/newsletter-tab";
+@import "modules/content/newsletter/newsletter-desktop";
+
+@import "modules/content/events/events-styles";
+@import "modules/content/events/events-mobile";
+@import "modules/content/events/events-tab";
+@import "modules/content/events/events-desktop";
+
+@import "modules/content/stay-connected/stay-connected-styles";
+@import "modules/content/stay-connected/stay-connected-mobile";
+@import "modules/content/stay-connected/stay-connected-tab";
+@import "modules/content/stay-connected/stay-connected-desktop";
+
+/******** CONTENT ***********/
+
+@import "modules/content/content";
+
+@import "modules/content/layouts/layouts-styles";
+@import "modules/content/layouts/layouts-mobile";
+@import "modules/content/layouts/layouts-tab";
+@import "modules/content/layouts/layouts-desktop";
+
+@import "modules/content/home/home-styles";
+@import "modules/content/home/home-mobile";
+@import "modules/content/home/home-tab";
+@import "modules/content/home/home-desktop";
+
+@import "modules/content/rooms/rooms-styles";
+@import "modules/content/rooms/rooms-mobile";
+@import "modules/content/rooms/rooms-tab";
+@import "modules/content/rooms/rooms-desktop";
+
+@import "modules/content/bar-restaurant/bar-restaurant-styles";
+@import "modules/content/bar-restaurant/bar-restaurant-mobile";
+@import "modules/content/bar-restaurant/bar-restaurant-tab";
+@import "modules/content/bar-restaurant/bar-restaurant-desktop";
+
+@import "modules/content/seminars/seminars-styles";
+@import "modules/content/seminars/seminars-mobile";
+@import "modules/content/seminars/seminars-tab";
+@import "modules/content/seminars/seminars-desktop";
+
+@import "modules/content/gallery/gallery-styles";
+@import "modules/content/gallery/gallery-mobile";
+@import "modules/content/gallery/gallery-tab";
+@import "modules/content/gallery/gallery-desktop";
+
+@import "modules/dividers";
+
+
+/*********** ANIMATIONS ************/
+@import "modules/animations/floating-divs";
+

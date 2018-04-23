@@ -1,0 +1,54 @@
+.slideshow-rooms {
+
+  &-container {
+
+  }
+
+  &__arrow--container {
+    &-right {
+    }
+    &-left {
+    }
+    > .arrow > svg {
+    }
+  }
+  &__content {
+    
+    &--container {
+      width: $slideshowRoomPictureWidth;
+    }
+
+  }
+  &__card {
+
+    &--picture {
+        &-prestige { 
+        }
+        &-deluxe { 
+        }
+        &-superior { 
+        }
+        &-presidential { 
+        }
+        &-prestige-suite { 
+        }
+        &-executive { 
+        }
+      }
+
+    &--headline {
+      text-align: center;
+    }
+
+    &--description {
+      // display: none;
+    }
+    &__button {
+      &--book {
+      }
+      &--rooms {
+      }
+    }
+  }
+}
+

@@ -1,0 +1,72 @@
+@media all and (min-width: $desktop-break) {
+
+  .slideshow-menu {
+      max-width: 1400px;
+
+    &-container {
+    }
+
+    &__tagline {
+      margin-top: -30px;
+    }
+    &__arrow--container {
+      &-right {
+      }
+      &-left {
+      }
+      > .arrow > svg {
+      }
+    }
+    &__content {
+
+      &--container {
+      }
+
+    }
+    &__card {
+
+
+      &--card1 > :first-child { 
+        height: $slideshowMenuPictureHeightDesktop19;
+      }
+      &--card2 > :first-child { 
+        height: $slideshowMenuPictureHeightDesktop;
+      }
+      &--card3 > :first-child { 
+        height: $slideshowMenuPictureHeightDesktop14;
+      }
+      &--card4 > :first-child { 
+        height: $slideshowMenuPictureHeightDesktop19;
+      }
+      &--card5 > :first-child { 
+        height: $slideshowMenuPictureHeightDesktop;
+      }
+      &--card6 > :first-child { 
+        height: $slideshowMenuPictureHeightDesktop14;
+      }
+
+      &--picture {
+      }
+
+      &--headline {
+
+      }
+
+      &--description {
+      }
+    }
+
+    &__button {
+      &--book {
+        margin-top: 30px;
+      }
+      &--offers {
+        display: none;
+        &-desktop {
+
+        }
+      }
+    }
+  }
+
+}

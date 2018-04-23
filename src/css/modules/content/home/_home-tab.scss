@@ -1,0 +1,277 @@
+@media all and (min-width: $mobile-break) {
+  .home {
+
+
+    &__background {
+    }
+
+
+    &__hotel-location {
+
+
+      &--descpicture {
+        grid-area: picture1;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        height: 100%;
+        width: 100%;
+      }
+      &--headline {
+        grid-area: headline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+        
+        text-align: start;
+      }
+      &--tagline {
+        grid-area: tagline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+
+        text-align: start;
+
+      }
+      &--button {
+        grid-area: button;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        margin-bottom: 30px;
+        -ms-grid-row-align: end;
+        align-self: end;
+      }
+      &--description {
+        grid-area: description;
+        font-family: $textContent;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        text-align: end;
+        -ms-grid-row-align: center;
+        align-self: center;
+      }
+      &--map {
+        grid-area: picture2;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        align-content: stretch;
+        position: relative;
+
+        > * {
+          flex-grow: 1;
+          border: none;
+          position: relative;
+
+        }
+      }
+      &--map-pin {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+      }
+      &--coordinates {
+        grid-area: coordinates;
+        -ms-grid-row-align: center;
+        align-self: center;
+        display: flex;
+        font-family: $textContent;
+        font-size: 0.75rem;
+        justify-content: flex-end;
+
+        > :first-child {
+          border-right: 1px solid $defaultFontColor;
+          padding-right: 10px;
+        }
+        > :last-child {
+          padding-left: 10px;
+        }
+      }
+    } 
+
+    &__hotel-rooms {
+
+
+      &--descpicture2 {
+        grid-area: picture2;
+      }
+      &--descpicture1 {
+        grid-area: picture1;
+        position: relative;
+
+        // background-image: url('../img/home/rooms-2@2x.png');
+      }
+      &--headline {
+        grid-area: headline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+        text-align: start;
+      }
+      &--tagline {
+        grid-area: tagline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+        text-align: start;
+      }
+      &--description {
+        grid-area: description;
+        font-family: $textContent;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        text-align: end;
+        -ms-grid-column-align: end;
+        -ms-grid-column-align: end;
+        justify-self: end;
+        -ms-grid-row-align: center;
+        align-self: center;
+        max-width: $hotelRoomsDescMaxWidth;
+        &--button {
+          flex-grow: 0;
+          grid-row: 5;
+          grid-column: 1 / -1;
+          -ms-grid-row-align: center;
+          align-self: center;
+          -ms-grid-column-align: center;
+          -ms-grid-column-align: center;
+          justify-self: center;
+        }
+      }
+
+    } 
+
+    &__bar {
+
+      &--descpictures {
+        grid-area: picture1;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        height: 100%;
+        width: 100%;
+        // background-image: url('../img/home/bar-2@2x.png');
+      }
+      &--descpitcure1 {
+        height: 100%;
+        width: 100%;
+      }
+      &--descpicture2 {
+        grid-area: picture2;
+        position: relative;
+        // background-image: url('../img/home/bar@2x.png');
+      }
+      &--headline {
+        grid-area: headline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+        
+        text-align: start;
+      }
+      &--tagline {
+        grid-area: tagline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+
+        line-height: 1.3125rem;
+        text-align: start;
+
+      }
+      &--button {
+        grid-area: button;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        margin-bottom: 30px;
+        -ms-grid-row-align: end;
+        align-self: end;
+      }
+      &--description {
+        grid-area: description;
+        font-family: $textContent;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        text-align: end;
+        -ms-grid-row-align: center;
+        align-self: center;
+      }
+    }
+
+    /*------------------------------------*\
+        RESTAURANT
+        \*------------------------------------*/
+
+        &__restaurant {
+          // width: 100%;
+          &--descpicture {
+            grid-area: descpicture;
+            // background-image: url('../img/home/restaurant@2x.png');
+          }
+          &--headline {
+            grid-area: headline;
+            text-align: start;
+            -ms-grid-row-align: end;
+            align-self: end;
+          }
+          &--tagline {
+            grid-area: tagline;
+            text-align: start;
+            -ms-grid-row-align: end;
+            align-self: end;
+          }
+          &--description {
+            &--container {
+              z-index: $zPicOnTopOfTheOther;
+              grid-row: 4 / -1;
+              grid-column: 3 / -1;
+              background-color:$descBgColor;
+              padding: $eventDescPadding;
+              text-align: start;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-start;
+              //align-content: center;
+
+            }
+            &--tagline {
+              text-align: start;
+
+            }
+            &--content {
+              font-family: $textContent;
+              font-size: 0.75rem;
+              line-height: 1.25rem;
+            }
+            &--buttons {
+              align-items: flex-start;
+            }
+            &--button {
+              margin-bottom: 10px;
+              // text-align: start;
+              // justify-content: flex-start;
+              // flex-grow: 0;
+            }
+          }
+
+        }
+
+      }
+
+    }

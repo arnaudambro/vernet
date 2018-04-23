@@ -1,0 +1,96 @@
+
+@media all and (min-width: $mobile-break)  {
+
+  .grid-layout-1 {
+
+    display: -ms-grid;
+display: grid;
+    max-width: $tabBodyWidth;
+    width: 90%;
+    height: $layoutWholeHeightGL1T;
+    grid-template-columns: 7.5fr 1fr 4fr 1.5fr 7fr;
+    grid-template-rows: 
+    3fr
+    2.4fr
+    4.2fr
+    1.5fr
+    3fr
+    2.4fr
+    4.2fr
+    1fr;
+
+    grid-template-areas: 
+    'picture1         picture1          picture1          blank1      headline'
+    'picture1         picture1          picture1          blank1      tagline'
+    'picture1         picture1          picture1          blank1      button'
+    'blank2           blank2            blank2            blank2      blank2'
+    'description      blank3            picture2          picture2   picture2'
+    'description      blank3            picture2          picture2   picture2'
+    'description      blank3            picture2          picture2   picture2'
+    'blank4           blank4            blank4            coordinates      coordinates';
+  }
+
+  .grid-layout-2 {
+
+    display: -ms-grid;
+display: grid;
+    width: 100%;
+    height: $layoutWholeHeightGL2T;
+    grid-template-columns: 1fr $tabBodyWidthDiv2 $tabBodyWidthDiv2 1fr;
+    grid-template-rows:
+    1fr
+    1fr
+    1fr
+    1fr
+    5.4fr;
+    grid-template-areas: 
+    'blank1          headline             description         blank2'
+    'blank1          blank3               description         blank2'
+    'blank1          tagline              description         blank2'
+    'blank4          blank4               blank4              blank4'
+    'picture1        picture1             picture2            picture2';
+  }
+
+  .grid-layout-3 {
+
+    display: -ms-grid;
+display: grid;
+    width: 100%;
+
+    grid-template-columns: 1fr 6fr 1fr 7fr 3fr;
+    grid-template-rows: 
+    1.1fr
+    1.0fr
+    4.7fr
+    4.2fr
+    5.8fr;
+
+
+    grid-template-areas: 
+    'blank1           headline          blank2            tagline         blank3'
+    'blank1           blank4            blank2            blank5          blank3'
+    'descpicture      descpicture       descpicture       descpicture     blank3'
+    'descpicture      descpicture       descpicture       descpicture     blank3'
+    'blank6           blank6            blank6            blank6          blank6';
+  }
+
+  .grid-layout-5 {
+
+    display: -ms-grid;
+display: grid;
+    max-width: $tabBodyWidth;
+    width: 90%;
+    height: $layoutWholeHeightGL5T;
+    grid-template-columns: 6fr 1fr 8fr;
+    grid-template-rows: 
+    1fr
+    1.6fr
+    1fr;
+
+    grid-template-areas: 
+    'picture1      blank       headline'
+    'picture1      blank       description'
+    'button        button      button';
+  }
+
+}

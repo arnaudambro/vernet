@@ -1,0 +1,44 @@
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  min-height: 100%;
+  width: 100vw;
+  // border: 10px solid #00F;
+  // transition: transform calc(1000/60 * 1ms) linear;
+  // will-change: scroll-position;
+
+
+  &__outer-container {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  &__inner-container {
+    position: absolute;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    // scroll-behavior: smooth;
+
+    height: 100%;
+    &.modal-open {
+      overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+      pointer-events: none;
+    }
+  }
+
+  &__inner-container::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+

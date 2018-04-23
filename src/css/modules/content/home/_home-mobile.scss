@@ -1,0 +1,67 @@
+.home {
+
+  &__background {
+      // background-image: url('../img/home/hero.png');
+  }
+
+
+  &__hotel-location {
+    &--descpicture {
+      background-color: $darkGray;
+      // background-image: url('../img/home/hotel-description.png');
+    }
+    &--headline {
+
+    }
+    &--tagline {
+      
+    }
+  } 
+
+  &__hotel-rooms {
+    &--descpicture2 {
+      // background-image: url('../img/home/rooms-1.png');
+    }
+    &--headline {
+
+    }
+    &--tagline {
+      
+    }
+  } 
+
+  &__bar {
+    
+    &--descpictures {
+      // background-image: url('../img/home/bar.png');
+
+    }
+    &--headline {
+
+    }
+    &--tagline {
+
+    }
+    &--descpicture2 {
+      overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+    }
+  }
+
+  &__restaurant {
+
+    &--descpicture {
+      // background-image: url('../img/home/restaurant.png');
+
+    }
+    &--headline {
+
+    }
+    &--tagline {
+
+    }
+
+  }
+
+}

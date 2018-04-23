@@ -1,0 +1,296 @@
+.header {
+  &__content {
+    color: $headerFontColor;
+    font-family: $headerFontFamily;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    z-index: $zHeaderContent;
+  }
+
+  &__back {
+    z-index: $zHeaderBackground;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    @extend %headerMenuBgColor;
+    overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+    /*background-image: url('../img/home/hero.png');*/
+  }
+
+  &__mask {
+    z-index: $zHeaderMask;
+    background-color: $headerMaskColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &__top {
+
+    &--company {
+      grid-area: companylogo;
+      -ms-grid-column-align: start;
+      justify-self: start;
+
+      display: flex;
+      align-items: center;
+    }
+    &--company-logo, &--company-logo:after {
+      max-height: $companyLogoHeight;
+      max-width: $companyLogoWidth;
+      height: $companyLogoHeight;
+      width: $companyLogoWidth;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--company-menu {
+    }
+
+
+    &--hotel-logo {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: $zMenu;
+
+    }
+
+    &--infos {
+      grid-area: infos;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      &-phone > .span {
+        white-space: nowrap;
+      }
+
+      &-language {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: relative;
+
+        .languages__toggle-button {
+          transition: transform $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+          transform-origin: center center;
+          transform: rotate(0);
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+
+
+        .languages {
+          position: absolute;
+          top: 25px;
+          right: -45px;
+          height: $inputHeightMultiply2;
+          width: 190px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $white;
+          opacity: 0;
+          transition: opacity $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+
+          &.active {
+            opacity: 1;
+          }
+          > * {
+            height: $inputHeight;
+            width: 90%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-bottom: 0.5px solid $transDarkGray;
+            color: $defaultFontColor;
+            text-transform: uppercase;
+
+            &.active {
+              color: $beige;
+            }
+          }
+        }
+      }
+
+      > div > :first-child {
+      }
+
+
+      > :not(:last-child) {
+      }
+
+
+      .fa-phone {
+        transform: scale(-1, 1);
+      }
+      .fa-phone, .fa-clock {
+        font-size: 0.875rem;
+      }
+      .fa-angle-down {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__slogan {
+    grid-area: slogan;
+    -ms-grid-column-align: center;
+justify-self: center;
+    -ms-grid-row-align: end;
+align-self: end;
+    letter-spacing: 1px;
+    font-family: $headerSlogan;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    color: $headerFontColor;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > .span {
+      display: block;
+    }
+  }
+
+  &__carnet {
+    grid-area: carnet;
+    -ms-grid-column-align: center;
+justify-self: center;
+    -ms-grid-row-align: end;
+align-self: end;
+    font-family: $headerCarnet;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 1px;
+    line-height: 2.2rem;
+    .span {
+      display: block;
+      text-align: center;
+    }
+    :first-child {
+      font-size: 1.875rem;
+    }
+    :last-child {
+      font-size: 1.25rem;
+      em {
+        font-family: $headerCarnetAuthor;
+      }
+    }
+  }
+
+  &__call-to-scroll {
+    grid-area: calltoscroll;
+    -ms-grid-column-align: center;
+justify-self: center;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    cursor: pointer;
+
+    &--text {
+
+    }
+    &--divider {
+      border: 0.5px solid $headerFontColor;
+      width: 0;
+      height: 33%;
+    }
+  }
+
+
+
+  &__menu {
+
+    grid-area: menu;
+    /***** LAYOUT *****/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -ms-grid-row-align: start;
+align-self: start;
+
+
+    &--hamburger {
+
+    }
+    &--calendar {
+      cursor: pointer;      
+      z-index: $zMenu;
+      opacity: 0;
+
+      > svg {
+        height: $hamWidth1575;
+        width: $hamWidth1575;
+        .to-fill {
+          fill: $calendarColorForMenu;
+        }
+      }
+    }
+
+    &--mobile-background {
+      background-color: $headerMenuBgMobile;
+      z-index: $zHeaderMobileBackground;
+      position: absolute;
+    }
+
+    &--items {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+    }
+
+    &--item {
+      text-align: center;
+      height: 100%;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      > * {
+        // width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        flex-grow: 0;
+      }
+
+    }
+  }
+}

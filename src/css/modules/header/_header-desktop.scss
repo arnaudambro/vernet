@@ -1,0 +1,300 @@
+@media all and (min-width: $desktop-break) {
+
+  .header {
+    min-height: 800px;
+    &__content {
+      font-size: 0.75rem;
+    }
+
+    &__back {
+      // background-image: url('../img/home/hero@2x.png');
+    }
+
+    &__mask {
+    }
+
+    &__top {
+
+      &--company {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+
+        width: 100px;
+        margin-left: 1vw;
+        justify-content: space-between;
+        background-color: transparent;
+        align-items: center;
+      }
+      &--company-logo, &--company-logo:after {
+        background-image: url('../img/logos/b-signature@2x.png');
+      }
+      &--company-menu {
+        display: block;
+      }
+
+
+      &--hotel-logo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 4;
+
+        grid-area: hotellogo1;
+        position: relative;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        background-image: url('../img/logos/vernet-logo-full-white@2x.png');
+        &.hotel-logo-half { display: none }
+        &.hotel-logo-full { display: block }
+      }
+
+      &--infos {
+        position: relative;
+
+        -ms-grid-row: 1;
+        -ms-grid-column: 6;
+        // -ms-grid-column-span: 5;
+
+        -ms-grid-column-align: end;
+        justify-self: end;
+        align-items: center;
+        width: 300px;
+        margin-right: 1vw;
+        background-color: transparent;
+        justify-content: end;
+
+        &-phone, &-local-time {
+          display: flex;
+
+          justify-content: center;
+          flex-wrap: nowrap;
+        }
+
+        &-language {
+
+          .languages {
+            top: 20px;
+            right: -10px;
+
+          }
+        }
+
+
+        &-phone > .span {
+        }
+        > div > :first-child {
+          margin-right: 5px;
+        }
+        > :not(:last-child) {
+          margin-right: 20px;
+        }
+        .fa-phone {
+        }
+        .fa-phone, .fa-clock {
+        }
+
+      }
+    }
+    
+
+    &__slogan {
+      -ms-grid-row: 3;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
+      -ms-grid-row-align: center;
+      align-self: center;
+      position: relative;
+      > .span {
+        font-size: 2.8rem;
+        line-height: 1.25em;
+      }
+      > .second-line {
+        white-space: nowrap;
+      }
+
+    }
+
+    &__carnet {
+      -ms-grid-row: 5;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
+
+      display: block;
+      position: relative;
+
+      .span {
+      }
+      :first-child {
+      }
+      :last-child {
+        em {
+        }
+      }
+    }
+
+    &__call-to-scroll {
+      -ms-grid-row: 6;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
+
+      display: flex;
+      position: relative;
+
+      &--text {
+      }
+      &--divider {
+        margin-top: 15%;
+      }
+    }
+
+
+
+    &__menu {
+
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 7;
+
+      z-index: $zMenuDesktop;
+      // z-index: 100000;
+      position: relative;
+      color: white;
+
+      -ms-grid-column-align: center;
+      justify-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+      align-content: center;
+      
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      
+      transition: transform $reservationAppearDuration cubic-bezier(0.25,0.8,0.5,1);
+      opacity: 1;
+      background: none;
+      pointer-events: auto;
+
+      &.fixed-out-of-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $menuHeightDesktop;
+        visibility: hidden;
+        transform: translate3d(0, 0, 0);
+
+
+        &.active {
+          visibility: visible;
+        }
+
+        &.translated {
+          transform: translate3d(0, $stickyMenuDesktopTop, 0);
+        }
+      }
+
+
+
+      &.fixed {
+        visibility: hidden;
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, $stickyMenuDesktopTop, 0);
+        height: $menuHeightDesktop; */
+      }
+
+      &--hamburger {
+      }
+
+      &--calendar {
+      }
+
+      &--mobile-background {
+      }
+      &--desktop-background-in {
+        &-header {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          pointer-events: none;
+          // transition: height 0.5s linear;
+          background: $headerMenuBgDesktop;
+        }
+        &-content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          pointer-events: none;
+          // transition: height 0.5s linear;
+          background: $headerMenuBackupBg;
+          box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+        }
+      }
+
+      &--items {
+        opacity: 1;
+        background: none;
+        z-index: $zHeaderContent;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: $desktopMaxBodyWidth;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 0;
+        padding-bottom: 0;
+
+        font-size: 0.75rem;
+      }
+      &--item {
+        min-width: 0;
+        position: relative;
+        color: white;
+        &:first-child {
+          padding-top: 0;
+          border-top: none;
+        }
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        z-index: $zHeaderContent;
+        flex-grow: 1;
+
+        &.before {
+          &:hover {
+            color: $headerMenuHoverColorBefore;
+            background: $headerMenuHoverBgColorBefore;
+            opacity: 0.8;
+          }
+        }
+
+        &.after {
+          &:hover {
+            color: $headerMenuHoverColorAfter;
+            background: $headerMenuHoverBgColorAfter;
+            opacity: 0.8;
+          }
+        }
+
+      }
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+.content {
+
+  grid-area: content;
+  
+  max-width: 100%;
+  @media all and (min-width: $desktop-break) { 
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+
+
+    background-image: url('../img/background-v-double.png');
+    background-repeat: repeat-y;
+    background-position: center top;
+  }
+}
+

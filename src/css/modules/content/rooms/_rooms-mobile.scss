@@ -1,0 +1,32 @@
+.rooms {
+
+  &__background {
+      // background-image: url('../img/rooms/hero.png');
+  }
+
+
+  &__introduction {
+    &--descpicture {
+      // background-image: url('../img/rooms/introduction.png');
+      background-position: center bottom;
+    }
+    &--headline {
+
+    }
+    &--description {
+      width: 90%;
+      
+    }
+  } 
+
+  &__note {
+    &--headline {
+      max-width: 85%;
+    }
+    &--text {
+    }
+    &--button {
+    }
+  }
+
+}

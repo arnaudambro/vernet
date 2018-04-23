@@ -1,0 +1,83 @@
+@media all and (min-width: $mobile-break) {
+
+  .slideshow-menu {
+
+    &-container {
+
+    }
+
+    &__headline {
+      text-align: center;
+    }
+    &__tagline {
+      text-align: start;
+      margin-bottom: 10px;
+      line-height: 1.3125rem;
+    }
+    &__arrow--container {
+      &-right {
+      }
+      &-left {
+      }
+      > .arrow > svg {
+      }
+    }
+    &__content {
+
+      &--container {
+      }
+
+    }
+    &__card {
+      align-items: flex-start;
+
+      margin-right: $picMarginRight;
+
+
+      &--card1 > .slideshow-menu__card--picture { 
+        /* height: calc($slideshowMenuPictureHeight * 1.9); */
+        height: $slideshowMenuPictureHeightMobile19;
+      }
+      &--card2 > .slideshow-menu__card--picture { 
+        /* height: calc($slideshowMenuPictureHeight * 1); */
+        height: $slideshowMenuPictureHeightMobile;
+      }
+      &--card3 > .slideshow-menu__card--picture { 
+        /* height: calc($slideshowMenuPictureHeight * 1.4); */
+        height: $slideshowMenuPictureHeightMobile14;
+      }
+      &--card4 > .slideshow-menu__card--picture { 
+        /* height: calc($slideshowMenuPictureHeight * 1.9); */
+        height: $slideshowMenuPictureHeightMobile19;
+      }
+      &--card5 > .slideshow-menu__card--picture { 
+        /* height: calc($slideshowMenuPictureHeight * 1); */
+        height: $slideshowMenuPictureHeightMobile;
+      }
+      &--card6 > .slideshow-menu__card--picture { 
+        /* height: calc($slideshowMenuPictureHeight * 1.4); */
+        height: $slideshowMenuPictureHeightMobile14;
+      }
+
+      &--picture {
+      }
+
+      &--headline {
+        font-size: 1.375rem;
+        text-align: start;
+      }
+
+      &--description {
+        display: static;
+      }
+    }
+
+    &__button {
+      &--book {
+      }
+      &--offers {
+      }
+    }
+  }
+
+}

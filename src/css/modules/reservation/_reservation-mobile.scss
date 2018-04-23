@@ -1,0 +1,281 @@
+@media all and (max-width: $desktop-break) {
+  .button__book--module {
+    grid-area: reservation;
+    z-index: $zHeaderContent;
+    -ms-grid-column-align: center;
+justify-self: center;
+    flex-grow: 0;
+  }
+  .header__reservation {
+    &__outer-container {
+      z-index: $zindexReservationOuterContainer;
+      position: fixed;
+      top: $menuBgHeightMobile; /*to show the header while showing the reservation module*/
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+      opacity: 0;
+      transition: opacity $reservationAppearDuration ease-in-out;
+      pointer-events: none;
+
+      /*OPAQUE BACKGROUND*/
+      background: $headerMenuBgMobile;
+      background: -webkit-linear-gradient(to bottom, $headerMenuBgGradientStart, $headerMenuBgMobile);
+      background: linear-gradient(to bottom, $headerMenuBgGradientStart, $headerMenuBgMobile); 
+
+      /*TRANSLUCIDE BACKGROUND*/
+      background: $headerMenuBgMobile;
+      background: -webkit-linear-gradient(to bottom, $headerReservationBgGradientStart, $headerReservationBgGradientFinish);
+      background: linear-gradient(to bottom, $headerReservationBgGradientStart, $headerReservationBgGradientFinish); 
+
+
+
+      &.active {
+        pointer-events: auto;
+        opacity: 1;
+        .ui-container {
+
+        }
+      }
+    }
+    &__inner-container {
+      position: absolute;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+    }
+    &__inner-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*height: calc(100vh - $menuBgHeightMobile); //to show the header while showing the reservation module, and scroll inside the module */
+    /*height: 100vh;*/
+    width: 100vw;
+
+
+
+    .ui-container {
+      /* display: -ms-grid;
+display: grid;*/
+      /* transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);*/
+      /* grid-template-columns: 1fr $inputCheckWidthMobile 1fr;*/
+      /* grid-template-rows: repeat(6, $reservationLabelHeight $inputHeight 40px);*/
+      /* grid-template-areas: */
+      /* 'blank0                 labelcheckin                         blank1'*/
+      /* 'blank0                 inputcheckin                         blank1'*/
+      /* 'blank0                 blankcheckin                         blank1'*/
+
+      /* 'blank0                 labelcheckout                        blank1'*/
+      /* 'blank0                 inputcheckout                        blank1'*/
+      /* 'blank0                 blankcheckout                        blank1'*/
+
+      /* 'blank0                 labelroom                            blank1'*/
+      /* 'blank0                 inputroom                            blank1'*/
+      /* 'blank0                 blankroom                            blank1'*/
+
+      /* 'blank0                 labeladults                          blank1'*/
+      /* 'blank0                 inputadults                          blank1'*/
+      /* 'blank0                 blankadults                          blank1'*/
+
+      /* 'blank0                 labelchildren                        blank1'*/
+      /* 'blank0                 inputchildren                        blank1'*/
+      /* 'blank0                 blankchildren                        blank1'*/
+
+      /* 'blank0                 blank                                 blank1'*/
+      /* 'blank0                 button                                blank1'*/
+      /* 'blank0                 blank-button                          blank1';*/
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      
+      width: 100%;
+      /* min-height: calc(100vh - $menuBgHeightMobile); // to show the header while showing the reservation module */
+      min-height: calc(100vh - 105px); // to show the header while showing the reservation module
+      min-height: 100vh; 
+      // height: 100%;
+
+
+      &.checkin-selected {
+        /*   grid-template-rows: */
+        /*     $reservationLabelHeight */
+        /*     $datePickerContainerHeightDesktop */
+        /*     40px */
+        /*     repeat(5, $reservationLabelHeight $inputHeight 40px);*/
+        /* }*/
+        .input__checkin {
+          margin-bottom: $datePickerContainerHeightDesktop;
+          // .angle-down-div {
+          //   transform: rotate(180deg);
+          //   transform-origin: center center;
+          // }
+        }
+      }
+      &.checkout-selected {
+        /* grid-template-rows: */
+        /*   repeat(1, $reservationLabelHeight $inputHeight 40px)*/
+        /*   $reservationLabelHeight */
+        /*   $datePickerContainerHeightDesktop*/
+        /*   40px */
+        /*   repeat(4, $reservationLabelHeight $inputHeight 40px);*/
+        .input__checkout {
+          margin-bottom: $datePickerContainerHeightDesktop;
+          // .angle-down-div {
+          //   transform: rotate(180deg);
+          //   transform-origin: center center;
+          // }
+        }
+      }
+      &.room-selected {
+        /* grid-template-rows: */
+        /*   repeat(2, $reservationLabelHeight $inputHeight 40px)*/
+        /*   $reservationLabelHeight */
+        /*   $inputHeightMultiply2*/
+        /*   40px */
+        /*   repeat(3, $reservationLabelHeight $inputHeight 40px);*/
+        .input__room {
+          margin-bottom: $inputHeightMultiply2;
+          // .angle-down-div {
+          //   transform: rotate(180deg);
+          //   transform-origin: center center;
+          // }
+        }
+      }
+      &.adults-selected {
+        /* grid-template-rows: */
+        /*   repeat(3, $reservationLabelHeight $inputHeight 40px)*/
+        /*   $reservationLabelHeight */
+        /*   $inputHeightMultiply2*/
+        /*   40px */
+        /*   repeat(2, $reservationLabelHeight $inputHeight 40px);*/
+        .input__adults {
+          margin-bottom: $inputHeightMultiply2;
+          // .angle-down-div {
+          //   transform: rotate(180deg);
+          //   transform-origin: center center;
+          // }
+        }
+      }
+      &.children-selected {
+        /* grid-template-rows: */
+        /*   repeat(4, $reservationLabelHeight $inputHeight 40px)*/
+        /*   $reservationLabelHeight */
+        /*   $inputHeightMultiply2*/
+        /*   40px */
+        /*   repeat(1, $reservationLabelHeight $inputHeight 40px);*/
+        .input__children {
+          margin-bottom: $inputHeightMultiply2;
+          // .angle-down-div {
+          //   transform: rotate(180deg);
+          //   transform-origin: center center;
+          // }
+        }
+      }
+    }
+    
+    .label {
+      width: $inputCheckWidthMobile;
+      pointer-events: none;
+      height: $reservationLabelHeight;
+      margin-bottom: $reservationGridRowGap;
+
+      &__checkin {
+        grid-area: labelcheckin;
+        order: 1;
+      }
+      &__checkout {
+        grid-area: labelcheckout;
+        order: 3;
+      }
+      &__room {
+        grid-area: labelroom;
+        order: 5;
+      }
+      &__adults {
+        grid-area: labeladults;
+        order: 7;
+      }
+      &__children {
+        grid-area: labelchildren;
+        order: 9;
+      }
+    }
+
+    .angle-down-div {
+      pointer-events: none;
+      transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .input {
+      width: $inputCheckWidthMobile;
+      border: none;
+      min-height: $inputHeight;
+      margin-bottom: $inputHeight;
+      transition: margin $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+
+      &__checkin {
+        grid-area: inputcheckin;
+        order: 2;
+      }      
+      &__checkout {
+        grid-area: inputcheckout;
+        order: 4;
+      }
+      &__room {
+        grid-area: inputroom;
+        /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
+        padding-right: calc((45px - 0.6875rem) / 2);
+        order: 6;
+      }
+      &__adults {
+        grid-area: inputadults;
+        /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
+        padding-right: calc((45px - 0.6875rem) / 2);
+        order: 8;
+      }
+      &__children {
+        grid-area: inputchildren;
+        /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
+        padding-right: calc((45px - 0.6875rem) / 2);
+        order: 10;
+      }
+    }
+
+    .menu-hamburger {
+      margin-top: 30px;
+      margin-bottom: 75px;
+    }
+
+
+    .button__book {
+      order: 11;
+      flex-shrink: 0;
+      &--margin-bottom {
+        order: 12;
+        flex-shrink: 0;
+      }
+    }
+    .headline-reservation {
+      display: none;
+      > .span {
+
+        &:first-child {
+
+        }
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,176 @@
+.check-bar-restaurant {
+  .no-bar-restaurant {
+    display: none;
+  }
+}
+
+
+.bar-restaurant {
+
+  &__header--reservation-hotel {
+    display: none;
+  }
+  &__header--reservation-restaurant {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    grid-area: reservation;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > * {
+      flex-shrink: 0;
+    }
+    > :first-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  &__head {
+    &--pic {
+      display: none;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  } 
+
+  &__restaurant {
+    
+    &--picture {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: $zPicOnTopOfTheOther;
+
+    }
+    &--headline {
+    }
+    &--tagline {
+
+    }
+    &--description {
+      font-family: $textContent;
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+    &--divider {
+    }
+    &--controls {
+    }
+    &--comment {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      &-background {
+
+      }
+      &-content {
+        font-family: $textContent2;
+        font-style: italic;
+      }
+      &-author {
+        font-family: $textContent;
+        font-size: 0.875rem;
+
+      }
+    }
+
+    &--buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+  } 
+
+
+  &__note {
+    background-color: $offersBgColor;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--headline {
+      width: $tabBodyWidth;
+      max-width: 85%;
+    }
+    &--tagline {
+      max-width: 85%;
+      width: $tabBodyWidth;
+      font-family: $textContent;
+      font-size: 1.375rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--text {
+      max-width: 85%;
+      width: $tabBodyWidth;
+      font-family: $textContent;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+    &--button {
+      max-width: 85%;
+      flex-grow: 0;
+    }
+  }
+
+
+  &__bar {
+    
+    &--picture {
+      grid-area: picture;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+
+    }
+    &--headline {
+    
+    }
+    &--tagline {
+ 
+    }
+    &--description {
+      display: flex;
+      
+      justify-content: center;
+      align-items: center;
+      
+      font-family: $textContent;
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+    }
+    &--buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &--divider1 {
+
+    }
+
+    &--controls {
+
+    }
+  } 
+
+
+
+}

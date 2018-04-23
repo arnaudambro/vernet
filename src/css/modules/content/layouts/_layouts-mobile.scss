@@ -1,0 +1,27 @@
+@media all and (max-width: $mobile-break) {
+  .mobile-fluid {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .grid-layout-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-layout-5-tall {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //align-content: center;
+
+  }
+
+}

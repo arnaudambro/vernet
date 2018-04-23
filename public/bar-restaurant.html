@@ -1,0 +1,915 @@
+
+
+<!DOCTYPE html>
+<html lang="fr_FR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:300,400,700" rel="stylesheet">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+  <title>Hotel Vernet | Bar et restaurant</title>
+  <!-- <link href="/vernet/static/css/main.css" rel="stylesheet"> -->
+</head>
+<body>
+  <div class="loading__background">
+    <div title="Vernet - Hôtel 5 étoiles" id="hotel-logo-full-loading" class="loading__content"></div>
+  </div>
+  <div class="wrapper__outer-container check-bar-restaurant">
+    <form action="submit" style='display: none' id="booking-form">
+      <input type="text" readonly name="checkin-input" form="booking-form">
+      <input type="text" name="checkout-input" form="booking-form">
+      <input type="text" name="rooms-input" id="rooms-input" form="booking-form" value="1">
+      <input type="text" name="adults-input" id="adults-input" form="booking-form" value="2">
+      <input type="text" name="children-input" id="children-input" form="booking-form" value="0">
+      <button type="submit" form="booking-form"></button>
+    </form>
+
+    <!-- B-SIGNATURE HOTELS MENU -->
+    <div class="b-signature no-mobile no-tab">
+
+      <div class="b-signature__close-button">
+        <span class="span b-signature__close-button--left-cross b-signature__close-button--cross"></span>
+        <span class="span b-signature__close-button--right-cross b-signature__close-button--cross"></span>
+      </div>
+      <div class="b-signature__headline headline">
+        <span class="span">Les Hôtels du Groupe B Signature</span>
+      </div>
+      <ul class="b-signature__hotels">
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-bel-ami"></a></li>
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-sers"></a></li>
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-edouard-7"></a></li>
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-vernet"></a></li>
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-montalembert"></a></li>
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-bretesche"></a></li>
+        <li><a href="#" class="b-signature__hotels--hotel b-signature__hotels--hotel-manapany"></a></li>
+      </ul>
+      <ul class="b-signature__labels">
+        <li><a href="#"  class="b-signature__labels--label b-signature__labels--label-world-hotels-deluxe"></a></li>
+        <li><a href="#"  class="b-signature__labels--label b-signature__labels--label-world-hotels-first-class"></a></li>
+        <li><a href="#"  class="b-signature__labels--label b-signature__labels--label-design-hotels"></a></li>
+        <li><a href="#"  class="b-signature__labels--label b-signature__labels--label-preferred"></a></li>
+        <li><a href="#"  class="b-signature__labels--label b-signature__labels--label-relais-chateaux"></a></li>
+      </ul>
+    </div>
+
+    <div class="wrapper__inner-container improve-scroll">
+      <div class="wrapper">
+        <!----                                                                ----! 
+              ----                                                        ---- 
+                  ----                                                ---- 
+                      ----                                        ---- 
+                          ----                                ---- 
+                              ----                        ---- 
+                                  ----                ---- 
+                                      ---- HEADER ---- 
+                                  ----                ----
+                              ----                        ----
+                          ----                                ----
+                      ----                                        ----
+                  ----                                                ----
+              ----                                                        ----
+        <-----                                                                ---->
+
+        <!-- BACKGROUNDS -->
+        <div class="header header__back bar-restaurant__background img__container img__container--hero">
+            <img src="%PUBLIC_URL%/img/bar-restaurant/hero.png" alt="paté en croûte au restaurant du Vernet" class="img__img">
+        </div>    
+        <div class="header header__mask"></div>
+        
+        <div class="header header__mask"></div>
+        <!-- B-SIGNATURE + HAMBURGER -->
+        <div class="header__content header__top header__top--company">
+          <div title="B-signature - Hotels & Resorts" class="header__top--company-logo"></div>
+          <div class="header__top--company-menu menu-hamburger menu-hamburger-19-14 no-mobile no-tab">
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+          </div>
+        </div>
+
+
+        <!-- HOTEL LOGO - FULL (DESKTOP) -->
+        <a href="/vernet/" title="Vernet - Hôtel 5 étoiles" class="header__content header__top header__top--hotel-logo hotel-logo-full"></a>
+
+        <!-- INFOS  (TELEPHONE, TIME, LANGUAGE) -->
+        <div class="header__content header__top header__top--infos">
+          <div class="header__top--infos-phone no-mobile no-tab">
+            <i class="icon fas fa-phone"></i>
+            <span class="span">tel 33 (0)1 44 31 98 00</span>
+          </div>
+          <div class="header__top--infos-local-time no-mobile no-tab" style='display: none;'>
+            <i class="icon far fa-clock"></i>
+            <span class="span local-time"></span>
+          </div>
+          <div class="header__top--infos-language">
+            <span class="span language">français</span>
+            <div class="angle-down-div languages__toggle-button"><i class="icon fas fa-angle-down"></i></div>
+            <ul class="languages">
+              <li class="languages__french active"><a href="/vernet/">français</a></li>
+              <li class="languages__english"><a href="/vernet/en/">english</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SLOGAN -->
+        <h2 class="header__content header__slogan">
+           <span class="span first-line">Bar et restaurant « le V »</span>
+           <span class="span second-line">Le plaisir des sens</span>
+         </h2>
+
+        <!-- RESERVATION -->
+        <!-- FULL VERSION DESKTOP -->
+        <div class="header__reservation__outer-container bar-restaurant__header--reservation-hotel">
+          <div class="header__reservation__inner-container">
+            <div class="header__content header__reservation">
+              <div class="ui-container__background-on-scroll no-mobile no-tab">
+                <a href="/vernet/" title="Vernet - Hôtel 5 étoiles" class="hotel-logo-half"></a>
+              </div>
+              <!-- <div class="ui-container__backup no-mobile no-tab"></div> -->
+              <div class="ui-container header__content">
+                <div class="active menu-hamburger menu-hamburger-1575-21375 no-desktop">
+                  <span class="span"></span>
+                  <span class="span"></span>
+                  <span class="span"></span>
+                  <span class="span"></span>
+                </div>
+                <div class="label label__checkin"><span class="span">arrivée</span></div>
+                <div class="label label__checkout"><span class="span">départ</span></div>
+                <div class="label label__room no-mobile no-tab"><span class="span">chambres / adultes / enfants</span></div>
+                <div class="label label__room no-desktop"><span class="span">chambres</span></div>
+                <div class="label label__adults no-desktop"><span class="span">adultes</span></div>
+                <div class="label label__children no-desktop"><span class="span">enfants</span></div>
+                <div class="input input__check input__checkin">
+                  <i class="input__calendar calendar-for-datepicker calendar-checkin"></i>
+                  <input class="input__content" type="text" readonly>
+                  <div class="checkin-datepicker__container datepicker__container">
+                    <div class="datepicker__date">
+                      <span class="span weekday"></span>
+                      <span class="span day-month"></span>
+                      <span class="span year"></span>
+                    </div>
+                    <div class="datepicker__buttons">
+                      <button class="datepicker__button datepicker__button--close">fermer</button>
+                      <button class="datepicker__button datepicker__button--validate">OK</button>
+                    </div>
+                    <div class="checkin-datepicker datepicker"></div>
+                  </div>
+                </div>
+                <div class="input input__check input__checkout">
+                  <i class="input__calendar calendar-for-datepicker calendar-checkout"></i>
+                  <input class="input__content" type="text" readonly>
+                  <div class="checkout-datepicker__container datepicker__container">
+                    <div class="datepicker__date">
+                      <span class="span weekday"></span>
+                      <span class="span day-month"></span>
+                      <span class="span year"></span>
+                    </div>
+                    <div class="datepicker__buttons">
+                      <button class="datepicker__button datepicker__button--close">fermer</button>
+                      <button class="datepicker__button datepicker__button--validate">OK</button>
+                    </div>
+                    <div class="checkout-datepicker datepicker"></div>
+                  </div>
+                </div>
+                <div class="input input__room-adults-children input-select no-mobile no-tab">
+                  <input class="input__content" type="text" readonly name="room-adults-children-input">
+                  <div class="angle-down-div input__room-adults-children--button"><i class="icon fas fa-angle-down"></i></div>
+                  <ul class="select__group select__room-adults-children">
+                    <li class="select select__room">
+                      <div class="fa-minus"><i class="icon fas fa-minus"></i></div>
+                      <span class="select__room--number select--number"></span>
+                      <div class="fa-plus"><i class="icon fas fa-plus"></i></div>
+                      <!-- <div class="angle-down-div"><i class="icon fas fa-angle-down"></i></div> -->
+                      <span class="select__room--text select--text">chambres</span>
+                      <i class="icon bed"></i>
+                    </li>
+                    <li class="select select__adults">
+                      <div class="fa-minus"><i class="icon fas fa-minus"></i></div>
+                      <span class="select__adults--number select--number"></span>
+                      <div class="fa-plus"><i class="icon fas fa-plus"></i></div>
+                      <!-- <div class="angle-down-div"><i class="icon fas fa-angle-down"></i></div> -->
+                      <span class="select__adults--text select--text">adultes</span>
+                      <i class="icon person"></i>
+                    </li>
+                    <li class="select select__children">
+                      <div class="fa-minus"><i class="icon fas fa-minus"></i></div>
+                      <span class="select__children--number select--number"></span>
+                      <div class="fa-plus"><i class="icon fas fa-plus"></i></div>
+                      <!-- <div class="angle-down-div"><i class="icon fas fa-angle-down"></i></div> -->
+                      <span class="select__children--text select--text">enfants</span>
+                      <i class="icon child-head"></i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="input input-select input__room no-desktop">
+                  <input class="input__content" type="text" readonly name="room-input">
+                  <div class="angle-down-div input__room--button"><i class="icon fas fa-angle-down"></i></div>
+                  <div class="select__group">
+                    <div class="select select__room">
+                      <div class="fa-minus"><i class="icon fas fa-minus"></i></div>
+                      <span class="select__room--number select--number"></span>
+                      <div class="fa-plus"><i class="icon fas fa-plus"></i></div>
+                      <!-- <div class="angle-down-div"><i class="icon fas fa-angle-down"></i></div> -->
+                      <span class="select__room--text select--text">chambres</span>
+                      <i class="icon bed"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="input input-select input__adults no-desktop">
+                  <input class="input__content" type="text" readonly name="adults-input">
+                  <div class="angle-down-div  input__adults--button"><i class="icon fas fa-angle-down"></i></div>
+                  <div class="select__group">
+                    <div class="select select__adults">
+                      <div class="fa-minus"><i class="icon fas fa-minus"></i></div>
+                      <span class="select__adults--number select--number"></span>
+                      <div class="fa-plus"><i class="icon fas fa-plus"></i></div>
+                      <!-- <div class="angle-down-div"><i class="icon fas fa-angle-down"></i></div> -->
+                      <span class="select__adults--text select--text">adultes</span>
+                      <i class="icon person"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="input input-select input__children no-desktop">
+                  <input class="input__content" type="text" readonly name="children-input">
+                  <div class="angle-down-div input__children--button"><i class="icon fas fa-angle-down"></i></div>
+                  <div class="select__group">
+                    <div class="select select__children">
+                      <div class="fa-minus"><i class="icon fas fa-minus"></i></div>
+                      <span class="select__children--number select--number"></span>
+                      <div class="fa-plus"><i class="icon fas fa-plus"></i></div>
+                      <!-- <div class="angle-down-div"><i class="icon fas fa-angle-down"></i></div> -->
+                      <span class="select__children--text select--text">enfants</span>
+                      <i class="icon child-head"></i>
+                    </div>
+                  </div>
+                </div>
+                <button form="booking-form" type="submit" class="button button__book" name="book-submit">réserver</button>
+                <div class="divider mobile-divider-75 tab-divider-75 no-desktop button__book--margin-bottom"></div>
+              </div>
+              <div class="headline-reservation">
+                <span class="span">en réservant directement sur notre site : </span>
+                <div class="avantages">
+                  <span class="span">1. wifi haut débit gratuit</span>
+                  <span class="span">2. petit-déjeuner offert</span>
+                  <span class="span">3. arrivée anticipée</span>
+                  <span class="span">4. départ tardif</span>
+                  <span class="span">5. cadeau de bienvenue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="button button__book--module no-desktop no-seminars no-bar-restaurant" name="booking-module">réserver</button>
+        <div class="header__content bar-restaurant__header--reservation-restaurant no-rooms no-gallery no-seminars no-home">
+            <a href="#" class="button button__book button__book--restaurant" name="book restaurant">réserver une table</a>
+            <a href="#" class="button button__book button__book--menu" name="menu">voir la carte</a>
+        </div>
+
+      <!-- MENU -->
+
+      <nav class="header__content header__menu">
+        <div class="header__content header__menu--container">
+          <div class="header__menu--mobile-background no-desktop"></div>
+          <!-- HOTEL LOGO - FULL (DESKTOP) AND HALF(MOBILE + TAB) -->
+          <a href="/vernet/" title="Vernet - Hôtel 5 étoiles" class="header__content header__top header__top--hotel-logo hotel-logo-half no-desktop"></a>
+
+          <div class="header__menu--desktop-background-in-header no-mobile no-tab"></div>
+          <div class="header__menu--desktop-background-in-content no-mobile no-tab"></div>
+          <ul class="header__menu--items">
+            <!-- <li class="header__menu--item"><a href="/vernet/home">hôtels &amp; alentours</a></li> -->
+            <li class="header__menu--item"><a href="/vernet/rooms">chambres &amp; suites</a></li>
+            <!-- <li class="header__menu--item"><a href="/vernet/offers">offres</a></li> -->
+            <!-- <li class="header__menu--item"><a href="/vernet/services">services sur mesure</a></li> -->
+            <li class="header__menu--item"><a href="/vernet/bar-restaurant">bar &amp; restaurant</a></li>
+            <!-- <li class="header__menu--item"><a href="/vernet/events">évènements</a></li> -->
+            <li class="header__menu--item"><a href="/vernet/seminars">séminaires</a></li>
+            <li class="header__menu--item"><a href="/vernet/gallery">galerie</a></li>
+            <!-- <li class="header__menu--item"><a href="/vernet/contact">contact</a></li> -->
+          </ul>
+          <!-- hamburger -->
+          <div class="header__menu--hamburger menu-hamburger menu-hamburger-1575-21375 no-desktop">
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+          </div>
+          <!-- calendar -->
+          <div class="header__content header__menu--calendar calendar-for-menu no-desktop no-seminars no-bar-restaurant"></div>
+        </div>
+
+      </nav>
+
+
+        <!-- CALL TO SCROLL -->
+        <div class="header__content header__call-to-scroll no-mobile no-tab">
+          <span class="span header__call-to-scroll--text">découvrir</span>
+          <div class="header__call-to-scroll--divider"></div>
+        </div>
+
+
+
+        <!----                                                                ----! 
+              ----                                                        ---- 
+                  ----                                                ---- 
+                      ----                                        ---- 
+                          ----                                ---- 
+                              ----                        ---- 
+                                  ----                ---- 
+                                      ---- CONTENT ---- 
+                                  ----                ----
+                              ----                        ----
+                          ----                                ----
+                      ----                                        ----
+                  ----                                                ----
+              ----                                                        ----
+        <-----                                                                ---->
+
+        
+        
+        <div class="content bar-restaurant">
+
+          <div class="divider mobile-divider-40 tab-divider-45 desktop-divider-80"></div>
+          
+              <!---- 
+                    ---- 
+                        ---- 
+                            ---- 
+                                ---- 
+                                    ---- 
+                                        ---- 
+                                            ---- HEAD ---- 
+                                        ---- 
+                                    ---- 
+                                ---- 
+                            ---- 
+                        ---- 
+                    ---- 
+              ---->
+          
+          <div class="mobile-fluid bar-restaurant__head">
+            <div class="bar-restaurant__head--text">
+              <blockquote class="bar-restaurant__head--blockquote headline">
+                <span class="span">Le V, restaurant&nbsp;</span>
+                <span class="span">de l’hôtel Vernet</span>
+              </blockquote>
+              <div class="divider mobile-divider-30 tab-divider-35 no-desktop"></div>
+              <div class="bar-restaurant__head--tagline tagline">
+                <span class="span">Surprendre, étonner, émerveiller...&nbsp;</span>
+                <span class="span"></span>
+              </div>
+            </div>
+            <div class="bar-restaurant__head--pic no-mobile no-tab"></div>
+            <div class="bar-restaurant__head--share share no-mobile no-tab">
+              <span class="bar-restaurant__head--share-title span">Partager</span>
+              <div class="bar-restaurant__head--share-icons share__icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a class="last-logo" href="#"><i class="fab fa-pinterest-p"></i></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider mobile-divider-35 tab-divider-70 desktop-divider-75"></div>
+
+              <!---- 
+                    ---- 
+                        ---- 
+                            ---- 
+                                ---- 
+                                    ---- 
+                                        ---- 
+                                            ---- RESTAURANT ---- 
+                                        ---- 
+                                    ---- 
+                                ---- 
+                            ---- 
+                        ---- 
+                    ---- 
+               ----> 
+          
+          <div class="mobile-fluid bar-restaurant__restaurant grid-layout-4">
+            <div class="bar-restaurant__restaurant--picture hero hero--mobile slideshow-grid__container restaurant floating_div__parent--parent">
+              <img src="%PUBLIC_URL%/img/bar-restaurant/intro.png" alt="" class="img__img">
+              <a href="#" class="button no-desktop button__book button__book--restaurant" name="book restaurant">réserver une table</a>
+              <div class="bar-restaurant__restaurant--picture--content slideshow-grid__content no-mobile no-tab floating_div__parent">
+                <div class="bar-restaurant__restaurant--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/intro.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__restaurant--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/intro.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__restaurant--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/intro.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__restaurant--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/intro.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__restaurant--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/intro.png" alt="" class="img__img">
+                </div>
+              </div>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-60 no-desktop"></div>
+            <div class="bar-restaurant__restaurant--headline headline">
+              <span class="span">Par le chef Exécutif</span>
+              <span class="span">Richard Robe</span>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-60 no-desktop"></div>
+            <div class="bar-restaurant__restaurant--tagline tagline">
+              <span class="span">Dans l’assiette, seules la simplicité</span>
+              <span class="span">et la justesse du goût ont droit de cité…</span>
+            </div>
+            <!-- <div class="divider mobile-divider-30 tab-divider-60 no-desktop"></div> -->
+            <div class="bar-restaurant__restaurant--comment-background no-mobile no-tab"></div>
+            <div class="bar-restaurant__restaurant--comment no-mobile no-tab">
+              <p class="bar-restaurant__restaurant--comment-content">« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus mauris, vestibulum vel fermentum non, faucibus vulputate sem. Sed nunc mauris, laoreet non elementum vel, vestibulum ac dui. »</p>
+              <div class="divider mobile-divider-15 tab-divider-35 no-desktop"></div>
+              <span class="no-mobile no-tab span bar-restaurant__restaurant--comment-author">François MARTIN, critique gastronomique au Figaro</span>
+              <span class="no-desktop span bar-restaurant__restaurant--comment-author">François MARTIN,</span>
+              <span class="no-desktop span bar-restaurant__restaurant--comment-author">critique gastronomique au Figaro</span>
+            </div>
+            <!-- <div class="divider mobile-divider-30 tab-divider-60 no-desktop"></div> -->
+            <div class="bar-restaurant__restaurant--divider no-mobile no-tab"></div>
+            <div class="bar-restaurant__restaurant--controls slideshow-grid__controls no-mobile no-tab">
+              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-left arrow--container restaurant" data-slideshow="restaurant">
+                <div class="arrow arrow--left"></div>
+              </div>
+              <div class="slideshow-grid__controls--slide restaurant" data-slideshow="restaurant">
+                <span class='span current'>1</span>
+                <span class='span span-divider'>/</span>
+                <span class='span total'>5</span>
+              </div>
+              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-right arrow--container restaurant" data-slideshow="restaurant">
+                <div class="arrow arrow--right"></div>
+              </div>
+            </div>
+            <div class="bar-restaurant__restaurant--description bar-restaurant__restaurant--description-first no-mobile no-tab">
+              <p class="first-part no-mobile no-tab">Sous la monumentale verrière réalisée par le maître verrier Charles Champigneulle, sur une armature signée Gustave Eiffel, le restaurant de l’hôtel Vernet est voué au plaisir des sens. La cuisine est accessible au regard grâce à une baie vitrée, créant un mouvement discret et ininterrompu. Le tout est animé par des œuvres d’artistes contemporains, placé ça et là sur les murs comme dans la demeure d’un collectionneur Parisien.</p>
+            </div>
+            <div class="bar-restaurant__restaurant--description bar-restaurant__restaurant--description-second no-mobile no-tab">
+              <p class="second-part no-mobile no-tab">Les mets confectionnés par le chef Exécutif Richard Robe mettent en exergue l’origine et les qualités gustatives des produits sélectionnés avec une exigence de tous les instants.<br />
+                Surprendre, étonner, émerveiller les papilles par une associations inédites de pures saveurs, faire revenir en mémoire un souvenir d’enfance par une recette oubliée, élaborer la carte telle un carnet de voyage gustatif, réinventer - pour mieux redécouvrir - les classiques de la gastronomie française… tel est le crédo du « V », le restaurant de l’hôtel Vernet.</p>
+            </div>
+            <div class="bar-restaurant__restaurant--buttons no-mobile no-tab">
+                <a href="#" class="button no-mobile no-tab button__book button__book--restaurant" name="book restaurant">réserver une table</a>
+                <div class="divider mobile-divider-20 no-tab no-desktop"></div>
+                <a href="#" class="button no-mobile no-tab button__book button__book--menu" name="menu">voir la carte</a>
+            </div>
+
+          </div>
+
+
+          <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-120"></div>
+
+
+              <!---- 
+                    ---- 
+                        ---- 
+                            ---- 
+                                ---- 
+                                    ---- 
+                                        ---- 
+                                            ---- MENU ---- 
+                                        ---- 
+                                    ---- 
+                                ---- 
+                            ---- 
+                        ---- 
+                    ---- 
+               ----> 
+          
+          <div class="mobile-fluid slideshow-menu-container">
+            <div class="divider mobile-divider-30 tab-divider-80 desktop-divider-100"></div>
+            <div class="slideshow-menu__headline headline">
+              <span class="span">Nos menus</span>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-120"></div>
+            <div class="slideshow-menu">
+              <div class="slideshow-menu__arrow--container slideshow-menu__arrow--container-left arrow--container">
+                <div class="arrow arrow--left"></div>
+              </div>
+              <div class="slideshow-menu__content--container">
+
+                <div class="slideshow-menu__content">
+                  <div class="slideshow-menu__card slideshow-menu__card--card1">
+                    <div class="slideshow-menu__card--picture floating_div__parent--parent">
+                      <div class="floating_div__parent">
+                        <div class="floating_div">
+                          <img src="%PUBLIC_URL%/img/bar-restaurant/menu-1.png" alt="" class="img__img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--headline">L’instant du « V »</div>
+                    <div class="divider tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--description no-mobile">
+                      <p>Disponible tous les midis <br /><br />Entrée - Plat ou Plat - Dessert : 39 euros<br />Entrée - Plat - Dessert : 50 euros</p>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <a href="#" class="button slideshow-menu__button slideshow-menu__button--offers-desktop" name="menu1">voir le menu</a>
+                  </div>
+                  <div class="slideshow-menu__card slideshow-menu__card--card2">
+                    <div class="slideshow-menu__card--picture floating_div__parent--parent">
+                      <div class="floating_div__parent">
+                        <div class="floating_div">
+                          <img src="%PUBLIC_URL%/img/bar-restaurant/menu-2.png" alt="" class="img__img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--headline">Menu dégustation</div>
+                    <div class="divider tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--description no-mobile">
+                      <p>Balade gustative en sept plats autour des produits de saisons Richard Robe, notre Chef Exécutif vous fait découvrir son univers culinaire <br />Disponible uniquement le soir <br /><br />Menu : 95 euros</p>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <a href="#" class="button slideshow-menu__button slideshow-menu__button--offers-desktop" name="menu2">voir le menu</a>
+                  </div>
+                  <div class="slideshow-menu__card slideshow-menu__card--card3">
+                    <div class="slideshow-menu__card--picture floating_div__parent--parent">
+                      <div class="floating_div__parent">
+                        <div class="floating_div">
+                          <img src="%PUBLIC_URL%/img/bar-restaurant/menu-3.png" alt="" class="img__img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--headline">Menu de la Saint Valentin</div>
+                    <div class="divider tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--description no-mobile">
+                      <p>L’hôtel Vernet et la Maison Bollinger sont heureux de vous présenter le Menu Dégustation imaginé par le Chef Richard Robe en accord avec le Bollinger Rosé 2006. <br />Valable uniquement le soir.<br /><br />Menu : 350 euros pour 2 personnes</p>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <a href="#" class="button slideshow-menu__button slideshow-menu__button--offers-desktop" name="menu3">voir le menu</a>
+                  </div>
+                  <div class="slideshow-menu__card slideshow-menu__card--card4">
+                    <div class="slideshow-menu__card--picture floating_div__parent--parent">
+                      <div class="floating_div__parent">
+                        <div class="floating_div">
+                          <img src="%PUBLIC_URL%/img/bar-restaurant/menu-4.png" alt="" class="img__img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--headline">L’instant du « V »</div>
+                    <div class="divider tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--description no-mobile">
+                      <p>Disponible tous les midis <br /><br />Entrée - Plat ou Plat - Dessert : 39 euros<br />Entrée - Plat - Dessert : 50 euros</p>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <a href="#" class="button slideshow-menu__button slideshow-menu__button--offers-desktop" name="menu4">voir le menu</a>
+                  </div>
+                  <div class="slideshow-menu__card slideshow-menu__card--card5">
+                    <div class="slideshow-menu__card--picture floating_div__parent--parent">
+                      <div class="floating_div__parent">
+                        <div class="floating_div">
+                          <img src="%PUBLIC_URL%/img/bar-restaurant/menu-5.png" alt="" class="img__img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--headline">Menu dégustation</div>
+                    <div class="divider tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--description no-mobile">
+                      <p>Balade gustative en sept plats autour des produits de saisons Richard Robe, notre Chef Exécutif vous fait découvrir son univers culinaire <br />Disponible uniquement le soir <br /><br />Menu : 95 euros</p>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <a href="#" class="button slideshow-menu__button slideshow-menu__button--offers-desktop" name="menu5">voir le menu</a>
+                  </div>
+                  <div class="slideshow-menu__card slideshow-menu__card--card6">
+                    <div class="slideshow-menu__card--picture floating_div__parent--parent">
+                      <div class="floating_div__parent">
+                        <div class="floating_div">
+                          <img src="%PUBLIC_URL%/img/bar-restaurant/menu-6.png" alt="" class="img__img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--headline">Menu de la Saint Valentin</div>
+                    <div class="divider tab-divider-35 desktop-divider-35"></div>
+                    <div class="slideshow-menu__card--description no-mobile">
+                      <p>L’hôtel Vernet et la Maison Bollinger sont heureux de vous présenter le Menu Dégustation imaginé par le Chef Richard Robe en accord avec le Bollinger Rosé 2006. <br />Valable uniquement le soir.<br /><br />Menu : 350 euros pour 2 personnes</p>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+                    <a href="#" class="button slideshow-menu__button slideshow-menu__button--offers-desktop" name="menu6">voir le menu</a>
+                  </div>
+                </div>
+              </div>
+              <div class="slideshow-menu__arrow--container slideshow-menu__arrow--container-right arrow--container">
+                <div class="arrow arrow--right"></div>
+              </div>
+            </div>
+            <div class="divider tab-divider-80"></div>
+            <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-150"></div>
+          </div>
+
+
+              <!---- 
+                    ---- 
+                        ---- 
+                            ---- 
+                                ---- 
+                                    ---- 
+                                        ---- 
+                                            ---- NOTE ---- 
+                                        ---- 
+                                    ---- 
+                                ---- 
+                            ---- 
+                        ---- 
+                    ---- 
+               ----> 
+          
+          <div class="bar-restaurant__note">
+            <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-110"></div>
+            <div class="bar-restaurant__note--headline headline">
+              <span class="span">Une raison de plus de séjourner à l’hôtel Vernet !</span>
+            </div>
+            <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-70"></div>
+            <div class="bar-restaurant__note--tagline">
+              <span class="span">20% de réduction sur le déjeuner ou dîner</span>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-35"></div>
+            <div class="bar-restaurant__note--text">
+              <p class="text-content">In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante. </p>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-35 desktop-divider-70"></div>
+            <a href="#" class="button bar-restaurant__note--button bar-restaurant__note--button-book" name="book">réserver à l'hôtel</a>
+            <div class="divider mobile-divider-20 tab-divider-20 desktop-divider-20"></div>
+            <a href="#" class="no-mobile no-tab button bar-restaurant__note--button bar-restaurant__note--button-offers" name="offers">voir toutes nos offres en détail</a>
+            <a href="#" class="no-desktop button bar-restaurant__note--button bar-restaurant__note--button-offers" name="offers">nos offres</a>
+            <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-120"></div>
+
+          </div>
+
+          <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-190"></div>
+
+                  <!---- 
+                         ---- 
+                             ---- 
+                                 ---- 
+                                     ---- 
+                                         ---- 
+                                             ---- 
+                                                 ---- BAR ---- 
+                                             ---- 
+                                         ---- 
+                                     ---- 
+                                 ---- 
+                             ---- 
+                         ---- 
+                    ----> 
+                
+          
+          <div class="mobile-fluid bar-restaurant__bar grid-layout-5-tall">
+            <div class="bar-restaurant__bar--headline headline">
+              <span class="span">Le bar de l’hôtel</span>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-35 no-desktop"></div>
+            <div class="bar-restaurant__bar--tagline tagline">
+              <span class="span">Une atmosphère à la fois intime et légère</span>
+            </div>
+            <div class="divider mobile-divider-45 tab-divider-60 no-desktop"></div>
+            <div class="bar-restaurant__bar--picture hero hero--mobile slideshow-grid__container barslideshow floating_div__parent--parent">
+              <img src="%PUBLIC_URL%/img/bar-restaurant/bar.png" alt="" class="img__img">
+              <a href="#" class="button no-desktop button__book button__book--restaurant" name="book restaurant">réserver une table</a>
+              <div class="bar-restaurant__bar--picture--content slideshow-grid__content no-mobile no-tab floating_div__parent">
+                <div class="bar-restaurant__bar--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/bar.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__bar--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/bar.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__bar--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/bar.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__bar--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/bar.png" alt="" class="img__img">
+                </div>
+                <div class="bar-restaurant__bar--picture--pic no-mobile no-tab floating_div">
+                  <img src="%PUBLIC_URL%/img/bar-restaurant/bar.png" alt="" class="img__img">
+                </div>
+              </div>
+            </div>
+            <div class="bar-restaurant__bar--picture-legend no-mobile no-tab">
+              <span class="span">Une architecture intérieure signée François Champsaur</span>
+            </div>
+            <div class="bar-restaurant__bar--controls slideshow-grid__controls no-mobile no-tab">
+              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-left arrow--container barslideshow" data-slideshow="barslideshow">
+                <div class="arrow arrow--left"></div>
+              </div>
+              <div class="slideshow-grid__controls--slide barslideshow" data-slideshow="barslideshow">
+                <span class='span current'>1</span>
+                <span class='span span-divider'>/</span>
+                <span class='span total'>5</span>
+              </div>
+              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-right arrow--container barslideshow" data-slideshow="barslideshow">
+                <div class="arrow arrow--right"></div>
+              </div>
+            </div>
+            <div class="no-mobile no-tab bar-restaurant__bar--divider1"></div>
+            <div class="divider mobile-divider-45 tab-divider-60 no-desktop"></div>
+            <div class="bar-restaurant__bar--description">
+              <p>Lumineux et chatoyant, le bar offre une atmosphère à la fois intime et légère comme les bulles d’un grand Champagne. Les matériaux sont nobles à l’image du bar en marbre aux contours déstructurés qui lui donne l’impression d’être mobile.<br /> Au plafond, une fresque de Jean-Michel Alberola dynamise l’élégance du lieu et répond visuellement au  tapis également signé par l’artiste. On touche du doigt l’esprit du lieu : surprendre et séduire à la fois une clientèle parisienne autant que cosmopolite, que ce soit autour d’un verre ou d’un repas.</p>
+            </div>
+            <div class="divider mobile-divider-30 tab-divider-60 no-desktop"></div>
+            <div class="bar-restaurant__bar--buttons">
+              <a href="#" class="button bar-restaurant__bar--button no-mobile no-tab" name="restaurant">reserver une table</a>
+              <div class="divider mobile-divider-20 no-tab no-desktop"></div>
+              <a href="#" class="button bar-restaurant__bar--button no-mobile no-tab" name="bar">voir la carte du bar</a>
+            </div>
+            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
+          </div>
+          
+          <div class="divider mobile-divider-45 tab-divider-80  desktop-divider-140"></div>
+
+
+
+
+              <!---- 
+                    ---- 
+                        ---- 
+                            ---- 
+                                ---- 
+                                    ---- 
+                                        ---- 
+                                            ---- STAY CONNECTED ---- 
+                                        ---- 
+                                    ---- 
+                                ---- 
+                            ---- 
+                        ---- 
+                    ---- 
+               ----> 
+          
+          <div class="stay-connected  no-mobile no-tab">
+            <div class="divider no-mobile no-tab desktop-divider-65"></div>
+            <div class="stay-connected__headline headline">Restons connectés</div>
+            <div class="divider no-mobile no-tab desktop-divider-30"></div>
+            <div class="stay-connected__social">
+              <span class="span stay-connected__social--hashtag">#hotelvernet</span>
+              <span class="span stay-connected__social--arobas">@hotelvernet</span>
+            </div>
+            <div class="divider no-mobile no-tab desktop-divider-75"></div>
+            <div class="stay-connected__cards">
+              <div class="stay-connected__cards--card stay-connected__card1">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic1.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card2">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic2.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card3">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic3.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card4">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic4.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card5">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic5.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card6">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic6.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card7">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic7.png" alt="" class="img__img">
+              </div>
+              <div class="stay-connected__cards--card stay-connected__card8">
+                <img src="%PUBLIC_URL%/img/stay-connected/pic8.png" alt="" class="img__img">
+              </div>
+            </div>
+            <div class="divider no-mobile no-tab desktop-divider-160"></div>
+          </div>
+
+
+
+
+                  <!---- 
+                        ---- 
+                            ---- 
+                                ---- 
+                                    ---- 
+                                        ---- 
+                                            ---- 
+                                                ---- NEWSLETTER  ---- 
+                                            ---- 
+                                        ---- 
+                                    ---- 
+                                ---- 
+                            ---- 
+                        ---- 
+                   ----> 
+              
+              <div class="mobile-fluid newsletter">
+                <div class="newsletter__headline headline">
+                  <span class="span">S'abonner à la newsletter</span>
+                </div>
+                <div class="divider no-mobile no-tab desktop-divider-15"></div>
+                <div class="newsletter__tagline no-mobile no-tab ">
+                  <span class="span">In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor </span>
+                </div>
+                <div class="divider mobile-divider-35 tab-divider-40 desktop-divider-60"></div>
+                <form action="submit" id="newsletter-form" class="newsletter__form">
+                  <input class="input newsletter__input" form="newsletter-form"></input>
+                  <div class="divider mobile-divider-25 tab-divider-25 no-desktop"></div>
+                  <button type="submit" class="button newsletter__button" form="newsletter-form" name="newsletter-submit">m'inscrire</button>
+                </form>
+                <div class="divider mobile-divider-50 tab-divider-85 desktop-divider-170"></div>
+              </div>
+
+
+
+                <!---- 
+                      ---- 
+                          ---- 
+                              ---- 
+                                  ---- 
+                                      ---- 
+                                          ---- 
+                                              ---- BACK TO TOP  ---- 
+                                          ---- 
+                                      ---- 
+                                  ---- 
+                              ---- 
+                          ---- 
+                      ---- 
+                 ----> 
+
+            <div class="mobile-fluid back-to-top">
+              <div class="angle-up-div back-to-top__button">
+                <i class="icon angle-up-icon"></i>
+              </div>
+              <div class="back-to-top__text">
+                <span class="span">back to top</span>
+              </div>
+              <div class="divider mobile-divider-50 tab-divider-85 desktop-divider-170"></div>
+            </div>
+
+          </div>
+
+        <!----                                                                ----! 
+                  ----                                                        ---- 
+                      ----                                                ---- 
+                          ----                                        ---- 
+                              ----                                ---- 
+                                  ----                        ---- 
+                                      ----                ---- 
+                                          ---- FOOTER ---- 
+                                      ----                ----
+                                  ----                        ----
+                              ----                                ----
+                          ----                                        ----
+                      ----                                                ----
+                  ----                                                        ----
+            <-----                                                                ---->
+        
+
+        <div class="footer__top--hotel-details">
+          <div class="footer__content footer__top footer__top--hotel-logo hotel-logo-full"></div>
+          <div class="footer__content footer__top footer__top--hotel-address">
+            <span class="span">Hôtel Vernet</span>
+            <span class="span">25 rue Vernet</span>
+            <span class="span">75008 Paris - France</span>
+            <span class="span">Tel 33 (0)1 44 31 98 00</span>
+            <span class="span">Fax 33 (0)1 44 31 85 69</span>
+          </div>
+        </div>
+        <div class="footer__content footer__top footer__top--social">
+          <div class="footer__top--social-logos">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="last-logo" href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <a href="#" title="Design Hotels" class="footer__top--social-design-hotels-logo"></a>
+        </div>
+        <div class="footer__content footer__bottom footer__bottom--legal">
+          <div class="one-line">
+            <span class="span mentions-legales"><a href="#">Mentions légales</a></span>
+            <span class="span copyright-large">© 2018 Hôtel Vernet - Tous droits réservés</span>
+            <span class="span hiring"><a href="#">Recrutement</a></span>
+            <span class="span press"><a href="#">Presse</a></span>
+          </div>
+          <span class="span copyright-small">© 2018 Hôtel Vernet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type='text/javascript'>
+    const loadingBackground = document.querySelector('.loading__background');
+    const wrapper = document.querySelector('.wrapper__outer-container');
+    wrapper.style.display = 'none';
+    loadingBackground.style.display = '';
+  </script>
+  <!-- <script type="text/javascript" src="/vernet/static/js/main.js"></script>   -->
+
+</body>
+</html>

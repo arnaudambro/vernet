@@ -1,0 +1,396 @@
+
+/*!
+* Pikaday
+* Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+*/
+
+/* Variables*/
+/* Declare any of these variables before importing this SCSS file to easily override defaults*/
+/* Variables are namespaced with the pd (pikaday) prefix*/
+
+
+/* Colours*/
+$pd-text-color: transparent;
+$pd-title-color: $datepickerPrimaryColor;
+$pd-title-bg: $datepickerBgColor;
+$pd-picker-bg: $datepickerBgColor;
+$pd-picker-border: $datepickerBgColor;
+$pd-picker-border-bottom: transparent;
+$pd-picker-shadow: $black;
+$pd-th-color: $darkGray;
+$pd-day-color: $black;
+$pd-day-bg: transparent;
+$pd-day-hover-color: $datepickerBgColor;
+$pd-day-hover-bg: $datepickerPrimaryColor;
+$pd-day-today-color: $black;
+$pd-day-selected-color: $datepickerBgColor;
+$pd-day-selected-bg: $datepickerPrimaryColor;
+$pd-day-selected-shadow: transparent;
+$pd-day-disabled-color: $darkGray;
+$pd-week-color: transparent;
+
+/* Font*/
+$pd-font-family: $textContent;
+
+.datepicker {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  @media all and (max-width: $desktop-break) {
+    -ms-grid-column: 1;
+  }
+  
+  grid-area: calendar;
+  width: 100%;
+  height: 100%;
+  cursor: initial;
+
+  &__container {
+    z-index: $zindexMenuOnTop;
+
+    position: absolute;
+    top: $inputHeight;
+    left: 0;
+    @extend %datePickerContainerWidth;
+    height: $datePickerContainerHeight;
+
+    display: -ms-grid;
+    display: grid;
+
+    -ms-grid-columns: 1fr $datePickerWidthMobile;
+    grid-template-columns: 1fr $datePickerWidthMobile;
+    -ms-grid-rows: $datePickerHeight 1fr;
+    grid-template-rows: $datePickerHeight 1fr;
+    grid-template-areas: 
+    'date calendar'
+    'date buttons';
+
+    @media all and (max-width: $desktop-break) {
+      border-top: 1px solid $datepickerPrimaryColor;
+      grid-template-columns: $datePickerWidthDesktop;
+      /* grid-template-rows: $datePickerHeight 1fr; */
+      grid-template-areas: 
+      'calendar'
+      'buttons';
+    }
+
+    background-color: $datepickerBgColor;
+
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0;
+    transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+    visibility: hidden;
+
+    &.active {
+      transform: perspective(350px) rotateX(0deg);
+      transition-delay: $selectDuration;
+      visibility: visible;
+    }
+  }
+  &__date {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: date;
+
+
+    @media all and (max-width: $desktop-break) {
+      display: none;
+    }
+
+    width: 100%;
+    height: 100%;
+    padding-top: 12px;
+    padding-left: 9px;
+
+    background-color: $datepickerPrimaryColor;
+    color: $datepickerBgColor;
+    cursor: initial;
+    
+    font-size: 0.875rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    line-height: 1.5rem;
+  }
+
+  &__buttons {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    @media all and (max-width: $desktop-break) {
+      -ms-grid-column: 1;
+    }
+    
+    grid-area: buttons;
+    -ms-grid-column-align: end;
+    -ms-grid-column-align: end;
+justify-self: end;
+    -ms-grid-row-align: center;
+align-self: center;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    cursor: initial;
+
+    > * {
+      border: none;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-family: $pd-font-family;
+      font-size: 0.75rem;
+      color: $pd-day-color;
+      cursor: pointer;
+    }
+    
+  }
+}
+
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: $pd-text-color;
+  background: $pd-picker-bg;
+  border: 1px solid $pd-picker-border;
+  border-bottom-color: $pd-picker-border-bottom;
+  font-family: $pd-font-family;
+  cursor: default;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  &.is-bound {
+    position: absolute;
+    box-shadow: 0 5px 15px -5px $pd-picker-shadow;
+  }
+}
+
+/* clear child float (pika-lendar), using the famous micro clearfix hack*/
+/* http://nicolasgallagher.com/micro-clearfix-hack/*/
+.pika-single {
+  *zoom: 1;
+
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after { clear: both }
+}
+
+.pika-lendar {
+  float: left;
+  /* width: 240px; */
+  @extend %datePickerWidth;
+  /* margin: 8px; */
+}
+
+.pika-title {
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+
+  select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    /* top: 5px; */
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+
+.pika-label {
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20pxpx;
+  font-family: $pd-font-family;
+  font-weight: bold;
+  color: $pd-title-color;
+  background-color: $pd-title-bg;
+}
+
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  text-indent: 20px; /* hide text using text-indent trick, using width value (it's enough) */
+  white-space: nowrap;
+  overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  opacity: 1;
+  *position: absolute;
+  *top: 0;
+  /* border: 1px solid #000; */
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.is-disabled {
+    cursor: default;
+    opacity: 0.2;
+  }
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+  background-image: url('../img/icons/angle-left.png');
+  *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+  background-image: url('../img/icons/angle-right.png');
+  *right: 0;
+}
+
+.pika-select {
+  display: inline-block;
+  *display: inline;
+  pointer-events: none;
+}
+
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+
+  th,
+  td {
+    width: calc(100% / 7);
+    padding: 0;
+  }
+
+  th {
+    color: $pd-th-color;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  abbr {
+    border-bottom: none;
+    /* cursor: help; */
+    text-decoration: none;
+  }
+}
+
+.pika-button {
+  cursor: pointer;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* outline: none; */
+  border: 0;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  padding: 0px;
+  color: $pd-day-color;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  background: $pd-day-bg;
+  margin: 1.5px auto;               /*MODIFY THE HEIGHT OF THE DATEPICKER */
+
+  .is-today & {
+    color: $pd-day-today-color;
+    font-weight: bold;
+  }
+
+  .is-selected & {
+    color: $pd-day-selected-color;
+    font-weight: bold;
+    background: $pd-day-selected-bg;
+    box-shadow: inset 0 1px 3px $pd-day-selected-shadow;
+    border-radius: 50%;
+  }
+
+  .is-disabled &,
+  .is-outside-current-month & {        
+    color: $pd-day-disabled-color;
+    opacity: .5;
+  }
+
+  .is-disabled & {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &:hover {
+    color: $pd-day-hover-color;
+    background: $pd-day-hover-bg;
+    box-shadow: none;
+    border-radius: 50%;
+  }
+
+  .is-selection-disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.pika-week {
+  font-size: 11px;
+  color: $pd-week-color;
+}
+
+.is-inrange .pika-button {
+  background: #D5E9F7;
+}
+
+.is-startrange .pika-button {
+  color: #fff;
+  background: #6CB31D;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-endrange .pika-button {
+  color: #fff;
+  background: #33aaff;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.pika-row td:last-of-type > *, 
+.pika-table thead > tr > th:last-of-type {
+  padding-right: 3px;
+}
+.pika-next {
+  margin-right: 3px;
+}

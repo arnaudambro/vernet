@@ -1,0 +1,346 @@
+@media all and (min-width: $desktop-break) {
+
+  .bar-restaurant {
+
+    &__header--reservation-hotel {
+      display: none;
+    }
+    &__header--reservation-restaurant {
+      flex-direction: row;
+      > :first-child {
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
+    }
+    &__head {
+      width: 90%;
+      max-width: $desktopMaxBodyWidth;
+      display: flex;
+
+      justify-content: space-around;
+      
+
+      &--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-top: 110px;
+        padding-right: calc(70px + 2vw);
+        position: relative;
+        flex-grow: 1;
+        max-width: 900px;
+      }
+      &--blockquote {
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        font-family: $introductionDesktop;
+        font-size: 2.8125rem;
+        margin-right: 160px;
+      }
+      &--tagline {
+        display: flex;
+        
+        justify-content: center;
+        margin-top: 30px;
+      }
+      &--pic {
+        display: none;
+
+      }
+      &--share {
+
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: space-around;
+        align-content: stretch;
+        margin-bottom: 5px;
+        font-family: $shareFontFamily;
+        color: $shareColor;
+        text-transform: uppercase;
+
+        &-title {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 0.625rem;
+          letter-spacing: 1px;
+        }
+        &-icons {
+          display: flex;
+          justify-content: space-around;
+        }
+        
+      }
+      &--tagline {
+      }
+    } 
+
+    &__restaurant {
+
+
+      &--picture {
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
+
+        grid-area: picture;
+        height: 115%;
+        width: 100%;
+        -ms-grid-row-align: start;
+        align-self: start;
+
+      }
+      &--headline {
+        -ms-grid-row: 5;
+        -ms-grid-column: 2;
+        text-align: left;
+        grid-area: headline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+      }
+      &--tagline {
+        -ms-grid-row: 6;
+        -ms-grid-column: 2;
+        text-align: left;
+        grid-area: tagline;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: center;
+        align-self: center;
+        text-align: start;
+
+      }
+      &--description {
+        &-first {
+          -ms-grid-row: 7;
+          -ms-grid-column: 2;          
+          grid-area: description1;
+          text-align: left;
+        }
+        &-second {
+          -ms-grid-row: 7;
+          -ms-grid-column: 3;
+          -ms-grid-column-span: 3;
+          grid-area: description2;
+          text-align: left;
+        }
+      }
+      &--divider {
+        -ms-grid-row: 4;
+        -ms-grid-column: 2;
+        grid-area: divider;
+        width: 160px;
+        border-bottom: 1px solid $black;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+      }
+      &--controls {
+        -ms-grid-row: 2;
+        -ms-grid-column: 5;
+        grid-area: controls;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+
+      }
+      &--comment {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 2;
+
+        grid-area: comment;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+        text-align: left;
+        text-align: start;
+        align-items: flex-start;
+        height: 130%;
+        padding-top: 110px;
+        padding-bottom: 110px;
+        padding-right: 100px;
+        max-width: 600px;
+
+        &-background {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 3;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 3;
+          grid-column: 1 / 4;
+          grid-row: 1 / 4;
+          background-color: $descBgColor;
+          height: 100%;
+          width: 100%;
+        }
+        &-content {
+          max-width: 100%;
+          line-height: 3rem;
+          font-size: 1.25rem;
+
+        }
+        &-author {
+        }
+      }
+
+      &--buttons {
+        -ms-grid-row: 8;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 2;
+        grid-area: buttons;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+
+        > :first-child {
+          margin-right: 40px;
+        }
+      }
+
+      &--descpicture {
+
+      }
+
+      &--headline {
+      }
+
+      &--button {
+      }
+      &--description {
+      }
+      &--divider1 {
+      }
+    }
+
+    &__bar {
+
+      &--picture {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 5;
+        -ms-grid-column: 3;
+        grid-area: picture;
+        position: relative;
+        // background-image: url('../img/rooms/introduction@2x.png');
+        width: 100%;
+        height: 100%;
+        -ms-grid-row-align: start;
+        align-self: start;
+        
+        &-legend {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 5;
+          -ms-grid-column: 4;          
+          grid-area: legend;
+          position: relative;
+          height: 100%;
+          width: 100%;
+          -ms-grid-row-align: start;
+          align-self: start;
+          align-items: flex-end;
+          justify-content: end;
+          display: flex;
+          > .span {
+            font-family: $textContent;
+            width: 20px;
+            white-space: nowrap;
+            margin-left: 30px;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+          }
+
+        }
+      }
+      &--headline {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: headline;
+        -ms-grid-row-align: end;
+        align-self: end;
+        -ms-grid-column-align: start;      
+        -ms-grid-column-align: start;
+        justify-self: start;      
+        text-align: start;
+      }
+      &--tagline {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        grid-area: tagline; 
+        -ms-grid-row-align: end;
+        align-self: end;
+        -ms-grid-column-align: start;     
+        -ms-grid-column-align: start;
+        justify-self: start;     
+      }
+      &--description {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+        grid-area: description;
+        -ms-grid-row-align: center;
+        align-self: center;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        text-align: start;
+        > * {
+          max-width: 100%; 
+        }
+
+      }
+      &--buttons {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+        grid-area: button;
+        -ms-grid-row-align: end;
+        align-self: end;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        flex-direction: column;
+        > :first-child {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+      &--divider1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: topdivider;
+        -ms-grid-row-align: end;
+        align-self: end;
+        -ms-grid-column-align: start;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        width: 160px;
+      }
+
+      &--controls {
+        -ms-grid-row: 6;
+        -ms-grid-column: 3;
+        grid-area: controls;
+        -ms-grid-column-align: center;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+      }
+    } 
+
+  }  
+
+}

@@ -1,0 +1,129 @@
+
+.slideshow-menu {
+
+
+  &__headline {
+    display: flex;
+    justify-content: center;
+    @extend %slideshowMenuWidth;
+  }
+
+  &__tagline {
+    @extend %slideshowMenuWidth;
+  }
+
+  &-container {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  position: relative;
+  font-family: $slideshowMenuFont;
+  // border: 1px solid #000;
+  width: 95%;
+
+  &__arrow--container {
+    z-index: $zSlideshowMenuArrows;
+    position: absolute;
+    @extend %slideshowMenuArrowTop;
+    padding-top: $slideshowMenuArrowPaddingY;
+    padding-bottom: $slideshowMenuArrowPaddingY;
+    padding-left: $slideshowMenuArrowPaddingX;
+    padding-right: $slideshowMenuArrowPaddingX;
+    > .arrow {
+      display: flex;
+
+      > svg {
+        height: $slideshowMenuArrowHeight;
+        width: $slideshowMenuArrowWidth;
+      }
+    }
+
+    &-right {
+      right: 0;
+    }
+    &-left {
+      left: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    // z-index: $zSlideshowMenusContent;
+
+    transition: transform 1s ease-in-out;
+
+    
+    &--container {
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      -ms-scroll-limit: 0 0 0 0;
+
+      @extend %slideshowMenuWidth;
+
+    }
+
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--card1 > .slideshow-menu__card--picture { 
+      // background-image: url('../img/bar-restaurant/menu-1.png');
+    }
+    &--card2 > .slideshow-menu__card--picture { 
+      // background-image: url('../img/bar-restaurant/menu-2.png');
+    }
+    &--card3 > .slideshow-menu__card--picture { 
+      // background-image: url('../img/bar-restaurant/menu-3.png');
+    }
+    &--card4 > .slideshow-menu__card--picture { 
+      // background-image: url('../img/bar-restaurant/menu-4.png');
+    }
+    &--card5 > .slideshow-menu__card--picture { 
+      // background-image: url('../img/bar-restaurant/menu-5.png');
+    }
+    &--card6 > .slideshow-menu__card--picture { 
+      // background-image: url('../img/bar-restaurant/menu-6.png');
+    }
+
+    &--picture {
+      @extend %slideshowMenuPictureWidth;
+      @extend %slideshowMenuPictureHeight;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--headline {
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.4em;
+
+    }
+
+    &--description {
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 1.6666em;
+      @extend %slideshowMenuPictureWidth;
+    }
+  }
+
+  &__button {
+    &--book {
+    }
+    &--offers {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+

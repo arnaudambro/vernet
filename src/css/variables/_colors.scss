@@ -1,0 +1,89 @@
+
+$white: rgba(255,255,255,1);
+$transWhite: rgba(245,245,245,.17);
+$black: rgba(0,0,0,1);
+$beige: rgba(176,128,91,1);
+$darkWhite: rgba(242,242,242,1);
+$darkGray: rgba(114,113,111,1.00); 
+$transDarkGray: rgba(114,113,111,0.17); 
+
+$defaultFontColor: $black;
+
+/******* HEADER *******/
+$headerFontColor: $white;
+$headerMaskColor: rgba(60,16,16,0.25);
+$headerReservationContainerBg: $transWhite;
+$headerMenuBgGradientStart: rgba(212,186,160,1.00);
+$headerReservationBgGradientStart: rgba(212,186,160,.93);
+$headerReservationBgGradientFinish: rgba(176,128,91,.93);
+$headerMenuBgMobile: $beige;
+$headerMenuBgDesktop: $transWhite;
+%headerMenuBgColor {
+  background-color: $headerMenuBgMobile;
+  @media all and (min-width: $desktop-break) {
+    background-color: $headerMenuBgDesktop;
+  }
+}
+$headerMenuBackupBg: $beige;
+$headerMenuHoverColorBefore: $headerFontColor;
+$headerMenuHoverColorAfter: $headerMenuBackupBg;
+$headerMenuHoverBgColorBefore: $headerMenuBackupBg;
+$headerMenuHoverBgColorAfter: $headerFontColor;
+
+
+
+/******* B-SIGNATURE **********/
+$bSignatureBgColor: $white;
+$bSignatureColor: $black;
+
+/********** FOOTER *********/
+$footerTopFontColor: $black;
+$footerTopBgColor: $white;
+$footerBottomFontColor: $white;
+$footerBottomBgColor: $black;
+
+/********* RESERVATION *********/
+$reservationOnScrollBg: $darkWhite;
+
+/********** OFFERS ***********/
+$offersBgColor: rgba(247,247,247,1);
+
+/********* BUTTONS / FORMS *********/
+$selectBgColor: $darkWhite;
+$selectColor: $black;
+$inputBgColor: $white;
+$inputColor: $black;
+$buttonBgColor: $black;
+$buttonFontColor: $white;
+
+/************ SHARE **********/
+$shareColor: rgba(121,121,121,1.00);
+
+/*********EVENTS ***********/
+$eventsDateBgColor: $beige;
+$eventsDateColor: $white;
+$eventsDescBgColor: $white;
+$eventsDescColor: $black;
+
+/******** RESTAURANT ********/
+$descBgColor: rgba(239,237,237,1);
+
+/********* ICONS ************/
+$hamburgerColor: $white;
+$hamColor1914: $hamburgerColor;
+$hamColor1575: $hamburgerColor;
+$calendarColorForMenu: $hamburgerColor;
+$pinColor: $black;
+
+/********* ARROWS ***********/
+$arrowColor: $black;
+$arrowBgColor: $transWhite;
+
+/****** NEWSLETTER *********/
+$borderColor: rgba(175,178,179,1);
+
+/********** DATEPICKER *********/
+$datepickerPrimaryColor: $beige;
+$datepickerBgColor: $white;
+
+

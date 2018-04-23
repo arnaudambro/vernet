@@ -1,0 +1,122 @@
+.divider {
+  width: 100%;
+  background-color: transparent;
+}
+
+@media all and (max-width: $mobile-break) {
+  
+  .mobile-divider-15 { height: 15px; }
+  .mobile-divider-20 { height: 20px; }
+  .mobile-divider-25 { height: 25px; }
+  .mobile-divider-30 { height: 30px; }
+  .mobile-divider-35 { height: 35px; }
+  .mobile-divider-40 { height: 40px; }
+  .mobile-divider-45 { height: 45px; }
+  .mobile-divider-50 { height: 50px; }
+  .mobile-divider-55 { height: 55px; }
+  .mobile-divider-60 { height: 60px; }
+  .mobile-divider-65 { height: 65px; }
+  .mobile-divider-70 { height: 70px; }
+  .mobile-divider-75 { height: 75px; }
+  .mobile-divider-80 { height: 80px; }
+  .mobile-divider-85 { height: 85px; }
+  .mobile-divider-90 { height: 90px; }
+  .mobile-divider-95 { height: 95px; }
+  .mobile-divider-100 { height: 100px; }
+  .mobile-divider-105 { height: 105px; }
+  .mobile-divider-110 { height: 110px; }
+  .mobile-divider-115 { height: 115px; }
+  .mobile-divider-120 { height: 120px; }
+  .mobile-divider-125 { height: 125px; }
+  .mobile-divider-130 { height: 130px; }
+  .mobile-divider-135 { height: 135px; }
+  .mobile-divider-140 { height: 140px; }
+  .mobile-divider-145 { height: 145px; }
+  .mobile-divider-150 { height: 150px; }
+  .mobile-divider-155 { height: 155px; }
+  .mobile-divider-160 { height: 160px; }
+
+
+
+  .no-mobile { display: none !important}
+}
+
+@media all and (min-width: $mobile-break) and (max-width: $desktop-break) {
+  
+  .tab-divider-15 { height: 15px; }
+  .tab-divider-20 { height: 20px; }
+  .tab-divider-25 { height: 25px; }
+  .tab-divider-30 { height: 30px; }
+  .tab-divider-35 { height: 35px; }
+  .tab-divider-40 { height: 40px; }
+  .tab-divider-45 { height: 45px; }
+  .tab-divider-50 { height: 50px; }
+  .tab-divider-55 { height: 55px; }
+  .tab-divider-60 { height: 60px; }
+  .tab-divider-65 { height: 65px; }
+  .tab-divider-70 { height: 70px; }
+  .tab-divider-75 { height: 75px; }
+  .tab-divider-80 { height: 80px; }
+  .tab-divider-85 { height: 85px; }
+  .tab-divider-90 { height: 90px; }
+  .tab-divider-95 { height: 95px; }
+  .tab-divider-100 { height: 100px; }
+  .tab-divider-105 { height: 105px; }
+  .tab-divider-110 { height: 110px; }
+  .tab-divider-115 { height: 115px; }
+  .tab-divider-120 { height: 120px; }
+  .tab-divider-125 { height: 125px; }
+  .tab-divider-130 { height: 130px; }
+  .tab-divider-135 { height: 135px; }
+  .tab-divider-140 { height: 140px; }
+  .tab-divider-145 { height: 145px; }
+  .tab-divider-150 { height: 150px; }
+  .tab-divider-155 { height: 155px; }
+  .tab-divider-160 { height: 160px; }
+
+  .no-tab { display: none !important}
+}
+
+@media all and (min-width: $desktop-break) {
+  
+  .desktop-divider-15 { height: 15px; }
+  .desktop-divider-20 { height: 20px; }
+  .desktop-divider-25 { height: 25px; }
+  .desktop-divider-30 { height: 30px; }
+  .desktop-divider-35 { height: 35px; }
+  .desktop-divider-40 { height: 40px; }
+  .desktop-divider-45 { height: 45px; }
+  .desktop-divider-50 { height: 50px; }
+  .desktop-divider-55 { height: 55px; }
+  .desktop-divider-60 { height: 60px; }
+  .desktop-divider-65 { height: 65px; }
+  .desktop-divider-70 { height: 70px; }
+  .desktop-divider-75 { height: 75px; }
+  .desktop-divider-80 { height: 80px; }
+  .desktop-divider-85 { height: 85px; }
+  .desktop-divider-90 { height: 90px; }
+  .desktop-divider-95 { height: 95px; }
+  .desktop-divider-100 { height: 100px; }
+  .desktop-divider-105 { height: 105px; }
+  .desktop-divider-110 { height: 110px; }
+  .desktop-divider-115 { height: 115px; }
+  .desktop-divider-120 { height: 120px; }
+  .desktop-divider-125 { height: 125px; }
+  .desktop-divider-130 { height: 130px; }
+  .desktop-divider-135 { height: 135px; }
+  .desktop-divider-140 { height: 140px; }
+  .desktop-divider-145 { height: 145px; }
+  .desktop-divider-150 { height: 150px; }
+  .desktop-divider-155 { height: 155px; }
+  .desktop-divider-160 { height: 160px; }
+  .desktop-divider-165 { height: 165px; }
+  .desktop-divider-170 { height: 170px; }
+  .desktop-divider-175 { height: 175px; }
+  .desktop-divider-180 { height: 180px; }
+  .desktop-divider-185 { height: 185px; }
+  .desktop-divider-190 { height: 190px; }
+
+  .no-desktop { display: none !important }
+}
+
+

@@ -1,0 +1,87 @@
+@media all and (min-width: $mobile-break) {
+
+  .slideshow-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    &__container {
+      overflow: hidden;
+      -ms-scroll-limit: 0 0 0 0;
+
+      justify-content: start;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -ms-grid-row-align: start;
+      align-self: start;
+      align-items: start;
+      height: 100%;
+    }
+
+    &__content {
+      flex-shrink: 0;
+      display: flex;
+      flex-wrap: nowrap;    
+      justify-content: flex-start;
+      align-content: flex-start;
+      height: 100%;
+      > .no-slideshow {
+        display: none;
+      }
+      > * {
+        height: 100%;
+        flex-shrink: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &.active  {
+        transition: transform $slideshowDuration ease-in-out;
+      }
+    }
+
+    &__controls {
+      flex-grow: 0;
+      display: flex;
+      height: $slideshowGridControlsHeight;
+      width: 130px;
+
+      justify-content: space-between;
+      align-items: center;
+
+      &--arrow--container {
+        z-index: $zSlideshowGridArrows;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .arrow {
+          display: flex;
+
+          > svg {
+            height: $slideshowGridArrowHeight;
+            width: $slideshowGridArrowWidth;
+          }
+        }
+      }
+
+      &--slide {
+        display: flex;
+        font-family: $textContent;
+        font-size: 0.75rem;
+        flex-basis: 30px;
+
+        justify-content: space-between;
+        align-items: center;
+
+      }
+    }
+
+
+
+
+  }
+}

@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  // border: 1px solid #0F0 !important; 
+  text-rendering: geometricPrecision;
+  /* text-rendering: optimizeLegibility; */
+  /* text-rendering: optimizeSpeed; */
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  /* scroll-behavior: smooth; */
+  /* transition-duration: $transitionBase; */
+  position: relative;
+
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  color: $defaultFontColor;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: absolute;
+  &.modal-open {
+    position: fixed;
+    overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+  }
+}
+
+
+.js {
+  display: none;
+}
+
+
+.improve-scroll {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 10000;
+}
+
+.span { 
+  display: block; 
+}
+
+.blockquote {
+  .span { 
+    display: inline-block; 
+  }
+  &:before {
+    content: '«'
+  }
+  &:after {
+    content: '»'
+  }
+}
+
+
+
+.img__img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+}
+
+.img__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &.header__back {
+    > * {
+      position: absolute;
+      right: 0;
+      left: 0;
+      /*margin: auto;*/
+      top: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+  }
+  
+}
+
+.headline {
+  font-family: $headlinFontFamily;
+  
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-align: center;
+
+  line-height: 1.75rem;  
+  @media all and (min-width: $desktop-break) {
+    font-family: 'Playfair Bold', serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 1.5em;
+  }
+  
+  @media all and (max-width: $mobile-break) {
+    // max-width: 260px;
+  }
+}
+
+.tagline {
+  font-family: $taglineFontFamily;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.3125rem;
+
+}
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media all and (max-width: $mobile-break) {
+  .hero--mobile {
+    width: 100vw;
+    max-width: 100%;
+    height: 250px;
+  }
+}

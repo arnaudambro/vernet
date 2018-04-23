@@ -1,0 +1,172 @@
+.input {
+  background-color: $inputBgColor;
+  color: $inputColor;
+
+  padding: $inputPadding;
+  height: $inputHeight;
+
+  font-family: $textContent;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select__group {
+  display: -ms-grid;
+  display: grid;
+  cursor: initial;
+  position: absolute;
+  top: $inputHeight;
+  left: 0;
+  height: 0;
+  width: 100%;
+  visibility: hidden;
+  -ms-grid-rows:  $selectHeight  $selectHeight  $selectHeight;
+  -ms-grid-columns:  1fr;
+
+  &.active {
+    height: auto;
+    visibility: visible;
+
+    .select {
+      width: 100%;
+      transform: perspective(350px) rotateX(0deg);
+      transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+      transition-delay: $selectDuration;
+    }
+    .select__room {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      @media all and (min-width: $desktop-break) {
+        transition-delay: $selectDuration;
+      }
+    }
+    .select__adults {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+      @media all and (min-width: $desktop-break) {
+        transition-delay: $selectDuration2;
+      }
+    }
+    .select__children {
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+      @media all and (min-width: $desktop-break) {
+        transition-delay: $selectDuration3;
+      }
+    }
+  }
+}
+
+.select {
+  position: relative;
+  background-color: $selectBgColor;
+  color: $selectColor;
+
+  border: $selectorBorderWidth solid $inputBgColor;
+
+  padding: $selectPadding;
+  height: $selectHeight;
+  
+  font-family: $textContent;
+  font-size: 0.6875rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &--text {
+    flex-grow: 1;
+  }
+  &--number {
+    width: $selectNumberPadding;
+  }
+
+  > * {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  width: 100%;
+  // https://codepen.io/dangodev/pen/dxeGk
+  
+  backface-visibility: hidden;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 0;
+  transition: all $selectDuration13 cubic-bezier(0.23, 1, 0.32, 1);
+  
+  &.select__room {
+    transition-delay: $selectDuration23;
+  }
+  &.select__adults {
+    transition-delay: $selectDuration13;
+  }
+  &.select__children {
+    /* transition-delay: clc($selectDuration * 0); */
+    transition-delay: 0;
+  }
+}
+
+.button {
+  position: relative;
+  @extend %buttonHeight;
+  z-index: $zindexMenuOnTop;
+  pointer-events: initial;
+
+  padding-left: $buttonPaddingX;
+  padding-right: $buttonPaddingX;
+  border: none;
+  font-family: $textContent;
+  
+  display: inline-flex;
+  white-space: nowrap;
+
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  
+  background-color: $buttonBgColor;
+  color: $buttonFontColor;
+  text-transform: uppercase;
+  font-size: 1.0625rem;
+  @media all and (min-width: $desktop-break) {
+    font-size: 0.75rem;
+  }
+
+  &:hover {
+    background-color: $beige;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: $white;
+    color: $beige;
+  }
+}
+
+.arrow {
+  > svg {
+    .to-stroke {
+      stroke: $arrowColor;
+    }
+  }
+  &--right {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+  &--container {
+    cursor: pointer;
+    > * {
+      // pointer-events: none;
+    }
+    @media all and (max-width: $mobile-break) {
+      background-color: $arrowBgColor;
+    }
+  }
+
+}

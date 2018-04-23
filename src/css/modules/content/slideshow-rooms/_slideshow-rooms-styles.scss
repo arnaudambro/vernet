@@ -1,0 +1,164 @@
+
+.slideshow-rooms {
+
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  position: relative;
+  font-family: $slideshowRooms;
+  // border: 1px solid #000;
+  width: 100%;
+
+  &__arrow--container {
+    z-index: $zSlideshowRoomsArrows;
+    position: absolute;
+    /* top: calc(($slideshowRoomPictureHeightMobile - $slideshowRoomArrowContainerHeight) / 2); */
+    top: $slideshowRoomArrowContainerTopMobile;
+    padding-top: $slideshowRoomArrowPaddingY;
+    padding-bottom: $slideshowRoomArrowPaddingY;
+    padding-left: $slideshowRoomArrowPaddingX;
+    padding-right: $slideshowRoomArrowPaddingX;
+    .arrow {
+      display: flex;
+      > svg {
+        height: $slideshowRoomArrowHeight;
+        width: $slideshowRoomArrowWidth;
+      }
+    }
+    &-right {
+      right: 0;
+    }
+    &-left {
+      left: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: $zSlideshowRoomsContent;
+    width: $slideshowRoomPictureWidth;
+    transition: transform 1s ease-in-out;
+
+
+    &--container {
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+
+    }
+
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $slideshowRoomPictureWidth;
+    flex-shrink: 0;
+
+
+    &--picture {
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      
+
+      width: $slideshowRoomPictureWidth;
+      height: $slideshowRoomPictureHeightMobile;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      &-prestige { 
+        // background-image: url('../img/rooms/prestige-1.png');
+      }
+      &-deluxe { 
+        // background-image: url('../img/rooms/deluxe-1.png');
+      }
+      &-superior { 
+        // background-image: url('../img/rooms/superior-1.png');
+      }
+      &-presidential { 
+        // background-image: url('../img/rooms/presidential-1.png');
+      }
+      &-prestige-suite { 
+        // background-image: url('../img/rooms/prestige-suite-1.png');
+      }
+      &-executive { 
+        // background-image: url('../img/rooms/executive-1.png');
+      }
+      &-signature { 
+        // background-image: url('../img/seminars/signature-1.png');
+      }
+      &-suite { 
+        // background-image: url('../img/seminars/suite-1.png');
+      }
+      &-salon-blanc { 
+        // background-image: url('../img/seminars/salon-blanc-1.png');
+      }
+      &-salons-exterieurs { 
+        // background-image: url('../img/seminars/salons-exterieurs-1.png');
+      }
+    }
+
+    &--headline {
+
+    }
+
+    &--description {
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 1.6666em;
+      text-align: center;
+      width: 95%;
+    }
+
+    &--features {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: $slideshowRoomFeatureHeight;
+    }
+    &--feature {
+      height: 100%;
+      width: $slideshowRoomFeatureWidth;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      font-family: $roomsIcons;
+      font-size: 0.5rem;
+      text-transform: uppercase;
+
+      &-picture {
+        height: 30px;
+        > svg {
+          height: 100%;
+          max-width: 29px;
+          max-height: 29px;
+        }
+      }
+    }
+    &__button {
+      &--book {
+      }
+      &--rooms {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+
+}
+

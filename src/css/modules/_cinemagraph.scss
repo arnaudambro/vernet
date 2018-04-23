@@ -1,0 +1,70 @@
+.cinemagraph {
+  visibility: hidden;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    > .cinemagraph__cafe {
+      margin-bottom: 35px;
+    }
+    
+  }
+  &__room {
+    &.landscape {
+      /* height: $cinemagraphRoomLandscapeWidth; //IN JS */
+      /* width: $cinemagraphRoomLandscapeHeight; //IN JS */
+      flex-shrink: 0;
+      visibility: visible;
+    }
+    &.portrait {
+
+      /* height: $cinemagraphRoomPortraitHeight; //IN JS */
+      /* width: $cinemagraphRoomPortraitWidth; //IN JS */
+      /* left: calc(($width - 100vw) / -2); */
+      visibility: visible;
+      flex-shrink: 0;
+
+    }
+  }
+  &__champagne--mobile {
+    &.landscape {
+      width: 100%;
+      flex-shrink: 0;
+      visibility: visible;
+    }
+    &.portrait {
+      height: 100%;
+      flex-shrink: 0;
+      visibility: visible;
+    }
+  }
+
+
+  &__champagne--tab-desktop {
+    &.landscape {
+      width: 100%;
+      flex-shrink: 0;
+      visibility: visible;
+    }
+    &.portrait {
+      height: 100%;
+      flex-shrink: 0;
+      visibility: visible;
+    }
+  }
+
+
+
+  &__cafe {
+    &.landscape {
+      width: 100%;
+      flex-shrink: 0;
+      visibility: visible;
+    }
+    &.portrait {
+      height: 100%;
+      flex-shrink: 0;
+      visibility: visible;
+    }
+  }
+}

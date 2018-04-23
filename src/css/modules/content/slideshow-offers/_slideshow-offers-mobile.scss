@@ -1,0 +1,56 @@
+.slideshow-offers {
+
+  &-container {
+
+  }
+
+  &__arrow--container {
+    &-right {
+    }
+    &-left {
+    }
+    > .arrow > svg {
+    }
+  }
+  &__content {
+    
+    &--container {
+
+    }
+
+  }
+  &__card {
+
+    &--card1 > :first-child { 
+    }
+    &--card2 > :first-child { 
+          }
+    &--card3 > :first-child { 
+    }
+    &--card4 > :first-child { 
+    }
+    &--card5 > :first-child { 
+    }
+    &--card6 > :first-child { 
+    }
+
+    &--picture {
+    }
+
+    &--headline {
+      font-size: 1.125rem;
+      text-align: center;
+    }
+
+    &--description {
+      // display: none;
+    }
+  }
+  &__button {
+    &--book {
+    }
+    &--offers {
+    }
+  }
+}
+

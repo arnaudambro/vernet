@@ -1,0 +1,65 @@
+{
+  "name": "ambroselli.io",
+  "version": "0.1.0",
+  "homepage": "/vernet/",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3",
+    "@fortawesome/fontawesome-free-brands": "^5.0.6",
+    "@fortawesome/fontawesome-free-regular": "^5.0.6",
+    "@fortawesome/fontawesome-free-solid": "^5.0.6",
+    "babel-polyfill": "^6.26.0",
+    "gotham-fonts": "^1.0.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "perfect-scrollbar": "^1.3.0",
+    "pikaday": "^1.7.0",
+    "prettier": "^1.10.2",
+    "prop-types": "^15.6.0",
+    "proxyquire": "^1.8.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
+    "react-iframe": "^1.1.0",
+    "react-intersection-observer": "^3.0.2",
+    "react-perfect-scrollbar": "^1.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "react-svg-inline": "^2.1.0",
+    "react-timeout": "^1.0.1",
+    "react-transition-group": "^2.2.1",
+    "rewire": "^3.0.2",
+    "smoothscroll-polyfill": "^0.4.0",
+    "source-map-explorer": "^1.5.0",
+    "stickybits": "^3.0.4",
+    "velocity-react": "^1.3.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "node scripts/customized-config start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "node scripts/customized-config build",
+    "build": "npm-run-all build-css build-js",
+    "test": "node scripts/customized-config test --env=jsdom",
+    "eject": "node scripts/customized-config eject"
+  },
+  "devDependencies": {
+    "raw-loader": "^0.5.1"
+  }
+}

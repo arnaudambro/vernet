@@ -1,0 +1,5 @@
+<svg viewBox="0 0 44 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M43.5,9.5 L1.5,9.5" id="Line" class="to-stroke"></path>
+  <path d="M10.5,0.5 L0.5,9.5" id="Line-2" class="to-stroke"></path>
+  <path d="M10.5,9.5 L0.5,18.5" id="Line-2" class="to-stroke" transform="translate(5.500000, 14.000000) scale(1, -1) translate(-5.500000, -14.000000) "></path>
+</svg>

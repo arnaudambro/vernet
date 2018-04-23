@@ -1,0 +1,34 @@
+
+$zHeaderContent: 55;
+$zMenu: 57;
+$zMenuDesktop: $zMenu - 3;
+/* $zReservation: $zMenu - 1; //JS */
+$zHeaderMask: 51;
+$zHeaderBackground: 50;
+$zHeaderMobileBackground: $zHeaderContent - 1;
+
+$zHeaderReservationContainer: $zHeaderContent + 3;
+$zHeaderReservationContent: $zHeaderContent + 4;
+
+$zindexMenuOnTop: 100;
+$zindexHamburgerOnTop: $zindexMenuOnTop + 10;
+$zindexReservationOuterContainer: $zindexHamburgerOnTop + 10;
+
+$zFooterContent: 55;
+
+$zSlideshowOffersContent: 15;
+$zSlideshowOffersArrows: 18;
+
+$zSlideshowRoomsContent: 15;
+$zSlideshowRoomsArrows: 18;
+
+$zSlideshowMenuContent: 15;
+$zSlideshowMenuArrows: 18;
+
+$zSlideshowGridContent: 15;
+$zSlideshowGridArrows: 18;
+$zPicOnTopOfTheOther: 2;
+
+$zGalleryCardMask: 51;
+$zGalleryCard: $zGalleryCardMask - 1;
+

@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Playfair';
+  src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot');
+  src: url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf') format('truetype'),
+       url('../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair-Italic';
+  src: url('../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot');
+  src: url('../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.ttf') format('truetype'),
+       url('../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: 400i;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Playfair-Bold';
+  src: url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot');
+  src: url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.ttf') format('truetype'),
+       url('../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair-Bold-Italic';
+  src: url('../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.eot');
+  src: url('../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+       url('../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Playfair-Black';
+  src: url('../fonts/PlayfairDisplay-Black/PlayfairDisplay-Black.eot');
+  src: url('../fonts/PlayfairDisplay-Black/PlayfairDisplay-Black.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Black/PlayfairDisplay-Black.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-Black/PlayfairDisplay-Black.ttf') format('truetype'),
+       url('../fonts/PlayfairDisplay-Black/PlayfairDisplay-Black.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair-Black-Italic';
+  src: url('../fonts/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.eot');
+  src: url('../fonts/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.ttf') format('truetype'),
+       url('../fonts/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 900;
+  font-style: italic;
+}

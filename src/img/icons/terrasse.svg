@@ -1,0 +1,19 @@
+<svg viewBox="0 0 34 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="terrasse" stroke-width="0.75" stroke="#000000">
+            <polyline id="Path_121" points="3.9 20.6 10.8 20.6 10.9 26.2"></polyline>
+            <path d="M3.9,20.6 L2.8,26.2" id="Line_133"></path>
+            <path d="M3.9,20.6 L1,12.2" id="Line_134"></path>
+            <polyline id="Path_122" points="8.9 20.6 6.9 18.6 3 18.6"></polyline>
+            <polyline id="Path_123" points="30.1 20.6 23.2 20.6 23.1 26.2"></polyline>
+            <path d="M30.1,20.6 L31.2,26.2" id="Line_135"></path>
+            <path d="M30.1,20.6 L33,12.2" id="Line_136"></path>
+            <polyline id="Path_124" points="25.2 20.6 27.1 18.6 31 18.6"></polyline>
+            <path d="M0.2,25.7 L33.7,25.7" id="Line_137"></path>
+            <path d="M13,19.7 L20.9,19.7" id="Line_138"></path>
+            <path d="M16,26 L16,0.9" id="Line_139"></path>
+            <path d="M12.5,9.8 C12.5,5.2 13.5,1.4 16.9,1.4 C20.3,1.4 21.3,5.1 21.3,9.8" id="Path_125"></path>
+            <path d="M8.6,9.8 L25.3,9.8 C25.3,5.18842234 21.5615777,1.45 16.95,1.45 C12.3384223,1.45 8.6,5.18842234 8.6,9.8 Z" id="Path_126"></path>
+        </g>
+    </g>
+</svg>

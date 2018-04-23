@@ -1,0 +1,17 @@
+
+@media all and (min-width: $mobile-break)  {
+  .newsletter {
+    &__headline {
+    }
+    &__tagline {
+      display: inline-block;
+    }
+    &__form {
+    }
+    &__input {
+      max-width: 345px;
+    }
+    &__button {
+    }
+  }
+}

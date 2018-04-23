@@ -1,0 +1,28 @@
+
+$transitionBase: 0.25s;
+
+$selectFactor: 1;
+$selectDuration: $transitionBase * $selectFactor;
+$selectDuration2: $transitionBase * $selectFactor * 2;
+$selectDuration3: $transitionBase * $selectFactor * 3;
+$selectDuration13: $transitionBase * $selectFactor * 1 / 3;
+$selectDuration23: $transitionBase * $selectFactor * 2 / 3;
+
+$loadingFactor: 2;
+$loadingDuration: $transitionBase * $loadingFactor;
+
+$hamFactor: 1;
+$hamTransDuration: $transitionBase * $hamFactor;
+
+$bSignatureFactor: 2;
+$bSignatureTransDur: $transitionBase * $bSignatureFactor;
+
+$hamMenuFactor: 1;
+$hamMenuTransDuration: $transitionBase * $hamMenuFactor;
+
+$reservationFactor: 2;
+$reservationAppearDuration: $transitionBase * $reservationFactor;
+
+$slideshowFactor: 4;
+$slideshowDuration: $transitionBase * $slideshowFactor;
+

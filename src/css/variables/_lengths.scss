@@ -1,0 +1,370 @@
+$desktop-break: 1200px;
+$less-than-desktop-break: $desktop-break - 10px;
+$mobile-break: 700px;
+$reservationPaddingY: 13px;
+$reservationGridRowGap: 10px;
+$reservationLabelHeight: 17px;
+$inputHeight: 45px;
+$inputHeightDiv2: $inputHeight / 2;
+$inputHeightDiv3: $inputHeight / 3;
+$inputHeightDiv4: $inputHeight / 4;
+$inputHeightMultiply2: $inputHeight * 2;
+
+/************ LAYOUTS ****************/
+
+
+
+/*****GRID LAYOUT 1 TAB****/
+$layoutWholeHeightGL1T: 612px;
+
+/*****GRID LAYOUT 2 TAB****/
+$layoutWholeHeightGL2T: 470px;
+
+/*****GRID LAYOUT 3 TAB****/
+$layoutWholeHeightGL3T: 755px;
+
+/*****GRID LAYOUT 5 TAB****/
+$layoutWholeHeightGL5T: 380px;
+
+/*****GRID LAYOUT 1 DESKTOP****/
+$layoutWholeHeightGL1D: 1160px;
+$beforeLastRowGL1D: 4.4fr;
+$lastRowGL1D: 2.14fr;
+
+/*****GRID LAYOUT 1 DESKTOP FOR BAR****/
+$layoutWholeHeightGL1DBar: 850px;
+$beforeLastRowGL1DBar: 0;
+$lastRowGL1DBar: 0;
+
+
+/*****GRID LAYOUT 2 DESKTOP****/
+$layoutWholeHeightGL2D: 960px;
+
+/*****GRID LAYOUT 3 DESKTOP****/
+$layoutWholeHeightGL3D: 1140px;
+
+/*****GRID LAYOUT 4 DESKTOP****/
+$layoutWholeHeightGL4D: 1140px;
+
+/*****GRID LAYOUT 5 DESKTOP****/
+$layoutWholeHeightGL5D: 510px;
+
+/*****GRID LAYOUT 5 TALL DESKTOP****/
+$layoutWholeHeightGL5tD: 940px;
+
+/*****GRID LAYOUT ROOMS DESKTOP****/
+$topSpaceGLRD: 100px;
+$headlineHeightGLRD: 40px;
+$descHeightGLRD: 200px;
+$bottomSpaceGLRD: 150px;
+$layoutWholeHeightGLRD: 550px; // $topSpace + $headlineHeight + $descHeight + $slideshowRoomFeatureHeight * 2 + $buttonHeight + $bottomSpace) =635p;
+$slideshowRoomPictureHeightGLRD: $layoutWholeHeightGLRD;
+
+
+/********** HEADER *******/
+$topHeightMobile: 35px;
+$topHeightTab: $topHeightMobile;
+$topHeightDesktop: 164px;
+
+$topHeightInBottomMobile: $topHeightMobile + 2 * $inputHeight;
+$topHeightInBottomTab: $topHeightTab + 2 * $inputHeight;
+$topHeightInBottomDesktop: $topHeightDesktop + 2 * $inputHeight;
+
+$menuHeightMobile: 35px;
+$menuHeightTab: $menuHeightMobile;
+$menuHeightDesktop: 64px;
+
+$menuBgHeightMobile: 2 * $topHeightMobile + $menuHeightMobile; // = 2 * 35px + 35px = 105px;
+$menuBgHeightTab: 2 * $topHeightTab + $menuHeightTab;
+$menuBgHeightDesktop: 2 * $topHeightDesktop + $menuHeightDesktop;
+
+$hotelLogoFullHeight: 125px;
+$hotelLogoFullWidth: 170px;
+$hotelLogoHalfHeight: 34px;
+$hotelLogoHalfWidth: 193px;
+
+$companyLogoHeight: 83px;
+$companyLogoHeightWithMargin: $companyLogoHeight + 30px;
+$companyLogoWidth: 65px;
+
+$hamburgerLeftMiniMobile: 20px;
+$hamburgerLeftMobile: 40px;
+
+/********** WRAPPER ***************/
+
+/*******WRAPPER MOBILE ********/
+$reservationHeightMobile: $inputHeight;
+$sloganHeightMobile: 65px;
+/* $remainingHeightMobile: 100vh - $topHeightMobile - $menuHeightMobile - $reservationHeightMobile - $sloganHeightMobile; //Incompatible vh and ps => replace directly where it si needed : 100vh - 35px - 35px - 45px - 65px */
+$footerHotelDetailsMobile: 180px;
+$footerSocialMobile: 70px;
+$footerBottomHeightMobile: 94px;
+
+/*******WRAPPER TAB ********/
+$reservationHeightTab: $inputHeight;
+$sloganHeightTab: 65px;
+/* $remainingHeightTab: 100vh - $topHeightTab - $menuHeightTab - $reservationHeightTab - $sloganHeightTab; //Incompatible vh and ps => replace directly where it si needed : 100vh - 35px - 35px - 45px - 65px */
+$footerTopHeightTab: 235px;
+$footerBottomHeightTab: 54px;
+
+
+/*******WRAPPER DESKTOP ********/
+$reservationHeightDesktop: 200px;
+/* $remainingHeightDesktop: 100vh - $topHeightDesktop - $menuHeightDesktop - $reservationHeightDesktop; //Incompatible vh and ps => replace directly where it si needed : 100vh - 164px - 64px - 200px */
+$remainingMinHeightDesktop: 800px - $topHeightDesktop - $menuHeightDesktop - $reservationHeightDesktop;
+/* $sloganHeightDesktop: $remainingHeightDesktop * 310 / 660; //Incompatible vh and ps => replace directly where it si needed */
+$sloganMinHeightDesktop: $remainingMinHeightDesktop * 310 / 660;
+/* $carnetHeightDesktop: $remainingHeightDesktop * 200 / 660; //Incompatible vh and ps => replace directly where it si needed */
+$carnetMinHeightDesktop: $remainingMinHeightDesktop * 200 / 660;
+/* $calltoscrollHeightDesktop: $remainingHeightDesktop * 150 / 660; //Incompatible vh and ps => replace directly where it si needed */
+$calltoscrollMinHeightDesktop: $remainingMinHeightDesktop * 150 / 660;
+$footerTopHeightDesktop: 235px;
+$footerBottomHeightDesktop: 54px;
+
+
+/*************** HAMBURGER MENU **************/
+
+$hamWidth1914: 19px;
+$hamLineHeight1914: 2px;
+$hamLineSpacing1914: 4px;
+$hamHeight1914: 3 * $hamLineHeight1914 + 2 * $hamLineSpacing1914;
+$hamTopSpan1For1914: 0;
+$hamTopSpan2And3For1914: $hamLineHeight1914 + $hamLineSpacing1914;
+$hamTopSpan4For1914: 2 * $hamTopSpan2And3For1914;
+
+
+$hamWidth1575: 21.375px;
+$hamLineHeight1575: 2.25px;
+$hamLineSpacing1575: 4.5px;
+$hamHeight1575: 3 * $hamLineHeight1575 + 2 * $hamLineSpacing1575;
+$hamTopSpan1For1575: 0;
+$hamTopSpan2And3For1575: $hamLineHeight1575 + $hamLineSpacing1575;
+$hamTopSpan4For1575: 2 * $hamTopSpan2And3For1575;
+
+/*************** B-SIGNATURE **************/
+$buttonSide: 65px;
+$crossSide: $buttonSide * 2 / 3;
+
+/*************** CINEMAGRAPHS **************/
+/* $cinemagraphRoomPortraitHeight: 105vh; //IN JS  */
+/* $cinemagraphRoomPortraitWidth: $cinemagraphRoomPortraitHeight * $videoRoomRatio; //IN JS  */
+/* $cinemagraphRoomLandscapeHeight: $cinemagraphRoomLandscapeWidth / $videoRoomRatio; //IN JS  */
+/* $cinemagraphRoomLandscapeWidth: 115vw; //IN JS  */
+
+/************* BUTTONS ************/
+$inputCheckWidthMobile: 250px;
+$inputCheckWidthDesktop: 155px;
+$inputSelectWidth: 280px;
+$inputPadding: $inputHeightDiv4;
+
+$buttonPaddingX: 45px;
+$buttonHeightMobile: 60px;
+$buttonHeightDesktop: $buttonPaddingX;
+
+%buttonHeight {
+  height: $buttonHeightMobile;
+  @media all and (min-width: $desktop-break) {
+    height: $buttonHeightDesktop;
+  }
+}
+
+$selectHeight: $inputHeight * 0.8;
+$selectPadding: $selectHeight / 4;
+$selectNumberPadding: $inputHeightDiv2;
+
+/*************** RESERVATION MODULE**************/
+$reservationWidth: 900px;
+$reservationPaddingTop: 17px;
+$reservationGridColumnGap: 20px;
+$reservationUIContainerWidth: $inputCheckWidthDesktop * 3 + $inputSelectWidth + 3 * $reservationGridColumnGap;
+$reservationUIContainerHeight: 2 * $reservationPaddingY + 2 * $reservationGridRowGap + $reservationLabelHeight + $inputHeight; // 2 * 13 + 2 * 10 + 17 + 45 = 108px
+$reservationUIContainerHeightNegative: $reservationUIContainerHeight * -1;
+$reservationMarginRightDesktop: ($reservationWidth - 3 *  $inputCheckWidthDesktop - $inputSelectWidth - 5 * $reservationGridColumnGap) / 2;
+
+$uiContainerFontSizeMobile: 0.6875rem;
+$uiContainerFontSizeDesktop: 0.6875rem;
+
+
+/*************** STICKY MENU**************/
+$stickyMenuMobile: 35px;
+$stickyMenuMobileMultiply2: 2 * $stickyMenuMobile;
+$stickyMenuDesktopTop: $reservationUIContainerHeight;
+
+
+/************** ICONS ***************/
+$calendarWidth: $inputHeightDiv2;
+$calendarHeight: $inputHeightDiv2;
+$inputContentMaxWidth: $inputCheckWidthDesktop - $inputHeight;
+
+/************ CONTENT *************/
+$tabBodyWidth: 700px;
+$tabBodyWidthDiv2: $tabBodyWidth / 2;
+$desktopMaxBodyWidth: 1140px;
+$desktopMaxBodyWidthDiv2: $desktopMaxBodyWidth / 2;
+
+/************ HOME ************/
+$pinHeight: 46px;
+$hotelRoomsDescMaxWidth: $tabBodyWidth * 2 / 5;
+$eventsHeight: 635px;
+$eventDescPadding: 50px;
+
+/********** SLIDESHOW OFFER ***********/
+$picMarginRight: 40px;
+
+$slideshowOfferPictureWidthMobile: 290px;
+$slideshowOfferPictureWidthDesktop: 350px;
+
+%slideshowOfferPictureWidth {
+  width: $slideshowOfferPictureWidthMobile;
+  @media all and (min-width: $desktop-break) {
+    width: $slideshowOfferPictureWidthDesktop;
+  }
+}
+
+%slideshowOfferPictureHeight {
+  height: $slideshowOfferPictureWidthMobile / 1.15;
+  @media all and (min-width: $desktop-break) {
+    height: $slideshowOfferPictureWidthDesktop / 1.15;
+  }
+}
+
+%slideshowOfferWidth {
+  width: $slideshowOfferPictureWidthMobile;
+  /* height: (2 * $slideshowOfferPictureWidthMobile + $picMarginRight) / 1.15; */
+
+  @media all and (min-width: $mobile-break) {
+    width: 2 * $slideshowOfferPictureWidthMobile + $picMarginRight;
+    /* height: (2 * $slideshowOfferPictureWidthMobile + $picMarginRight) / 1.15; */
+  }
+  @media all and (min-width: $desktop-break) {
+    width: 3 * $slideshowOfferPictureWidthDesktop + 2 * $picMarginRight;
+    /* height: (3 * $slideshowOfferPictureWidthDesktop + 2 * $picMarginRight) / 1.15; */
+  }
+}
+
+$slideshowOfferArrowHeight: 19px;
+$slideshowOfferArrowWidth: 45px;
+$slideshowOfferArrowPaddingY: 12px;
+$slideshowOfferArrowPaddingX: 17.5px;
+$slideshowOfferArrowContainerHeight: $slideshowOfferArrowHeight + $slideshowOfferArrowPaddingY + $slideshowOfferArrowPaddingX;
+
+%slideshowOfferArrowTop {
+  top: $slideshowOfferPictureWidthMobile / 1.15 / 2 - $slideshowOfferArrowContainerHeight;
+  @media all and (min-width: $desktop-break) {
+    top: $slideshowOfferPictureWidthDesktop / 1.15 / 2 - $slideshowOfferArrowContainerHeight;
+  }
+}
+
+
+/********** SLIDESHOW GRID ***********/
+$slideshowGridWidth: 290px;
+$slideshowGridHeight: $slideshowGridWidth / 1.15;
+
+$slideshowGridArrowWidth: 24px;
+$slideshowGridArrowHeight: $slideshowGridArrowWidth * 19 / 45;
+$slideshowGridArrowPaddingY: 7px;
+$slideshowGridArrowPaddingX: 0px;
+$slideshowGridArrowContainerHeight: $slideshowGridArrowHeight + $slideshowGridArrowPaddingY + $slideshowGridArrowPaddingX;
+
+$slideshowGridControlsHeight: $slideshowGridArrowHeight * 1.15;
+
+/********** SLIDESHOW ROOMS ***********/
+$picMarginRight: 40px;
+$slideshowRoomPictureWidth: 100%;
+
+$slideshowRoomPictureHeightMobile: 254px;
+
+$slideshowRoomFeatureHeight: 50px;
+$slideshowRoomFeatureWidth: $slideshowRoomFeatureHeight;
+
+$slideshowRoomArrowHeight: 19px;
+$slideshowRoomArrowWidth: 45px;
+$slideshowRoomArrowPaddingY: 12px;
+$slideshowRoomArrowPaddingX: 17.5px;
+$slideshowRoomArrowContainerHeight: $slideshowRoomArrowHeight + $slideshowRoomArrowPaddingY + $slideshowRoomArrowPaddingX;
+$slideshowRoomArrowContainerTopMobile: ($slideshowRoomPictureHeightMobile - $slideshowRoomArrowContainerHeight) / 2;
+$slideshowRoomArrowContainerTop: ($slideshowRoomPictureHeightGLRD - $slideshowRoomArrowContainerHeight) / 2;
+
+/********** SLIDESHOW MENU ***********/
+$picMarginRight: 40px;
+$slideshowMenuPictureWidthMobile: 290px;
+$slideshowMenuPictureHeightMobile: $slideshowMenuPictureWidthMobile / 1.15;
+$slideshowMenuPictureHeightMobile19: $slideshowMenuPictureHeightMobile * 1.9;
+$slideshowMenuPictureHeightMobile14: $slideshowMenuPictureHeightMobile * 1.4;
+$slideshowMenuPictureWidthDesktop: 350px;
+$slideshowMenuPictureHeightDesktop: $slideshowMenuPictureWidthDesktop / 1.15;
+$slideshowMenuPictureHeightDesktop19: $slideshowMenuPictureHeightDesktop * 1.9;
+$slideshowMenuPictureHeightDesktop14: $slideshowMenuPictureHeightDesktop * 1.4;
+
+%slideshowMenuPictureWidth {
+  width: $slideshowMenuPictureWidthMobile;
+  @media all and (min-width: $desktop-break) {
+    width: $slideshowMenuPictureWidthDesktop;
+  }
+}
+
+%slideshowMenuPictureHeight {
+  height: $slideshowMenuPictureHeightMobile;
+  @media all and (min-width: $desktop-break) {
+    height: $slideshowMenuPictureHeightDesktop;
+  }
+}
+%slideshowMenuWidth {
+  width: 2 * $slideshowOfferPictureWidthMobile + $picMarginRight;
+  // height: (2 * $slideshowOfferPictureWidthMobile + $picMarginRight) / 1.15;
+  @media all and (min-width: $desktop-break) {
+    width: 3 * $slideshowOfferPictureWidthDesktop + 2 * $picMarginRight;
+    // height: (3 * $slideshowOfferPictureWidthDesktop + 2 * $picMarginRight) / 1.15;
+  }
+}
+
+$slideshowMenuArrowHeight: 19px;
+$slideshowMenuArrowWidth: 45px;
+$slideshowMenuArrowPaddingY: 12px;
+$slideshowMenuArrowPaddingX: 17.5px;
+$slideshowMenuArrowContainerHeight: $slideshowMenuArrowHeight + $slideshowMenuArrowPaddingY + $slideshowMenuArrowPaddingX;
+
+%slideshowMenuArrowTop {
+  top: $slideshowMenuPictureWidthMobile / 1.15 / 2 - $slideshowMenuArrowContainerHeight;
+  @media all and (min-width: $desktop-break) {
+    top: $slideshowMenuPictureWidthDesktop / 1.15 / 2 - $slideshowMenuArrowContainerHeight;
+  }
+}
+/*************** GALLERY **************/
+$galleryGap: 20px;
+/* $galleryCardWidth: 50vw - 1.5 * $galleryGap; //Incompatible vh and ps => replace directly where it si needed : 50vw - 1.5 * 20px */
+$galleryCardMaxWidth: $desktopMaxBodyWidth / 2 - $galleryGap / 2;
+
+/**************** DATEPICKER *************/
+
+$datePickerWidthMobile: $inputCheckWidthMobile;
+$datePickerWidthDesktop: 250px;
+
+%datePickerWidth {
+ width: $datePickerWidthMobile;
+ @media all and (min-width: $desktop-break) {
+   width: $datePickerWidthDesktop;
+ }
+}
+
+$datePickerHeight: 180px;
+
+%datePickerContainerWidth {
+ width: $datePickerWidthMobile;
+ @media all and (min-width: $desktop-break) {
+   width: 315px;
+ }
+}
+
+$datePickerContainerHeight: 210px;
+$datePickerContainerHeightDesktop: $datePickerContainerHeight + $inputHeight;
+
+
+/************ SELECTOR *******************/
+$selectorBorderWidth: 5px;
+
+/********** FLOATING DIVS ***************/
+$translationAmplitude: 15%; 
+$floatingDivHeight: 100% + $translationAmplitude; 
+$initTranslate: -15px;
+

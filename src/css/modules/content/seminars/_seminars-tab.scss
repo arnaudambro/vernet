@@ -1,0 +1,52 @@
+@media all and (min-width: $mobile-break) {
+  .seminars {
+
+    &__background {
+      // background-image: url('../img/seminars/hero@2x.png');
+      background-position: center bottom;
+    }
+
+    &__introduction {
+
+
+      &--descpicture {
+        grid-area: picture1;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        height: 100%;
+        width: 100%;
+      }
+      &--headline {
+        grid-area: headline;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        -ms-grid-row-align: center;
+align-self: center;
+        
+        text-align: start;
+      }
+      &--description {
+        grid-area: description;
+        -ms-grid-column-align: start;
+        justify-self: start;
+        font-family: $textContent;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+
+        -ms-grid-row-align: center;
+align-self: center;
+        text-align: start;
+
+      }
+      &--button {
+        grid-area: button;
+        -ms-grid-column-align: center;
+justify-self: center;
+        -ms-grid-row-align: end;
+align-self: end;
+      }
+    } 
+
+
+  }
+}

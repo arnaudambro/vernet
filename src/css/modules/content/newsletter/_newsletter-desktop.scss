@@ -1,0 +1,23 @@
+
+@media all and (min-width: $desktop-break)  {
+
+  .newsletter {
+    &__headline {
+    }
+    &__tagline {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+    &__form {
+      flex-direction: row;
+    }
+    &__input {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+    &__button {
+    }
+  }
+
+}

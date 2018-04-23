@@ -1,0 +1,79 @@
+@media all and (min-width: $desktop-break) {
+
+  .slideshow-offers {
+      max-width: 1400px;
+
+    &-container {
+      background-color: $offersBgColor;
+
+
+
+    }
+
+    &__headline {
+      display: flex;
+      
+      justify-content: space-between;
+      //align-items: center;
+      //align-content: center;
+      
+    }
+    &__tagline {
+      margin-top: -30px;
+    }
+    &__arrow--container {
+      &-right {
+      }
+      &-left {
+      }
+      > .arrow > svg {
+      }
+    }
+    &__content {
+
+      &--container {
+      }
+
+    }
+    &__card {
+
+
+      &--card1 > :first-child { 
+      }
+      &--card2 > :first-child { 
+      }
+      &--card3 > :first-child { 
+      }
+      &--card4 > :first-child { 
+      }
+      &--card5 > :first-child { 
+      }
+      &--card6 > :first-child { 
+      }
+
+      &--picture {
+      }
+
+      &--headline {
+
+      }
+
+      &--description {
+      }
+    }
+
+    &__button {
+      &--book {
+        margin-top: 30px;
+      }
+      &--offers {
+        display: none;
+        &-desktop {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+}

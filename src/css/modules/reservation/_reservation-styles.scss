@@ -1,0 +1,154 @@
+$fontSize: 0.6875rem;
+
+.header__reservation {
+
+
+
+  &__outer-container {
+    grid-area: reservation;
+  }
+  &__inner-container {    
+  }
+
+  .headline-reservation {
+    text-align: center;
+    > .span {
+      display: block;
+      &:first-child {
+        margin-top: 20px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+}
+
+.ui-container {
+
+  &.checkin-selected {
+    .input__checkin {
+      .angle-down-div {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+  &.checkout-selected {
+    .input__checkout {
+      .angle-down-div {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+  &.room-selected {
+    .input__room,
+    .input__room-adults-children {
+      .angle-down-div {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+
+  }
+  &.adults-selected {
+    .input__adults {
+      .angle-down-div {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+  &.children-selected {
+    .input__children {
+      .angle-down-div {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+  //LABELS
+
+font-size: $fontSize;
+
+  .label {
+    &__checkout {
+    }
+    &__checkin {
+    }
+    &__room {
+    }
+  }
+
+  //INPUTS & SELECTS
+
+font-size: $fontSize;
+
+  .input {
+    padding: 0;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: $inputHeight;
+    border: 1px solid transparent;
+
+    &__content {
+      border: none;
+      // pointer-events: none;
+      flex-grow: 1;
+      min-width: 0;
+      flex-shrink: 1;
+      background: transparent;
+      text-align: center;
+      cursor: pointer;
+    }
+    &__calendar {
+      margin: $inputHeightDiv4;
+      pointer-events: none;
+    }
+    &__check {
+
+      > .input__content {
+        width: $inputContentMaxWidth;
+      }
+    }
+    &__checkin {
+      position: relative;
+    }      
+    &__checkout {
+      position: relative;
+    }
+
+    &__room-adults-children {
+      color: $buttonBgColor;
+      position: relative;
+      > .icon {
+        // pointer-events: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bed, .person, .child-head {
+    margin-left: $inputHeightDiv4;
+  }
+  .fa-minus, .fa-angle-down, .fa-plus {
+    cursor: pointer;
+    width: $inputHeightDiv3;
+  }
+
+
+  .angle-down-div {
+    pointer-events: none;
+    transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+
+
+  .button__book {
+  }
+
+}
+
+
+

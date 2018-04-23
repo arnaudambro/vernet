@@ -1,0 +1,80 @@
+@media all and (min-width: $mobile-break) {
+  .bar-restaurant {
+
+    &__background {
+      // background-image: url('../img/bar-restaurant/hero@2x.png');
+      background-position: center bottom;
+    }
+
+    &__restaurant {
+      width: 100%;
+
+
+      &--picture {
+        // background-image: url('../img/bar-restaurant/intro@2x.png');
+        height: 500px;
+        background-position: center bottom 20%;
+
+      }
+      &--headline {
+
+      }
+      &--description {
+        font-family: $textContent;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+
+        -ms-grid-row-align: center;
+align-self: center;
+        text-align: start;
+
+      }
+      &--comment {
+        &-content {
+          
+        }
+      }
+      &--buttons {
+        flex-direction: row;
+        align-items: flex-start;
+
+        > :first-child {
+          margin-right: 40px;
+        }
+      }
+    } 
+
+
+    &__bar {
+      width: 100%;
+
+      &--picture {
+        // background-image: url('../img/rooms/introduction@2x.png');
+        height: 500px;
+        width: 100%;
+        background-position: center bottom 20%;
+      }
+      &--headline {
+        text-align: center;
+        width: 100%;
+      }
+      &--description {
+        width: 100%;
+
+        > * {
+          max-width: 300px; 
+        }
+
+      }
+      &--buttons {
+        flex-direction: row;
+        > :first-child {
+          margin-right: 15px;
+        }
+
+      }
+    } 
+
+
+  }
+}

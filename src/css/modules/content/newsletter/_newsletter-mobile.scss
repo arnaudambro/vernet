@@ -1,0 +1,22 @@
+.newsletter {
+
+  &__headline {
+
+  }
+  &__tagline {
+    display: none;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__input {
+    width: 90%;
+  }
+  &__button {
+
+  }
+}

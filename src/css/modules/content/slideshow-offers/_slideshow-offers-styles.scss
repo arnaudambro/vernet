@@ -1,0 +1,125 @@
+
+.slideshow-offers {
+
+  &-container {
+    width: 100%;
+    background-color: $offersBgColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  position: relative;
+  font-family: $slideshowOffers;
+  // border: 1px solid #000;
+  width: 95%;
+
+  &__headline {
+    @extend %slideshowOfferWidth;
+    text-align: start;
+  }
+
+  &__tagline {
+    @extend %slideshowOfferWidth;
+    text-align: start;
+    margin-bottom: 10px;
+    line-height: 1.3125rem;
+  }
+
+  &__arrow--container {
+    z-index: $zSlideshowOffersArrows;
+    position: absolute;
+    @extend %slideshowOfferArrowTop;
+    padding-top: $slideshowOfferArrowPaddingY;
+    padding-bottom: $slideshowOfferArrowPaddingY;
+    padding-left: $slideshowOfferArrowPaddingX;
+    padding-right: $slideshowOfferArrowPaddingX;
+    > .arrow {
+      display: flex;
+
+      > svg {
+        height: $slideshowOfferArrowHeight;
+        width: $slideshowOfferArrowWidth;
+      }
+    }
+
+    &-right {
+      right: 0;
+    }
+    &-left {
+      left: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: $zSlideshowOffersContent;
+
+    transition: transform 1s ease-in-out;
+
+    
+    &--container {
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+-ms-scroll-limit: 0 0 0 0;
+
+      @extend %slideshowOfferWidth;
+
+    }
+
+  }
+  &__card {
+
+    &--card1 > :first-child { 
+      // background-image: url('../img/offers/offer-1.png');
+    }
+    &--card2 > :first-child { 
+      // background-image: url('../img/offers/offer-2.png');
+    }
+    &--card3 > :first-child { 
+      // background-image: url('../img/offers/offer-3.png');
+    }
+    &--card4 > :first-child { 
+      // background-image: url('../img/offers/offer-4.png');
+    }
+    &--card5 > :first-child { 
+      // background-image: url('../img/offers/offer-5.png');
+    }
+    &--card6 > :first-child { 
+      // background-image: url('../img/offers/offer-6.png');
+    }
+
+    &--picture {
+      @extend %slideshowOfferPictureWidth;
+      @extend %slideshowOfferPictureHeight;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--headline {
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.4em;
+
+    }
+
+    &--description {
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 1.6666em;
+    }
+  }
+
+  &__button {
+    &--book {
+    }
+    &--offers {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+

@@ -1,0 +1,42 @@
+.bar-restaurant {
+
+  &__background {
+      // background-image: url('../img/bar-restaurant/hero.png');
+  }
+
+
+  &__restaurant {
+    &--picture {
+      // background-image: url('../img/bar-restaurant/intro.png');
+    } 
+    &--headline {
+
+    }
+    &--description {
+      width: 90%;
+    }
+    &--comment {
+      &-content {
+        max-width: 300px; 
+        
+      }
+    }
+
+  } 
+
+  &__bar {
+
+    &--picture {
+      // background-image: url('../img/rooms/introduction.png');
+      background-position: center bottom;
+    }
+    &--headline {
+
+    }
+    &--description {
+      width: 90%;
+      text-align: center;
+
+    }
+  } 
+}
