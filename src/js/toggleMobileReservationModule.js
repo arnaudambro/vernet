@@ -49,10 +49,6 @@ function toggleReservation(e) {
 }
 
 
-document.querySelector('.button.button__book').addEventListener('click', function(e) {
-  alert('blob')
-})
-
 export { initToggleReservationMobile };
 
 
