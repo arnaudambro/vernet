@@ -1,12 +1,9 @@
 
-
 <!DOCTYPE html>
 <html lang="fr_FR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-
-
   <meta name="theme-color" content="#000000">
   <meta name="robots" content="noindex">
 
@@ -16,8 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:300,400,700" rel="stylesheet">
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
-
-  <title>Hotel Vernet | Home</title>
+  <title>Hotel Vernet | Chambres et suites</title>
   <!-- <link href="/vernet/static/css/main.css" rel="stylesheet"> -->
 <link href="/vernet/static/css/main.1a2ae76d.css" rel="stylesheet"></head>
 <body>
@@ -25,14 +21,14 @@
   <div class="loading__background">
     <div title="Vernet - Hôtel 5 étoiles" id="hotel-logo-full-loading" class="loading__content"></div>
   </div>
-  <div class="wrapper__outer-container check-home">
+  <div class="wrapper__outer-container check-rooms">
     <form action="submit" style='display: none' id="booking-form">
       <input type="text" readonly name="checkin-input" form="booking-form">
       <input type="text" name="checkout-input" form="booking-form">
       <input type="text" name="rooms-input" id="rooms-input" form="booking-form" value="1">
       <input type="text" name="adults-input" id="adults-input" form="booking-form" value="2">
       <input type="text" name="children-input" id="children-input" form="booking-form" value="0">
-      <button type="submit" form="booking-form"></button>
+      <button type="submit" id="only-valid-submit-booking-button" form="booking-form"></button>
     </form>
 
     <!-- B-SIGNATURE HOTELS MENU -->
@@ -65,34 +61,31 @@
 
     <div class="wrapper__inner-container improve-scroll">
       <div class="wrapper">
-
         <!----                                                                ----! 
-                  ----                                                        ---- 
-                      ----                                                ---- 
-                          ----                                        ---- 
-                              ----                                ---- 
-                                  ----                        ---- 
-                                      ----                ---- 
-                                          ---- HEADER ---- 
-                                      ----                ----
-                                  ----                        ----
-                              ----                                ----
-                          ----                                        ----
-                      ----                                                ----
-                  ----                                                        ----
-            <-----                                                                ---->
-        
+              ----                                                        ---- 
+                  ----                                                ---- 
+                      ----                                        ---- 
+                          ----                                ---- 
+                              ----                        ---- 
+                                  ----                ---- 
+                                      ---- HEADER ---- 
+                                  ----                ----
+                              ----                        ----
+                          ----                                ----
+                      ----                                        ----
+                  ----                                                ----
+              ----                                                        ----
+        <-----                                                                ---->
 
         <!-- BACKGROUNDS -->
         <!-- <div class="header header__back home__background img__container img__container--hero">
+            <img src="/vernet/img/home/hero.png" alt="image d'une chambre de l'hôtel Vernet" class="img__img">
         </div> -->
-        <div class="header header__back home__background cinemagraph__container">
-            <img src="/vernet/img/home/hero.png" alt="image d'une chambre de l'hôtel Vernet" class="img__img no-js">
-            <video class="cinemagraph cinemagraph__room js" autoplay muted playsinline loop preload src="/vernet/cinemagraphs/vernet-cinemagraph-chambre.mp4" type="video/mp4"></video>
+        <div class="header header__back rooms__background img__container img__container--hero">
+            <img src="/vernet/img/rooms/hero.png" alt="image d'une chambre de l'hôtel Vernet" class="img__img">
         </div>
 
-        <!-- CINEMAGRAPH -->
-
+       
         <div class="header header__mask"></div>
         <!-- B-SIGNATURE + HAMBURGER -->
         <div class="header__content header__top header__top--company">
@@ -131,9 +124,10 @@
 
         <!-- SLOGAN -->
         <h2 class="header__content header__slogan">
-          <span class="span first-line">Un hôtel lifestyle intemporel</span>
-          <span class="span second-line">au coeur des Champs-Elysées</span>
+          <span class="span first-line">Chambres et suites</span>
+          <span class="span second-line">Une atmosphère contemporaine au style parisien</span>
         </h2>
+
 
         <!-- RESERVATION -->
         <!-- FULL VERSION DESKTOP -->
@@ -261,7 +255,7 @@
                     </div>
                   </div>
                 </div>
-                <button form="booking-form" type="submit" class="button button__book" name="book-submit">réserver</button>
+                <button class="button button__book" name="book-submit">réserver</button>
                 <div class="divider mobile-divider-75 tab-divider-75 no-desktop button__book--margin-bottom"></div>
               </div>
               <div class="headline-reservation">
@@ -317,10 +311,10 @@
 
 
         <!-- CARNET DE VOYAGE -->
-        <div class="header__content header__carnet no-mobile no-tab">
+        <!--<div class="header__content header__carnet no-mobile no-tab">
           <span class="span">Carnet de voyage</span>
           <span class="span">By <em>Christina Bazan</em></span>
-        </div>
+        </div> -->
 
         <!-- CALL TO SCROLL -->
         <div class="header__content header__call-to-scroll no-mobile no-tab">
@@ -331,23 +325,24 @@
 
 
         <!----                                                                ----! 
-                  ----                                                        ---- 
-                      ----                                                ---- 
-                          ----                                        ---- 
-                              ----                                ---- 
-                                  ----                        ---- 
-                                      ----                ---- 
-                                          ---- CONTENT ---- 
-                                      ----                ----
-                                  ----                        ----
-                              ----                                ----
-                          ----                                        ----
-                      ----                                                ----
-                  ----                                                        ----
-            <-----                                                                ---->
+              ----                                                        ---- 
+                  ----                                                ---- 
+                      ----                                        ---- 
+                          ----                                ---- 
+                              ----                        ---- 
+                                  ----                ---- 
+                                      ---- CONTENT ---- 
+                                  ----                ----
+                              ----                        ----
+                          ----                                ----
+                      ----                                        ----
+                  ----                                                ----
+              ----                                                        ----
+        <-----                                                                ---->
+
         
         
-        <div class="content home">
+        <div class="content rooms">
 
           <div class="divider mobile-divider-40 tab-divider-45 desktop-divider-80"></div>
           
@@ -358,147 +353,86 @@
                                 ---- 
                                     ---- 
                                         ---- 
-                                            ---- INTRODUCTION ---- 
+                                            ---- HEAD ---- 
                                         ---- 
                                     ---- 
                                 ---- 
                             ---- 
                         ---- 
                     ---- 
-               ----> 
+              ---->
           
-          <div class="mobile-fluid home__hotel-introduction">
-            <div class="home__hotel-introduction--text">
-              <blockquote class="home__hotel-introduction--blockquote blockquote headline">
-                <span class="span">Il était une fois&nbsp;</span>
-                <span class="span">l'hôtel Vernet...</span>
+          <div class="mobile-fluid rooms__head">
+            <div class="rooms__head--text">
+              <blockquote class="rooms__head--blockquote headline">
+                <span class="span">Les prestations&nbsp;</span>
+                <span class="span">d'un hôtel 5 étoiles</span>
               </blockquote>
-              <div class="divider mobile-divider-30 tab-divider-25 no-desktop"></div>
-              <div class="home__hotel-introduction--tagline tagline">
-                <span class="span">Et si le bonheur était ici...</span>
+              <div class="divider mobile-divider-30 tab-divider-35 no-desktop"></div>
+              <div class="rooms__head--tagline tagline">
+                <span class="span">Elégance et savoir-faire au service&nbsp;</span>
+                <span class="span">d’une clientèle internationale...</span>
               </div>
             </div>
-            <div class="home__hotel-introduction--pic img__container no-mobile no-tab img__container floating_div__parent--parent">
-              <div class="floating_div__parent">
-                <div class="floating_div">
-                  <img src="/vernet/img/home/intro.png" alt="Christina Bazan" class="img__img">
-                </div>
+            <!-- <div class="rooms__head--pic no-mobile no-tab"></div> -->
+            <div class="rooms__head--share share no-mobile no-tab">
+              <span class="rooms__head--share-title span">Partager</span>
+              <div class="rooms__head--share-icons share__icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a class="last-logo" href="#"><i class="fab fa-pinterest-p"></i></i></a>
               </div>
             </div>
           </div>
+
           <div class="divider mobile-divider-35 tab-divider-70 desktop-divider-75"></div>
 
 
-
-              <!---- 
-                    ---- 
-                        ---- 
-                            ---- 
-                                ---- 
-                                    ---- 
-                                        ---- 
-                                            ---- LOCATION ---- 
-                                        ---- 
-                                    ---- 
-                                ---- 
-                            ---- 
-                        ---- 
-                    ---- 
-               ----> 
+                  <!---- 
+                         ---- 
+                             ---- 
+                                 ---- 
+                                     ---- 
+                                         ---- 
+                                             ---- 
+                                                 ---- INTRODUCTION ---- 
+                                             ---- 
+                                         ---- 
+                                     ---- 
+                                 ---- 
+                             ---- 
+                         ---- 
+                    ----> 
+                
           
-          <div class="mobile-fluid home__hotel-location grid-layout-1">
-            <div class="home__hotel-location--time home__hotel-location--time-1 no-mobile no-tab ">
-              <span class="span">14:30</span>
-            </div>
-            <div class="home__hotel-location--descpicture hero--mobile hero slideshow-grid__container check-in floating_div__parent--parent">
-              <img src="/vernet/img/home/hotel-description.png" alt="" class="img__img">
-              <a href="/vernet/hotel/" class="button no-tab no-desktop home__hotel-location--button">l'hôtel</a>
-              <div class="home__hotel-location--descpicture--content no-mobile no-tab slideshow-grid__content floating_div__parent">
-                <div class="home__hotel-location--descpicture--pic no-mobile no-tab img__container floating_div"  id="test-floating-div">
-                  <img src="/vernet/img/home/hotel-description.png" alt="" class="img__img">
-                  <!-- <img src="/vernet/img/test/test_pic_1.png" alt="" class="img__img"> -->
-                </div>
-                <div class="home__hotel-location--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/hotel-description.png" alt="" class="img__img">
-                  <!-- <img src="/vernet/img/test/test_pic_2.png" alt="" class="img__img"> -->
-                </div>
-                <div class="home__hotel-location--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/hotel-description.png" alt="" class="img__img">
-                  <!-- <img src="/vernet/img/test/test_pic_3.png" alt="" class="img__img"> -->
-                </div>
-                <div class="home__hotel-location--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/hotel-description.png" alt="" class="img__img">
-                  <!-- <img src="/vernet/img/test/test_pic_4.png" alt="" class="img__img"> -->
-                </div>
-              </div>
-            </div>
-            <div class="divider mobile-divider-45 no-tab no-desktop"></div>
-            <div class="no-mobile no-tab home__hotel-location--divider1"></div>
-            <div class="home__hotel-location--headline headline">
-              <span class="span">Check-in</span>
-              <span class="span">à l'hôtel Vernet</span>
-            </div>
-            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
-            <div class="home__hotel-location--tagline tagline">
-              <span class="span">Avec toute l’élégance d’un hôtel</span>
-              <span class="span">particulier parisien...</span>
-            </div>
-            <a href="/vernet/hotel/" class="button no-mobile home__hotel-location--button" >l'hôtel</a>
-            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
-            <div class="home__hotel-location--controls slideshow-grid__controls  no-mobile no-tab">
-              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-left arrow--container check-in" data-slideshow="check-in">
-                <div class="arrow arrow--left"></div>
-              </div>
-              <div class="slideshow-grid__controls--slide check-in" data-slideshow="check-in">
-                <span class='span current'>1</span>
-                <span class='span span-divider'>/</span>
-                <span class='span total'>5</span>
-              </div>
-              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-right arrow--container check-in" data-slideshow="check-in">
-                <div class="arrow arrow--right"></div>
-              </div>
-            </div>
-            <div class="home__hotel-location--descpicture2  no-mobile no-tab hero slideshow-grid__container check-in floating_div__parent--parent no-slideshow">
-              <!-- <img src="/vernet/img/home/hotel-description-2.png" alt="" class="img__img no-js"> -->
-              <!-- <video class="cinemagraph cinemagraph__cafe js" autoplay muted playsinline loop preload src="/vernet/cinemagraphs/vernet-cinemagraph-cafe.mp4" type="video/mp4"></video> -->
-              <div class="home__hotel-location--descpicture2--content no-mobile no-tab slideshow-grid__content floating_div__parent">
-                <div class="home__hotel-location--descpicture2--pic no-mobile no-tab img__container cinemagraph__container floating_div">
-                  <!-- <img src="/vernet/img/home/hotel-description-2.png" alt="" class="img__img no-js"> -->
-                  <video class="cinemagraph cinemagraph__cafe js" autoplay muted playsinline loop preload src="/vernet/cinemagraphs/vernet-cinemagraph-cafe.mp4" type="video/mp4"></video>
-                </div>
-                <div class="home__hotel-location--descpicture2--pic no-mobile no-tab img__container floating_div no-slideshow">
-                  <img src="/vernet/img/home/hotel-description-2.png" alt="" class="img__img">
-                </div>
-                <div class="home__hotel-location--descpicture2--pic no-mobile no-tab img__container floating_div no-slideshow">
-                  <img src="/vernet/img/home/hotel-description-2.png" alt="" class="img__img">
-                </div>
-                <div class="home__hotel-location--descpicture2--pic no-mobile no-tab img__container floating_div no-slideshow">
-                  <img src="/vernet/img/home/hotel-description-2.png" alt="" class="img__img">
-                </div>
-              </div>
-            </div>
-            <div class="no-tab no-desktop home__hotel-location--map-pin map-pin"></div>
-            <div class="no-mobile home__hotel-location--description">
-              <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.<br /><br />Suspendisse iaculis turpis quis libero bibendum, et scelerisque magna porta. Nullam dapibus, dui nec aliquet volutpat, enim nibh tristique purus, eu hendrerit nulla lorem a sem. 
-              </p>
-
-            </div>
-            <div class="no-mobile home__hotel-location--map floating_div__parent--parent">
+          <div class="mobile-fluid rooms__introduction grid-layout-5">
+            <div class="rooms__introduction--descpicture hero hero--mobile floating_div__parent--parent">
               <div class="floating_div__parent">
                 <div class="floating_div">
-                  <!-- <div class="iframe-mask"></div> -->
-                  <iframe src="https://snazzymaps.com/embed/53836"></iframe>
+                  <img src="/vernet/img/rooms/introduction.png" alt="" class="img__img">
                 </div>
               </div>
             </div>
-            <div class="no-mobile home__hotel-location--coordinates">
-              <span class="span">Latitude : 48.871963</span>
-              <span class="span">Longitude : 2.297887</span>
+            <div class="rooms__introduction--descpicture-legend no-mobile no-tab">
+              <span class="span">Une architecture intérieure signée François Champsaur</span>
             </div>
-            <div class="desktop-visible-divider  no-mobile no-tab home__hotel-location--divider2"></div>
+            <div class="divider mobile-divider-45 no-tab no-desktop"></div>
+            <div class="no-mobile no-tab rooms__introduction--divider1"></div>
+            <div class="rooms__introduction--headline headline">
+              <span class="span">Un équipement complet</span>
+              <span class="span">à votre disposition</span>
+            </div>
+            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
+            <div class="rooms__introduction--description">
+              <p>Hôtel entièrement non-fumeur - Minibar - Accès WIFI haut débit - Cinéma à la demande - Radio - Télévision écran plasma offrant un bouquet de 60 chaînes - Lecteur DVD sur demande - Smartphone Jack - Coffre-fort individuel - Air conditionné - Room service 24/24 - Machine à Café espresso dans les suites et chambres Prestige - PlayStation à la demande</p>
+            </div>
+            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
+            <a href="#" class="button no-desktop rooms__introduction--button" name="book">reserver</a>
+            <a href="#" class="button no-mobile no-tab rooms__introduction--button" name="book">reserver à l'hôtel</a>
           </div>
-          
-          <div class="divider mobile-divider-20 tab-divider-70 no-desktop"></div>
+            <div class="divider mobile-divider-75 tab-divider-80  desktop-divider-160"></div>
+
 
               <!---- 
                     ---- 
@@ -516,46 +450,232 @@
                     ---- 
                ----> 
           
-          <div class="mobile-fluid home__hotel-rooms grid-layout-2">
-            <div class="home__hotel-location--time home__hotel-location--time-2 no-mobile no-tab ">
-              <span class="span">15:00</span>
+          <div class="mobile-fluid slideshow-rooms-container">
+            <!-- headline  -->
+            <div class="slideshow-rooms__headline headline">
+              <span class="span">Chambres</span>
             </div>
-            <div class="home__hotel-rooms--descpicture1 hero--mobile hero no-mobile img__container">
-              <img src="/vernet/img/home/rooms-1.png" alt="" class="img__img">
-            </div>
-            <div class="home__hotel-rooms--descpicture2 hero--mobile hero img__container">
-              <a href="/vernet/rooms/" class="button no-tab no-desktop home__hotel-rooms--description--button">chambres & suites</a>
-              <img src="/vernet/img/home/rooms-2.png" alt="" class="img__img">
-              <div class="home__hotel-rooms--descpicture2-description  no-mobile no-tab">
-                <div class="home__hotel-rooms--descpicture2-description-headline  no-mobile no-tab">
-                  <span class="span">SUITE HORACE VERNET</span>
-                </div>
-                <div class="home__hotel-rooms--descpicture2-description-text  no-mobile no-tab">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim a arcu aliquet placerat. </p>
+
+            <div class="divider mobile-divider-45 tab-divider-70 desktop-divider-60"></div>
+
+            <div class="slideshow-rooms">
+              <!-- arrow left -->
+              <div class="slideshow-rooms__arrow--container slideshow-rooms__arrow--container-left arrow--container no-desktop" id="rooms-arrow-left">
+                <div class="arrow arrow--left"></div>
+              </div>
+
+              <!-- div with overflow hidden  -->
+              <div class="slideshow-rooms__content--container">
+
+                <!-- div surrounding the cards -->
+                <div class="slideshow-rooms__content" id="rooms-content">
+
+                  <!-- card  -->
+                  <div class="slideshow-rooms__card slideshow-rooms__card--prestige">
+                    <!-- picture -->
+                    <div class="slideshow-rooms__card--picture slideshow-rooms__card--picture-prestige">
+                      <img src="/vernet/img/rooms/prestige-1.png" alt="" class="img__img">
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-left arrow--container no-mobile no-tab">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-container  no-mobile no-tab floating_div__parent--parent  floating_div__parent--parent">
+                        <div class="slideshow-rooms__card--picture-content floating_div__parent">
+                          <div class="slideshow-rooms__card--picture-prestige-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-1.png" alt="" class="img__img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-right arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--right"></div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-30 tab-divider-35 no-desktop"></div>
+                    <!-- headline -->
+                    <div class="slideshow-rooms__card--headline headline">Chambre prestige</div>
+                    <div class="slideshow-rooms__card--divider"></div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- description -->
+                    <div class="slideshow-rooms__card--description">
+                      <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.</p>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- features -->
+                    <div class="slideshow-rooms__card--features">
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-shower">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-shower shower"></div>
+                        <div class="slideshow-rooms__card--feature-name">douche</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-terrasse">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-terrasse terrasse"></div>
+                        <div class="slideshow-rooms__card--feature-name">terrasse</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-m2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-m2 m2"></div>
+                        <div class="slideshow-rooms__card--feature-name">m2</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-personsx2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-personsx2 personsx2"></div>
+                        <div class="slideshow-rooms__card--feature-name">2 pers.</div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- button -->
+                    <a href="#" class="button slideshow-rooms__card--button slideshow-rooms__card--button--rooms" name="prestige">réserver</a>
+                  </div>
+
+                  <!-- card  -->
+                  <div class="slideshow-rooms__card slideshow-rooms__card--deluxe">
+                    <!-- picture -->
+                    <div class="slideshow-rooms__card--picture slideshow-rooms__card--picture-deluxe">
+                      <img src="/vernet/img/rooms/deluxe-1.png" alt="" class="img__img">
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-left arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-container  no-mobile no-tab  floating_div__parent--parent">
+                        <div class="slideshow-rooms__card--picture-content floating_div__parent">
+                          <div class="slideshow-rooms__card--picture-deluxe-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/deluxe-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-deluxe-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/deluxe-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-deluxe-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/deluxe-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-deluxe-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/deluxe-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-deluxe-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/deluxe-1.png" alt="" class="img__img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-right arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--right"></div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- headline -->
+                    <div class="slideshow-rooms__card--headline headline">Chambre deluxe</div>
+                    <div class="slideshow-rooms__card--divider"></div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- description -->
+                    <div class="slideshow-rooms__card--description">
+                      <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.</p>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- features -->
+                    <div class="slideshow-rooms__card--features">
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-shower">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-shower shower"></div>
+                        <div class="slideshow-rooms__card--feature-name">douche</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-terrasse">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-terrasse terrasse"></div>
+                        <div class="slideshow-rooms__card--feature-name">terrasse</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-m2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-m2 m2"></div>
+                        <div class="slideshow-rooms__card--feature-name">m2</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-personsx2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-personsx2 personsx2"></div>
+                        <div class="slideshow-rooms__card--feature-name">2 pers.</div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- button -->
+                    <a href="#" class="button slideshow-rooms__card--button slideshow-rooms__card--button--rooms" name="deluxe">réserver</a>
+                  </div>
+
+                  <!-- card  -->
+                  <div class="slideshow-rooms__card slideshow-rooms__card--superior">
+                    <!-- picture -->
+                    <div class="slideshow-rooms__card--picture slideshow-rooms__card--picture-superior">
+                      <img src="/vernet/img/rooms/superior-1.png" alt="" class="img__img">
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-left arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-container  no-mobile no-tab  floating_div__parent--parent">
+                        <div class="slideshow-rooms__card--picture-content floating_div__parent">
+                          <div class="slideshow-rooms__card--picture-superior-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/superior-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-superior-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/superior-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-superior-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/superior-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-superior-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/superior-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-superior-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/superior-1.png" alt="" class="img__img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-right arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--right"></div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- headline -->
+                    <div class="slideshow-rooms__card--headline headline">Chambre superieure</div>
+                    <div class="slideshow-rooms__card--divider"></div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- description -->
+                    <div class="slideshow-rooms__card--description">
+                      <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.</p>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- features -->
+                    <div class="slideshow-rooms__card--features">
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-shower">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-shower shower"></div>
+                        <div class="slideshow-rooms__card--feature-name">douche</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-terrasse">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-terrasse terrasse"></div>
+                        <div class="slideshow-rooms__card--feature-name">terrasse</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-m2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-m2 m2"></div>
+                        <div class="slideshow-rooms__card--feature-name">m2</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-personsx2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-personsx2 personsx2"></div>
+                        <div class="slideshow-rooms__card--feature-name">2 pers.</div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- button -->
+                    <a href="#" class="button slideshow-rooms__card--button slideshow-rooms__card--button--rooms" name="superior">réserver</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <a href="/vernet/rooms/" class="button home__hotel-rooms--description--button no-mobile" >chambres & suites</a>
-            <div class="home__hotel-rooms--description--buttons  no-mobile no-tab">
-              <a href="/vernet/rooms/" class="button home__hotel-rooms--description--button1  no-mobile no-tab" >explorez les chambres & suites</a>
-              <button class="button home__hotel-rooms--description--button2  no-mobile no-tab" name="booking-module">réservez à l'hôtel</button>
-            </div>
-            <div class="divider mobile-divider-35 no-tab no-desktop"></div>
-            <div class="home__hotel-rooms--headline headline">
-              <span class="span">Relax time</span>
-              <span class="span">dans ma suite</span>
-            </div>
-            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
-            <div class="home__hotel-rooms--tagline tagline">
-              <span class="span">Des petites attentions particulières</span>
-              <span class="span">qui me font sentir comme à la maison...</span>
-            </div>
-            <div class="no-mobile home__hotel-rooms--description">
-              <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.<br /><br />Suspendisse iaculis turpis quis libero bibendum, et scelerisque magna porta. Nullam dapibus, dui nec aliquet volutpat, enim nibh tristique purus, eu hendrerit nulla lorem a sem. </p>
+
+              <!-- arrow right -->
+              <div class="slideshow-rooms__arrow--container slideshow-rooms__arrow--container-right arrow--container no-desktop" id="rooms-arrow-right">
+                <div class="arrow arrow--right"></div>
+              </div>
             </div>
           </div>
 
-          <div class="divider mobile-divider-45 no-tab no-desktop"></div>
+          <div class="divider mobile-divider-45 tab-divider-80 desktop-divider-80"></div>
+
 
               <!---- 
                     ---- 
@@ -672,203 +792,246 @@
           <div class="divider no-mobile tab-divider-50 desktop-divider-80"></div>
 
 
-              <!---- 
-                    ---- 
-                        ---- 
-                            ---- 
-                                ---- 
-                                    ---- 
-                                        ---- 
-                                            ---- BAR ---- 
-                                        ---- 
-                                    ---- 
-                                ---- 
-                            ---- 
-                        ---- 
-                    ---- 
-               ----> 
-          
-              <div class="mobile-fluid home__bar grid-layout-1">
-                <div class="home__bar--descpicture2 slideshow-grid__container bar hero--mobile hero floating_div__parent--parent">
-                  <!-- <img src="/vernet/img/home/bar.png" alt="" class="img__img no-mobile no-js"> -->
-                  <video class="cinemagraph cinemagraph__champagne--mobile no-tab no-desktop js" autoplay muted playsinline loop preload src="/vernet/cinemagraphs/vernet-cinemagraph-champagne.mp4" type="video/mp4"></video>
-                  <div class="home__bar--descpicture2--content slideshow-grid__content no-mobile no-tab floating_div__parent">
-                    <div class="home__bar--descpicture2--pic img__container floating_div">
-                      <img src="/vernet/img/home/bar.png" alt="" class="img__img">
-                    </div>
-                    <div class="home__bar--descpicture2--pic img__container floating_div">
-                      <img src="/vernet/img/home/bar.png" alt="" class="img__img">
-                    </div>
-                    <div class="home__bar--descpicture2--pic img__container floating_div">
-                      <img src="/vernet/img/home/bar.png" alt="" class="img__img">
-                    </div>
-                    <div class="home__bar--descpicture2--pic img__container floating_div">
-                      <img src="/vernet/img/home/bar.png" alt="" class="img__img">
-                    </div>
-                    <div class="home__bar--descpicture2--pic img__container floating_div">
-                      <img src="/vernet/img/home/bar.png" alt="" class="img__img">
-                    </div>
-                  </div>
-                </div>
-                <div class="home__bar--descpictures no-mobile">
-                  <a href="/vernet/bar-restaurant/" class="button home__bar--button no-tab no-desktop">bar & restaurant</a>
-                  <img src="/vernet/img/home/bar-2.png" alt="" class="img__img">
-                  <div class="home__bar--descpicture1 slideshow-grid__container bar floating_div__parent--parent no-slideshow">
-                    <div class="home__bar--descpicture1--content slideshow-grid__content floating_div__parent">
-                      <div class="home__bar--descpicture1--pic img__container floating_div">
-                        <video class="cinemagraph cinemagraph__champagne--tab-desktop" autoplay muted playsinline loop preload src="/vernet/cinemagraphs/vernet-cinemagraph-champagne.mp4" type="video/mp4"></video>
-                      </div>
-                      <div class="home__bar--descpicture1--pic img__container floating_div  no-slideshow">
-                        <img src="/vernet/img/home/bar-2.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture1--pic img__container floating_div  no-slideshow">
-                        <img src="/vernet/img/home/bar-2.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture1--pic img__container floating_div  no-slideshow">
-                        <img src="/vernet/img/home/bar-2.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture1--pic img__container floating_div  no-slideshow">
-                        <img src="/vernet/img/home/bar-2.png" alt="" class="img__img">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="home__bar--descpicture3  no-mobile no-tab slideshow-grid__container bar floating_div__parent--parent">
-                    <div class="home__bar--descpicture3--content no-mobile no-tab slideshow-grid__content floating_div__parent">
-                      <div class="home__bar--descpicture3--pic no-mobile no-tab img__container floating_div">
-                        <img src="/vernet/img/home/bar-3.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture3--pic no-mobile no-tab img__container floating_div">
-                        <img src="/vernet/img/home/bar-3.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture3--pic no-mobile no-tab img__container floating_div">
-                        <img src="/vernet/img/home/bar-3.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture3--pic no-mobile no-tab img__container floating_div">
-                        <img src="/vernet/img/home/bar-3.png" alt="" class="img__img">
-                      </div>
-                      <div class="home__bar--descpicture3--pic no-mobile no-tab img__container floating_div">
-                        <img src="/vernet/img/home/bar-3.png" alt="" class="img__img">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="divider mobile-divider-45 no-tab no-desktop"></div>
-                <div class="home__bar--divider1 no-mobile no-tab "></div>
-                <div class="home__bar--headline headline">
-                  <span class="span">Apéritif</span>
-                  <span class="span">au bar du Vernet</span>
-                </div>
-                <div class="divider mobile-divider-30 no-tab no-desktop "></div>
-                <div class="home__bar--tagline tagline">
-                  <span class="span">Comme l’impression de séjourner</span>
-                  <span class="span">chez un collectionneur...</span>
-                </div>
-                <div class="home__bar--time home__bar--time-1 no-mobile no-tab ">
-                  <span class="span">18:30</span>
-                </div>
-                <a href="/vernet/bar-restaurant/" class="button home__bar--button no-mobile" >bar & restaurant</a>
-                <!-- <a href="#" class="button home__bar--button no-mobile  no-desktop" name="hôtel">bar & restaurant</a> -->
-                <!-- <a href="#" class="button home__bar--button no-mobile no-tab" name="hôtel">explorer l'hôtel</a> -->
-                <div class="divider mobile-divider-30 no-tab no-desktop"></div>
-                <div class="home__bar--controls slideshow-grid__controls  no-mobile no-tab">
-                  <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-left arrow--container bar" data-slideshow="bar">
-                    <div class="arrow arrow--left"></div>
-                  </div>
-                  <div class="slideshow-grid__controls--slide bar" data-slideshow="bar">
-                    <span class='span current'>1</span>
-                    <span class='span span-divider'>/</span>
-                    <span class='span total'>5</span>
-                  </div>
-                  <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-right arrow--container bar" data-slideshow="bar">
-                    <div class="arrow arrow--right"></div>
-                  </div>
-                </div>
-                <div class="home__bar--description no-mobile">
-                  <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.<br /><br />Suspendisse iaculis turpis quis libero bibendum, et scelerisque magna porta. Nullam dapibus, dui nec aliquet volutpat, enim nibh tristique purus, eu hendrerit nulla lorem a sem. 
-                  </p>
-                </div>
-              </div>
-
-          <div class="divider tab-divider-75 no-mobile no-desktop"></div>
-
-              <!---- 
-                    ---- 
-                        ---- 
-                            ---- 
-                                ---- 
-                                    ---- 
-                                        ---- 
-                                            ---- RESTAURANT ---- 
-                                        ---- 
-                                    ---- 
-                                ---- 
-                            ---- 
-                        ---- 
-                    ---- 
-               ----> 
-          
-          <div class="mobile-fluid home__restaurant grid-layout-3">
-            <div class="home__bar--time home__bar--time-2 no-mobile no-tab ">
-              <span class="span">20:00</span>
+                <!---- 
+                      ---- 
+                          ---- 
+                              ---- 
+                                  ---- 
+                                      ---- 
+                                          ---- 
+                                              ---- SUITES ---- 
+                                          ---- 
+                                      ---- 
+                                  ---- 
+                              ---- 
+                          ---- 
+                      ---- 
+                 ----> 
+          <div class="mobile-fluid slideshow-rooms-container">
+            <!-- headline  -->
+            <div class="slideshow-rooms__headline headline">
+              <span class="span">Suites</span>
             </div>
-            <div class="home__restaurant--descpicture hero--mobile hero slideshow-grid__container restaurant floating_div__parent--parent">
-              <button class="button no-tab no-desktop home__restaurant--description--button home__restaurant--description--button-book" name="book-restaurant">réserver une table</button>
-              <a href="/vernet/menu/" class="button no-tab no-desktop home__restaurant--description--button home__restaurant--description--button-menu" >voir la carte</a>          
-              <img src="/vernet/img/home/restaurant.png" alt="" class="img__img">
-              <div class="home__restaurant--descpicture--content no-mobile no-tab slideshow-grid__content floating_div__parent">
-                <div class="home__restaurant--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/restaurant.png" alt="" class="img__img">
-                </div>
-                <div class="home__restaurant--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/restaurant.png" alt="" class="img__img">
-                </div>
-                <div class="home__restaurant--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/restaurant.png" alt="" class="img__img">
-                </div>
-                <div class="home__restaurant--descpicture--pic no-mobile no-tab img__container floating_div">
-                  <img src="/vernet/img/home/restaurant.png" alt="" class="img__img">
-                </div>
-              </div>
-            </div>
-            <div class="home__restaurant--controls slideshow-grid__controls  no-mobile no-tab">
-              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-left arrow--container restaurant" data-slideshow="restaurant">
+
+            <div class="divider mobile-divider-45 tab-divider-70 desktop-divider-60"></div>
+
+            <div class="slideshow-rooms">
+              <!-- arrow left -->
+              <div class="slideshow-rooms__arrow--container slideshow-rooms__arrow--container-left arrow--container no-desktop" id="suites-arrow-left">
                 <div class="arrow arrow--left"></div>
               </div>
-              <div class="slideshow-grid__controls--slide restaurant" data-slideshow="restaurant">
-                <span class='span current'>1</span>
-                <span class='span span-divider'>/</span>
-                <span class='span total'>5</span>
+
+              <!-- div with overflow hidden  -->
+              <div class="slideshow-rooms__content--container">
+
+                <!-- div surrounding the cards -->
+                <div class="slideshow-rooms__content" id="suites-content">
+
+                  <!-- card  -->
+                  <div class="slideshow-rooms__card slideshow-rooms__card--presidential">
+                    <!-- picture -->
+                    <div class="slideshow-rooms__card--picture slideshow-rooms__card--picture-presidential">
+                      <img src="/vernet/img/rooms/presidential-1.png" alt="" class="img__img">
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-left arrow--container no-mobile no-tab">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-container  no-mobile no-tab  floating_div__parent--parent">
+                        <div class="slideshow-rooms__card--picture-content floating_div__parent">
+                          <div class="slideshow-rooms__card--picture-presidential-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/presidential-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-presidential-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/presidential-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-presidential-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/presidential-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-presidential-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/presidential-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-presidential-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/presidential-1.png" alt="" class="img__img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-right arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--right"></div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- headline -->
+                    <div class="slideshow-rooms__card--headline headline">Suite présidentielle</div>
+                    <div class="slideshow-rooms__card--divider"></div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- description -->
+                    <div class="slideshow-rooms__card--description">
+                      <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.</p>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- features -->
+                    <div class="slideshow-rooms__card--features">
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-shower">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-shower shower"></div>
+                        <div class="slideshow-rooms__card--feature-name">douche</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-terrasse">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-terrasse terrasse"></div>
+                        <div class="slideshow-rooms__card--feature-name">terrasse</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-m2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-m2 m2"></div>
+                        <div class="slideshow-rooms__card--feature-name">m2</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-personsx2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-personsx2 personsx2"></div>
+                        <div class="slideshow-rooms__card--feature-name">2 pers.</div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- button -->
+                    <a href="#" class="button slideshow-rooms__card--button slideshow-rooms__card--button--rooms" name="presidential">réserver</a>
+                  </div>
+
+                  <!-- card  -->
+                  <div class="slideshow-rooms__card slideshow-rooms__card--prestige-suite">
+                    <!-- picture -->
+                    <div class="slideshow-rooms__card--picture slideshow-rooms__card--picture-prestige-suite">
+                      <img src="/vernet/img/rooms/prestige-suite-1.png" alt="" class="img__img">
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-left arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-container  no-mobile no-tab  floating_div__parent--parent">
+                        <div class="slideshow-rooms__card--picture-content floating_div__parent">
+                          <div class="slideshow-rooms__card--picture-prestige-suite-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-suite-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-suite-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-suite-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-suite-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-suite-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-suite-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-suite-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-prestige-suite-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/prestige-suite-1.png" alt="" class="img__img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-right arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--right"></div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- headline -->
+                    <div class="slideshow-rooms__card--headline headline">Suite prestige</div>
+                    <div class="slideshow-rooms__card--divider"></div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- description -->
+                    <div class="slideshow-rooms__card--description">
+                      <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.</p>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- features -->
+                    <div class="slideshow-rooms__card--features">
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-shower">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-shower shower"></div>
+                        <div class="slideshow-rooms__card--feature-name">douche</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-terrasse">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-terrasse terrasse"></div>
+                        <div class="slideshow-rooms__card--feature-name">terrasse</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-m2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-m2 m2"></div>
+                        <div class="slideshow-rooms__card--feature-name">m2</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-personsx2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-personsx2 personsx2"></div>
+                        <div class="slideshow-rooms__card--feature-name">2 pers.</div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- button -->
+                    <a href="#" class="button slideshow-rooms__card--button slideshow-rooms__card--button--rooms" name="prestige-suite">réserver</a>
+                  </div>
+
+                  <!-- card  -->
+                  <div class="slideshow-rooms__card slideshow-rooms__card--executive">
+                    <!-- picture -->
+                    <div class="slideshow-rooms__card--picture slideshow-rooms__card--picture-executive">
+                      <img src="/vernet/img/rooms/executive-1.png" alt="" class="img__img">
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-left arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-container  no-mobile no-tab  floating_div__parent--parent">
+                        <div class="slideshow-rooms__card--picture-content floating_div__parent">
+                          <div class="slideshow-rooms__card--picture-executive-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/executive-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-executive-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/executive-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-executive-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/executive-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-executive-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/executive-1.png" alt="" class="img__img">
+                          </div>
+                          <div class="slideshow-rooms__card--picture-executive-pic slideshow-rooms__card--picture-pic floating_div">
+                            <img src="/vernet/img/rooms/executive-1.png" alt="" class="img__img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slideshow-rooms__card--picture-arrow--container slideshow-rooms__card--picture-arrow--container-right arrow--container  no-mobile no-tab">
+                        <div class="arrow arrow--right"></div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- headline -->
+                    <div class="slideshow-rooms__card--headline headline">Suite exécutive</div>
+                    <div class="slideshow-rooms__card--divider"></div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- description -->
+                    <div class="slideshow-rooms__card--description">
+                      <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.</p>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- features -->
+                    <div class="slideshow-rooms__card--features">
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-shower">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-shower shower"></div>
+                        <div class="slideshow-rooms__card--feature-name">douche</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-terrasse">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-terrasse terrasse"></div>
+                        <div class="slideshow-rooms__card--feature-name">terrasse</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-m2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-m2 m2"></div>
+                        <div class="slideshow-rooms__card--feature-name">m2</div>
+                      </div>
+                      <div class="slideshow-rooms__card--feature slideshow-rooms__card--feature-personsx2">
+                        <div class="slideshow-rooms__card--feature-picture slideshow-rooms__card--feature-picture-personsx2 personsx2"></div>
+                        <div class="slideshow-rooms__card--feature-name">2 pers.</div>
+                      </div>
+                    </div>
+                    <div class="divider mobile-divider-45 tab-divider-35 no-desktop"></div>
+                    <!-- button -->
+                    <a href="#" class="button slideshow-rooms__card--button slideshow-rooms__card--button--rooms" name="executive">réserver</a>
+                  </div>
+                </div>
               </div>
-              <div class="slideshow-grid__controls--arrow--container slideshow-grid__controls--arrow--container-right arrow--container restaurant" data-slideshow="restaurant">
+
+              <!-- arrow right -->
+              <div class="slideshow-rooms__arrow--container slideshow-rooms__arrow--container-right arrow--container no-desktop" id="suites-arrow-right">
                 <div class="arrow arrow--right"></div>
               </div>
             </div>
-            <div class="divider mobile-divider-45 no-tab no-desktop"></div>
-            <div class="desktop-visible-divider  no-mobile no-tab home__restaurant--divider1"></div>
-            <div class="home__restaurant--headline headline">
-              <span class="span">Gastronomie</span>
-              <span class="span">au restaurant le V</span>
-            </div>
-            <div class="divider mobile-divider-30 no-tab no-desktop"></div>
-            <div class="home__restaurant--tagline tagline">
-              <span class="span">Lorsque ta table préférée est réservée avant</span>
-              <span class="span">même que tu n’aies eu besoin de le faire...</span>
-            </div>
-            <div class="no-mobile home__restaurant--description--container">
-              <div class="home__restaurant--description--tagline tagline">Lorem ipsum dolor sit amet...</div>
-              <div class="home__restaurant--description--content">
-                <p>In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor a. Phasellus tincidunt volutpat egestas. Pellentesque sit amet imperdiet nunc, ut faucibus ante.<br /><br />Suspendisse iaculis turpis quis libero bibendum, et scelerisque magna porta. Nullam dapibus, dui nec aliquet volutpat, enim nibh tristique purus, eu hendrerit nulla lorem a sem. </p>
-              </div>
-              <div class="home__restaurant--description--buttons">
-                <a href="#" class="button home__restaurant--description--button home__restaurant--description--button-book" name="book-restaurant">réserver une table</a>
-                <a href="#" class="button home__restaurant--description--button home__restaurant--description--button-menu" name="menu">voir la carte</a>
-              </div>
-            </div>
-            <div class="divider mobile-divider-45 no-tab no-desktop"></div>
           </div>
 
-          <div class="divider mobile-divider-50 tab-divider-90 desktop-divider-160"></div>
-
+          <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-180"></div>
 
               <!---- 
                     ---- 
@@ -877,7 +1040,7 @@
                                 ---- 
                                     ---- 
                                         ---- 
-                                            ---- EVENTS ---- 
+                                            ---- NOTE ---- 
                                         ---- 
                                     ---- 
                                 ---- 
@@ -886,29 +1049,21 @@
                     ---- 
                ----> 
           
-          <div class="events  no-mobile no-tab floating_div__parent--parent">
-            <div class="events__descpicture floating_div__parent">
-              <div class="floating_div events__descpicture--pic">
-                <img src="/vernet/img/home/events.png" alt="" class="img__img">
-              </div>
+          <div class="rooms__note">
+            <div class="divider mobile-divider-50 tab-divider-50 desktop-divider-100"></div>
+            <div class="rooms__note--headline headline">
+              <span class="span">Nous rappelons à notre aimable clientèle que le meilleur prix garanti est ici !</span>
             </div>
-            <div class="events__headline-and-button">
-              <div class="events__headline headline">Évènements</div>
-              <a href="/vernet/events/" class="button events__button">découvrir tous nos évènements</a>
+            <div class="divider mobile-divider-50 tab-divider-75 desktop-divider-70"></div>
+            <div class="rooms__note--text">
+              <p class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus molestie pretium. Duis porttitor luctus dictum. Integer dapibus eleifend tortor blandit suscipit. Mauris laoreet nunc eget ipsum rhoncus, non condimentum dui laoreet. Suspendisse luctus ultricies blandit. Aenean arcu urna, tempor non enim sed, auctor hendrerit neque. Sed vitae ullamcorper arcu, id faucibus arcu. Nam faucibus lobortis tempus. Sed viverra nisl id urna dapibus interdum.</p>
             </div>
-            <div class="events__blank"></div>
-            <div class="events__description--date">14 janvier 2018</div>
-            <div class="events__description">
-              <div class="events__description--title">
-                <span class="span">vernissage de l’exposition  dédiée  au photographe jean-philippe piter « from saint barth with love »</span>
-              </div>
-              <div class="events__description--tagline tagline">
-                <span class="span">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin enim a arcu aliquet placerat.</span>
-              </div>
-            </div>
+            <div class="divider mobile-divider-60 tab-divider-60 desktop-divider-90"></div>
+            <a href="#" class="button no-mobile no-tab rooms__note--button" name="book">réserver à l'hôtel</a>
+            <div class="divider no-mobile no-tab desktop-divider-100"></div>
           </div>
 
-          <div class="divider no-mobile no-tab desktop-divider-65"></div>
+          <div class="divider mobile-divider-45 tab-divider-60 desktop-divider-60"></div>
 
 
               <!---- 
@@ -967,68 +1122,69 @@
 
 
 
-              <!---- 
-                    ---- 
+                  <!---- 
                         ---- 
                             ---- 
                                 ---- 
                                     ---- 
                                         ---- 
-                                            ---- NEWSLETTER  ---- 
+                                            ---- 
+                                                ---- NEWSLETTER  ---- 
+                                            ---- 
                                         ---- 
                                     ---- 
                                 ---- 
                             ---- 
                         ---- 
-                    ---- 
-               ----> 
-          
-          <div class="mobile-fluid newsletter">
-            <div class="newsletter__headline headline">
-              <span class="span">S'abonner à la newsletter</span>
-            </div>
-            <div class="divider no-mobile no-tab desktop-divider-15"></div>
-            <div class="newsletter__tagline no-mobile no-tab ">
-              <span class="span">In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor </span>
-            </div>
-            <div class="divider mobile-divider-35 tab-divider-40 desktop-divider-60"></div>
-            <form action="submit" id="newsletter-form" class="newsletter__form">
-              <input class="input newsletter__input" form="newsletter-form"></input>
-              <div class="divider mobile-divider-25 tab-divider-25 no-desktop"></div>
-              <button type="submit" class="button newsletter__button" form="newsletter-form" name="newsletter-submit">m'inscrire</button>
-            </form>
-            <div class="divider mobile-divider-50 tab-divider-85 desktop-divider-170"></div>
-          </div>
+                   ----> 
+              
+              <div class="mobile-fluid newsletter">
+                <div class="newsletter__headline headline">
+                  <span class="span">S'abonner à la newsletter</span>
+                </div>
+                <div class="divider no-mobile no-tab desktop-divider-15"></div>
+                <div class="newsletter__tagline no-mobile no-tab ">
+                  <span class="span">In id nunc eu velit aliquet laoreet quis nec orci. Pellentesque ultrices placerat dolor, sed lacinia turpis auctor </span>
+                </div>
+                <div class="divider mobile-divider-35 tab-divider-40 desktop-divider-60"></div>
+                <form action="submit" id="newsletter-form" class="newsletter__form">
+                  <input class="input newsletter__input" form="newsletter-form"></input>
+                  <div class="divider mobile-divider-25 tab-divider-25 no-desktop"></div>
+                  <button type="submit" class="button newsletter__button" form="newsletter-form" name="newsletter-submit">m'inscrire</button>
+                </form>
+                <div class="divider mobile-divider-50 tab-divider-85 desktop-divider-170"></div>
+              </div>
 
 
 
-            <!---- 
-                  ---- 
+                <!---- 
                       ---- 
                           ---- 
                               ---- 
                                   ---- 
                                       ---- 
-                                          ---- BACK TO TOP  ---- 
+                                          ---- 
+                                              ---- BACK TO TOP  ---- 
+                                          ---- 
                                       ---- 
                                   ---- 
                               ---- 
                           ---- 
                       ---- 
-                  ---- 
-             ----> 
+                 ----> 
 
-          <div class="mobile-fluid back-to-top">
-            <div class="angle-up-div back-to-top__button">
-              <i class="icon angle-up-icon"></i>
+            <div class="mobile-fluid back-to-top">
+              <div class="angle-up-div back-to-top__button">
+                <i class="icon angle-up-icon"></i>
+              </div>
+              <div class="back-to-top__text">
+                <span class="span">back to top</span>
+              </div>
+              <div class="divider mobile-divider-50 tab-divider-85 desktop-divider-170"></div>
             </div>
-            <div class="back-to-top__text">
-              <span class="span">back to top</span>
-            </div>
-            <div class="divider mobile-divider-50 tab-divider-85 desktop-divider-170"></div>
+
           </div>
 
-        </div>
 
         <!----                                                                ----! 
                   ----                                                        ---- 
@@ -1066,25 +1222,23 @@
         </div>
         <div class="footer__content footer__bottom footer__bottom--legal">
           <div class="one-line">
-            <span class="span mentions-legales"><a href="/vernet/legal/">Mentions légales</a></span>
+            <span class="span mentions-legales"><a href="#">Mentions légales</a></span>
             <span class="span copyright-large">© 2018 Hôtel Vernet - Tous droits réservés</span>
-            <span class="span hiring"><a href="/vernet/jobs/">Recrutement</a></span>
-            <span class="span press"><a href="/vernet/press/">Presse</a></span>
+            <span class="span hiring"><a href="#">Recrutement</a></span>
+            <span class="span press"><a href="#">Presse</a></span>
           </div>
           <span class="span copyright-small">© 2018 Hôtel Vernet</span>
         </div>
       </div>
     </div>
   </div>
-
-
   <script type='text/javascript'>
-    const loadingBackground = document.querySelector('.loading__background');
-    const wrapper = document.querySelector('.wrapper__outer-container');
+    var loadingBackground = document.querySelector('.loading__background');
+    var wrapper = document.querySelector('.wrapper__outer-container');
     wrapper.style.display = 'none';
     loadingBackground.style.display = '';
   </script>
   <!-- <script type="text/javascript" src="/vernet/static/js/main.js"></script>   -->
-  
-<script type="text/javascript" src="/vernet/static/js/main.fb075376.js"></script></body>
+
+<script type="text/javascript" src="/vernet/static/js/main.504f04ee.js"></script></body>
 </html>

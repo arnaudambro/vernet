@@ -20,12 +20,12 @@ if (reservationContainer) {
   let mobileCheckoutField;
   let fixedCheckoutField;
 
-  let mobileCheckinDatepicker;
-  let fixedCheckinDatepicker;
+  // let mobileCheckinDatepicker;
+  // let fixedCheckinDatepicker;
   let mobileCheckoutDatepicker;
   let fixedCheckoutDatepicker;
 
-  let checkinDatePickers;
+  // let checkinDatePickers;
   let checkoutDatePickers;
 
   let checkinRenderContainers;
@@ -63,7 +63,7 @@ if (reservationContainer) {
         moment.locale(`${lang}`);
         const clickedDate = this.getMoment();
         if (type === 'checkin') {
-          const otherPosition = (position === 'fixed' ? 'mobile' : 'fixed');
+          // const otherPosition = (position === 'fixed' ? 'mobile' : 'fixed');
           renderContainers.forEach(container => container.querySelector('.weekday').innerText = clickedDate.format('ddd').replace('.', ''));
           renderContainers.forEach(container => container.querySelector('.day-month').innerText = clickedDate.format('D MMM').replace('.', ''));
           renderContainers.forEach(container => container.querySelector('.year').innerText = clickedDate.format('YYYY').replace('.', ''));
@@ -121,18 +121,18 @@ if (reservationContainer) {
 
     mobileCheckinField = uiContainerMobile.querySelector('.input__checkin');
     const mobileCheckinContainer = uiContainerMobile.querySelector('.checkin-datepicker');
-    mobileCheckinDatepicker = createDatePicker(mobileCheckinField, mobileCheckinContainer, checkinRenderContainers, 'checkin', 'mobile');
+    createDatePicker(mobileCheckinField, mobileCheckinContainer, checkinRenderContainers, 'checkin', 'mobile');
 
 
     fixedCheckinField = uiContainerFixed.querySelector('.input__checkin');
     const fixedCheckinContainer = uiContainerFixed.querySelector('.checkin-datepicker');
-    fixedCheckinDatepicker = createDatePicker(fixedCheckinField, fixedCheckinContainer, checkinRenderContainers, 'checkin', 'fixed');
+    createDatePicker(fixedCheckinField, fixedCheckinContainer, checkinRenderContainers, 'checkin', 'fixed');
 
 
-    checkinDatePickers = {
-      mobile: mobileCheckinDatepicker,
-      fixed: fixedCheckinDatepicker
-    }
+    // checkinDatePickers = {
+    //   mobile: mobileCheckinDatepicker,
+    //   fixed: fixedCheckinDatepicker
+    // }
 
     /*------------------------------------*/
     /*CHECKOUT DATEPICKERS*/

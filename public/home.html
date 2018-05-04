@@ -32,7 +32,7 @@
       <input type="text" name="rooms-input" id="rooms-input" form="booking-form" value="1">
       <input type="text" name="adults-input" id="adults-input" form="booking-form" value="2">
       <input type="text" name="children-input" id="children-input" form="booking-form" value="0">
-      <button type="submit" form="booking-form"></button>
+      <button type="submit" id="only-valid-submit-booking-button" form="booking-form"></button>
     </form>
 
     <!-- B-SIGNATURE HOTELS MENU -->
@@ -1079,8 +1079,8 @@
 
 
   <script type='text/javascript'>
-    const loadingBackground = document.querySelector('.loading__background');
-    const wrapper = document.querySelector('.wrapper__outer-container');
+    var loadingBackground = document.querySelector('.loading__background');
+    var wrapper = document.querySelector('.wrapper__outer-container');
     wrapper.style.display = 'none';
     loadingBackground.style.display = '';
   </script>

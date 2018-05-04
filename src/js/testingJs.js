@@ -32,17 +32,6 @@ if (!String.prototype.includes) {
 }
 
 
-if (!NodeList.prototype.forEach) {
-  /*console.log('ça ne marche pas');*/
-} else {
-  /*console.log('ça marche');*/
-}
-
-
-/*console.log('noJs:', noJs);*/
-/*console.log('js:', js);*/
-/*console.log('fuckingArray:', fuckingArray);*/
-
 
 noJs && noJs.forEach(element => element.style.display = 'none');
 js && js.forEach(element => element.classList.remove('js'));

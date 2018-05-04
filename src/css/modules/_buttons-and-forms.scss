@@ -115,7 +115,7 @@
   position: relative;
   @extend %buttonHeight;
   z-index: $zindexMenuOnTop;
-  pointer-events: initial;
+  pointer-events: auto;
 
   padding-left: $buttonPaddingX;
   padding-right: $buttonPaddingX;

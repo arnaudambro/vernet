@@ -583,7 +583,7 @@ body {
 .button {
   position: relative;
   z-index: 100;
-  pointer-events: initial;
+  pointer-events: auto;
   padding-left: 45px;
   padding-right: 45px;
   border: none;

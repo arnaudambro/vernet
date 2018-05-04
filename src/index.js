@@ -35,4 +35,6 @@ import './js/slideshowRooms';
 import './js/slideshowMenu';
 import './js/slideshowGrid-order';
 
+import './js/submitBookingForm';
+
 import './css/styles.css';
