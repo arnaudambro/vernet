@@ -3,7 +3,12 @@
   &__container {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+    @supports not (-ms-high-contrast: none) {
+      flex-direction: row;
+    }
+
     > .cinemagraph__cafe {
       margin-bottom: 35px;
     }
@@ -15,6 +20,7 @@
       /* width: $cinemagraphRoomLandscapeHeight; //IN JS */
       flex-shrink: 0;
       visibility: visible;
+      display: block;
     }
     &.portrait {
 

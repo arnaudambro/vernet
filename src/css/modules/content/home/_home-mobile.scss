@@ -1,7 +1,7 @@
 .home {
 
   &__background {
-      // background-image: url('../img/home/hero.png');
+    // background-image: url('../img/home/hero.png');
   }
 
 
@@ -44,7 +44,7 @@
     }
     &--descpicture2 {
       overflow: hidden;
--ms-scroll-limit: 0 0 0 0;
+      -ms-scroll-limit: 0 0 0 0;
 
     }
   }

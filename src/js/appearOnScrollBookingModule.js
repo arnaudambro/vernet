@@ -3,8 +3,8 @@ const wrapper = document.querySelector('.wrapper__inner-container');
 /*const wrapperOuter = document.querySelector('.wrapper__outer-container');*/
 /*const wrapperOuterContainer = document.querySelector('.wrapper__outer-container');*/
 const reservationModule = wrapper.querySelector('.header__reservation__outer-container');
-const noRestaurant = reservationModule &&!reservationModule.classList.contains('bar-restaurant__header--reservation-hotel');
-const noSeminars = reservationModule &&!reservationModule.classList.contains('seminars__header--reservation-hotel');
+const noRestaurant = reservationModule && !reservationModule.classList.contains('bar-restaurant__header--reservation-hotel');
+const noSeminars = reservationModule && !reservationModule.classList.contains('seminars__header--reservation-hotel');
 
 let initParametersDesktopBooking;
 

@@ -44,14 +44,14 @@
       }
     }
     .select__adults {
-      -ms-grid-row: 2;
+      -ms-grid-row: 1;
       -ms-grid-column: 1;
       @media all and (min-width: $desktop-break) {
         transition-delay: $selectDuration2;
       }
     }
     .select__children {
-      -ms-grid-row: 3;
+      -ms-grid-row: 1;
       -ms-grid-column: 1;
       @media all and (min-width: $desktop-break) {
         transition-delay: $selectDuration3;

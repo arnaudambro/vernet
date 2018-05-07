@@ -10,6 +10,10 @@
 
 
       &--descpicture {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         grid-area: picture1;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -18,6 +22,8 @@
         width: 100%;
       }
       &--headline {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
         grid-area: headline;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -28,6 +34,8 @@
         text-align: start;
       }
       &--tagline {
+        -ms-grid-row: 2;
+        -ms-grid-column: 5;
         grid-area: tagline;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -39,6 +47,8 @@
 
       }
       &--button {
+        -ms-grid-row: 3;
+        -ms-grid-column: 5;        
         grid-area: button;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -48,6 +58,9 @@
         align-self: end;
       }
       &--description {
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
         grid-area: description;
         font-family: $textContent;
         font-size: 0.75rem;
@@ -57,6 +70,10 @@
         align-self: center;
       }
       &--map {
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
         grid-area: picture2;
         display: flex;
         justify-content: stretch;
@@ -77,6 +94,9 @@
         right: 25%;
       }
       &--coordinates {
+        -ms-grid-row: 8;
+        -ms-grid-column: 4;
+        -ms-grid-column-span: 2;
         grid-area: coordinates;
         -ms-grid-row-align: center;
         align-self: center;
@@ -99,15 +119,23 @@
 
 
       &--descpicture2 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
         grid-area: picture2;
       }
       &--descpicture1 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-area: picture1;
         position: relative;
 
         // background-image: url('../img/home/rooms-2@2x.png');
       }
       &--headline {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
         grid-area: headline;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -117,6 +145,8 @@
         text-align: start;
       }
       &--tagline {
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
         grid-area: tagline;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -126,6 +156,9 @@
         text-align: start;
       }
       &--description {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
         grid-area: description;
         font-family: $textContent;
         font-size: 0.75rem;
@@ -139,6 +172,9 @@
         max-width: $hotelRoomsDescMaxWidth;
         &--button {
           flex-grow: 0;
+          -ms-grid-row: 5;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 4;
           grid-row: 5;
           grid-column: 1 / -1;
           -ms-grid-row-align: center;
@@ -154,6 +190,10 @@
     &__bar {
 
       &--descpictures {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         grid-area: picture1;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -162,16 +202,27 @@
         width: 100%;
         // background-image: url('../img/home/bar-2@2x.png');
       }
-      &--descpitcure1 {
+      &--descpicture1 {
         height: 100%;
         width: 100%;
+        &--pic {
+          @media all and (max-width: $desktop-break) {
+            transform: translate3D(0,0,0) !important;
+          }
+        }
       }
       &--descpicture2 {
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
         grid-area: picture2;
         position: relative;
         // background-image: url('../img/home/bar@2x.png');
       }
       &--headline {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
         grid-area: headline;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -182,6 +233,8 @@
         text-align: start;
       }
       &--tagline {
+        -ms-grid-row: 2;
+        -ms-grid-column: 5;
         grid-area: tagline;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -194,6 +247,8 @@
 
       }
       &--button {
+        -ms-grid-row: 3;
+        -ms-grid-column: 5;
         grid-area: button;
         -ms-grid-column-align: start;
         -ms-grid-column-align: start;
@@ -203,6 +258,9 @@
         align-self: end;
       }
       &--description {
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
         grid-area: description;
         font-family: $textContent;
         font-size: 0.75rem;
@@ -213,65 +271,77 @@
       }
     }
 
-    /*------------------------------------*\
-        RESTAURANT
-        \*------------------------------------*/
+    /*------------------------------------*/
+    /*RESTAURANT*/
+    /*------------------------------------*/
 
-        &__restaurant {
-          // width: 100%;
-          &--descpicture {
-            grid-area: descpicture;
-            // background-image: url('../img/home/restaurant@2x.png');
-          }
-          &--headline {
-            grid-area: headline;
-            text-align: start;
-            -ms-grid-row-align: end;
-            align-self: end;
-          }
-          &--tagline {
-            grid-area: tagline;
-            text-align: start;
-            -ms-grid-row-align: end;
-            align-self: end;
-          }
-          &--description {
-            &--container {
-              z-index: $zPicOnTopOfTheOther;
-              grid-row: 4 / -1;
-              grid-column: 3 / -1;
-              background-color:$descBgColor;
-              padding: $eventDescPadding;
-              text-align: start;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: flex-start;
-              //align-content: center;
-
-            }
-            &--tagline {
-              text-align: start;
-
-            }
-            &--content {
-              font-family: $textContent;
-              font-size: 0.75rem;
-              line-height: 1.25rem;
-            }
-            &--buttons {
-              align-items: flex-start;
-            }
-            &--button {
-              margin-bottom: 10px;
-              // text-align: start;
-              // justify-content: flex-start;
-              // flex-grow: 0;
-            }
-          }
+    &__restaurant {
+      // width: 100%;
+      &--descpicture {
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
+        grid-area: descpicture;
+        // background-image: url('../img/home/restaurant@2x.png');
+      }
+      &--headline {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        grid-area: headline;
+        text-align: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+      }
+      &--tagline {
+        -ms-grid-row: 1;
+        -ms-grid-column: 4;
+        grid-area: tagline;
+        text-align: start;
+        -ms-grid-row-align: end;
+        align-self: end;
+      }
+      &--description {
+        &--container {
+          z-index: $zPicOnTopOfTheOther;
+          -ms-grid-row: 4;
+          -ms-grid-row-span: 2;
+          -ms-grid-column: 3;
+          -ms-grid-column-span: 3;
+          grid-row: 4 / -1;
+          grid-column: 3 / -1;
+          background-color:$descBgColor;
+          padding: $eventDescPadding;
+          text-align: start;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          //align-content: center;
 
         }
+        &--tagline {
+          text-align: start;
 
+        }
+        &--content {
+          font-family: $textContent;
+          font-size: 0.75rem;
+          line-height: 1.25rem;
+        }
+        &--buttons {
+          align-items: flex-start;
+        }
+        &--button {
+          margin-bottom: 10px;
+          // text-align: start;
+          // justify-content: flex-start;
+          // flex-grow: 0;
+        }
       }
 
     }
+
+  }
+
+}

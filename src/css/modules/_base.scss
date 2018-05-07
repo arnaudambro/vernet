@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  // border: 1px solid #0F0 !important; 
+  // border: 3px solid #0F0 !important; 
   text-rendering: geometricPrecision;
   /* text-rendering: optimizeLegibility; */
   /* text-rendering: optimizeSpeed; */
@@ -99,6 +99,7 @@ body {
   text-align: center;
 
   line-height: 1.75rem;  
+
   @media all and (min-width: $desktop-break) {
     font-family: 'Playfair Bold', serif;
     font-weight: 700;
@@ -106,9 +107,6 @@ body {
     line-height: 1.5em;
   }
   
-  @media all and (max-width: $mobile-break) {
-    // max-width: 260px;
-  }
 }
 
 .tagline {

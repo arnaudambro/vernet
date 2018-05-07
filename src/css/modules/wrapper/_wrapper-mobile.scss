@@ -6,7 +6,22 @@
 
 
   /**********GRID SETUP************/
+  -ms-grid-columns: 40px $hamWidth1575 1fr $hamWidth1575 40px;
   grid-template-columns: 40px $hamWidth1575 1fr $hamWidth1575 40px;
+  -ms-grid-rows: 
+  $topHeightMobile
+  $menuHeightMobile
+  calc((100vh - 35px - 35px - 45px - 65px ) * 0.35)
+  $sloganHeightMobile 
+  calc((100vh - 35px - 35px - 45px - 65px ) * 0.15)
+  $reservationHeightMobile
+  calc((100vh - 35px - 35px - 45px - 65px ) * 0.5)
+  1fr
+  $footerHotelDetailsMobile
+  $footerSocialMobile
+  $footerBottomHeightMobile
+  $companyLogoHeightWithMargin
+  $topHeightInBottomMobile; 
   grid-template-rows: 
   $topHeightMobile
   $menuHeightMobile

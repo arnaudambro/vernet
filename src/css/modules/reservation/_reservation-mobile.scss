@@ -1,9 +1,12 @@
 @media all and (max-width: $desktop-break) {
   .button__book--module {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
     grid-area: reservation;
     z-index: $zHeaderContent;
     -ms-grid-column-align: center;
-justify-self: center;
+    justify-self: center;
     flex-grow: 0;
   }
   .header__reservation {
@@ -17,7 +20,7 @@ justify-self: center;
       width: 100vw;
       height: 100vh;
       overflow: hidden;
--ms-scroll-limit: 0 0 0 0;
+      -ms-scroll-limit: 0 0 0 0;
 
       opacity: 0;
       transition: opacity $reservationAppearDuration ease-in-out;
@@ -66,7 +69,7 @@ justify-self: center;
 
     .ui-container {
       /* display: -ms-grid;
-display: grid;*/
+      display: grid;*/
       /* transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);*/
       /* grid-template-columns: 1fr $inputCheckWidthMobile 1fr;*/
       /* grid-template-rows: repeat(6, $reservationLabelHeight $inputHeight 40px);*/
@@ -117,165 +120,165 @@ display: grid;*/
         .input__checkin {
           margin-bottom: $datePickerContainerHeightDesktop;
           // .angle-down-div {
-          //   transform: rotate(180deg);
-          //   transform-origin: center center;
-          // }
+            //   transform: rotate(180deg);
+            //   transform-origin: center center;
+            // }
+          }
         }
-      }
-      &.checkout-selected {
-        /* grid-template-rows: */
-        /*   repeat(1, $reservationLabelHeight $inputHeight 40px)*/
-        /*   $reservationLabelHeight */
-        /*   $datePickerContainerHeightDesktop*/
-        /*   40px */
-        /*   repeat(4, $reservationLabelHeight $inputHeight 40px);*/
-        .input__checkout {
-          margin-bottom: $datePickerContainerHeightDesktop;
-          // .angle-down-div {
-          //   transform: rotate(180deg);
-          //   transform-origin: center center;
-          // }
-        }
-      }
-      &.room-selected {
-        /* grid-template-rows: */
-        /*   repeat(2, $reservationLabelHeight $inputHeight 40px)*/
-        /*   $reservationLabelHeight */
-        /*   $inputHeightMultiply2*/
-        /*   40px */
-        /*   repeat(3, $reservationLabelHeight $inputHeight 40px);*/
-        .input__room {
-          margin-bottom: $inputHeightMultiply2;
-          // .angle-down-div {
-          //   transform: rotate(180deg);
-          //   transform-origin: center center;
-          // }
-        }
-      }
-      &.adults-selected {
-        /* grid-template-rows: */
-        /*   repeat(3, $reservationLabelHeight $inputHeight 40px)*/
-        /*   $reservationLabelHeight */
-        /*   $inputHeightMultiply2*/
-        /*   40px */
-        /*   repeat(2, $reservationLabelHeight $inputHeight 40px);*/
-        .input__adults {
-          margin-bottom: $inputHeightMultiply2;
-          // .angle-down-div {
-          //   transform: rotate(180deg);
-          //   transform-origin: center center;
-          // }
-        }
-      }
-      &.children-selected {
-        /* grid-template-rows: */
-        /*   repeat(4, $reservationLabelHeight $inputHeight 40px)*/
-        /*   $reservationLabelHeight */
-        /*   $inputHeightMultiply2*/
-        /*   40px */
-        /*   repeat(1, $reservationLabelHeight $inputHeight 40px);*/
-        .input__children {
-          margin-bottom: $inputHeightMultiply2;
-          // .angle-down-div {
-          //   transform: rotate(180deg);
-          //   transform-origin: center center;
-          // }
-        }
-      }
-    }
-    
-    .label {
-      width: $inputCheckWidthMobile;
-      pointer-events: none;
-      height: $reservationLabelHeight;
-      margin-bottom: $reservationGridRowGap;
+        &.checkout-selected {
+          /* grid-template-rows: */
+          /*   repeat(1, $reservationLabelHeight $inputHeight 40px)*/
+          /*   $reservationLabelHeight */
+          /*   $datePickerContainerHeightDesktop*/
+          /*   40px */
+          /*   repeat(4, $reservationLabelHeight $inputHeight 40px);*/
+          .input__checkout {
+            margin-bottom: $datePickerContainerHeightDesktop;
+            // .angle-down-div {
+              //   transform: rotate(180deg);
+              //   transform-origin: center center;
+              // }
+            }
+          }
+          &.room-selected {
+            /* grid-template-rows: */
+            /*   repeat(2, $reservationLabelHeight $inputHeight 40px)*/
+            /*   $reservationLabelHeight */
+            /*   $inputHeightMultiply2*/
+            /*   40px */
+            /*   repeat(3, $reservationLabelHeight $inputHeight 40px);*/
+            .input__room {
+              margin-bottom: $inputHeightMultiply2;
+              // .angle-down-div {
+                //   transform: rotate(180deg);
+                //   transform-origin: center center;
+                // }
+              }
+            }
+            &.adults-selected {
+              /* grid-template-rows: */
+              /*   repeat(3, $reservationLabelHeight $inputHeight 40px)*/
+              /*   $reservationLabelHeight */
+              /*   $inputHeightMultiply2*/
+              /*   40px */
+              /*   repeat(2, $reservationLabelHeight $inputHeight 40px);*/
+              .input__adults {
+                margin-bottom: $inputHeightMultiply2;
+                // .angle-down-div {
+                  //   transform: rotate(180deg);
+                  //   transform-origin: center center;
+                  // }
+                }
+              }
+              &.children-selected {
+                /* grid-template-rows: */
+                /*   repeat(4, $reservationLabelHeight $inputHeight 40px)*/
+                /*   $reservationLabelHeight */
+                /*   $inputHeightMultiply2*/
+                /*   40px */
+                /*   repeat(1, $reservationLabelHeight $inputHeight 40px);*/
+                .input__children {
+                  margin-bottom: $inputHeightMultiply2;
+                  // .angle-down-div {
+                    //   transform: rotate(180deg);
+                    //   transform-origin: center center;
+                    // }
+                  }
+                }
+              }
 
-      &__checkin {
-        grid-area: labelcheckin;
-        order: 1;
-      }
-      &__checkout {
-        grid-area: labelcheckout;
-        order: 3;
-      }
-      &__room {
-        grid-area: labelroom;
-        order: 5;
-      }
-      &__adults {
-        grid-area: labeladults;
-        order: 7;
-      }
-      &__children {
-        grid-area: labelchildren;
-        order: 9;
-      }
-    }
+              .label {
+                width: $inputCheckWidthMobile;
+                pointer-events: none;
+                height: $reservationLabelHeight;
+                margin-bottom: $reservationGridRowGap;
 
-    .angle-down-div {
-      pointer-events: none;
-      transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
-    }
+                &__checkin {
+                  grid-area: labelcheckin;
+                  order: 1;
+                }
+                &__checkout {
+                  grid-area: labelcheckout;
+                  order: 3;
+                }
+                &__room {
+                  grid-area: labelroom;
+                  order: 5;
+                }
+                &__adults {
+                  grid-area: labeladults;
+                  order: 7;
+                }
+                &__children {
+                  grid-area: labelchildren;
+                  order: 9;
+                }
+              }
 
-    .input {
-      width: $inputCheckWidthMobile;
-      border: none;
-      min-height: $inputHeight;
-      margin-bottom: $inputHeight;
-      transition: margin $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+              .angle-down-div {
+                pointer-events: none;
+                transition: all $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
+              }
 
-      &__checkin {
-        grid-area: inputcheckin;
-        order: 2;
-      }      
-      &__checkout {
-        grid-area: inputcheckout;
-        order: 4;
-      }
-      &__room {
-        grid-area: inputroom;
-        /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
-        padding-right: calc((45px - 0.6875rem) / 2);
-        order: 6;
-      }
-      &__adults {
-        grid-area: inputadults;
-        /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
-        padding-right: calc((45px - 0.6875rem) / 2);
-        order: 8;
-      }
-      &__children {
-        grid-area: inputchildren;
-        /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
-        padding-right: calc((45px - 0.6875rem) / 2);
-        order: 10;
-      }
-    }
+              .input {
+                width: $inputCheckWidthMobile;
+                border: none;
+                min-height: $inputHeight;
+                margin-bottom: $inputHeight;
+                transition: margin $selectDuration cubic-bezier(0.23, 1, 0.32, 1);
 
-    .menu-hamburger {
-      margin-top: 30px;
-      margin-bottom: 75px;
-    }
+                &__checkin {
+                  grid-area: inputcheckin;
+                  order: 2;
+                }      
+                &__checkout {
+                  grid-area: inputcheckout;
+                  order: 4;
+                }
+                &__room {
+                  grid-area: inputroom;
+                  /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
+                  padding-right: calc((45px - 0.6875rem) / 2);
+                  order: 6;
+                }
+                &__adults {
+                  grid-area: inputadults;
+                  /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
+                  padding-right: calc((45px - 0.6875rem) / 2);
+                  order: 8;
+                }
+                &__children {
+                  grid-area: inputchildren;
+                  /* padding-right: calc(($inputHeight - $uiContainerFontSizeMobile) / 2); */
+                  padding-right: calc((45px - 0.6875rem) / 2);
+                  order: 10;
+                }
+              }
 
-
-    .button__book {
-      order: 11;
-      flex-shrink: 0;
-      &--margin-bottom {
-        order: 12;
-        flex-shrink: 0;
-      }
-    }
-    .headline-reservation {
-      display: none;
-      > .span {
-
-        &:first-child {
-
-        }
-      }
-    }
-  }
+              .menu-hamburger {
+                margin-top: 30px;
+                margin-bottom: 75px;
+              }
 
 
-}
+              .button__book {
+                order: 11;
+                flex-shrink: 0;
+                &--margin-bottom {
+                  order: 12;
+                  flex-shrink: 0;
+                }
+              }
+              .headline-reservation {
+                display: none;
+                > .span {
+
+                  &:first-child {
+
+                  }
+                }
+              }
+            }
+
+
+          }

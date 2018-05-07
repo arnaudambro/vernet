@@ -9,11 +9,15 @@
   &__top {
 
     &--hotel-details {
+      -ms-grid-row: 9;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
       grid-area: details;
       -ms-grid-column-align: start;
       justify-self: start;
       -ms-grid-row-align: center;
-align-self: center;
+      align-self: center;
       display: flex;
       
       justify-content: center;
@@ -37,10 +41,13 @@ align-self: center;
     }
 
     &--social {
-
+      -ms-grid-row: 10;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 3;
       grid-area: social;
       -ms-grid-row-align: center;
-align-self: center;
+      align-self: center;
 
       display: flex;
 
@@ -66,6 +73,10 @@ align-self: center;
   }
 
   &__bottom {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
     grid-area: legal;
     display: flex;
     flex-direction: column;

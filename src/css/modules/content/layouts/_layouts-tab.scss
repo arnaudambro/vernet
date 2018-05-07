@@ -4,11 +4,21 @@
   .grid-layout-1 {
 
     display: -ms-grid;
-display: grid;
+    display: grid;
     max-width: $tabBodyWidth;
     width: 90%;
     height: $layoutWholeHeightGL1T;
+    -ms-grid-columns: 7.5fr 1fr 4fr 1.5fr 7fr;
     grid-template-columns: 7.5fr 1fr 4fr 1.5fr 7fr;
+    -ms-grid-rows: 
+    3fr
+    2.4fr
+    4.2fr
+    1.5fr
+    3fr
+    2.4fr
+    4.2fr
+    1fr;
     grid-template-rows: 
     3fr
     2.4fr
@@ -33,16 +43,24 @@ display: grid;
   .grid-layout-2 {
 
     display: -ms-grid;
-display: grid;
+    display: grid;
     width: 100%;
     height: $layoutWholeHeightGL2T;
+    -ms-grid-columns: 1fr $tabBodyWidthDiv2 $tabBodyWidthDiv2 1fr;
     grid-template-columns: 1fr $tabBodyWidthDiv2 $tabBodyWidthDiv2 1fr;
+    -ms-grid-rows:
+    1fr
+    1fr
+    1fr
+    1fr
+    5.4fr;
     grid-template-rows:
     1fr
     1fr
     1fr
     1fr
     5.4fr;
+
     grid-template-areas: 
     'blank1          headline             description         blank2'
     'blank1          blank3               description         blank2'
@@ -54,10 +72,18 @@ display: grid;
   .grid-layout-3 {
 
     display: -ms-grid;
-display: grid;
+    display: grid;
     width: 100%;
 
+    -ms-grid-columns: 1fr 6fr 1fr 7fr 3fr;
     grid-template-columns: 1fr 6fr 1fr 7fr 3fr;
+    -ms-grid-rows: 
+    1.1fr
+    1.0fr
+    4.7fr
+    4.2fr
+    5.8fr;
+
     grid-template-rows: 
     1.1fr
     1.0fr
@@ -77,11 +103,16 @@ display: grid;
   .grid-layout-5 {
 
     display: -ms-grid;
-display: grid;
+    display: grid;
     max-width: $tabBodyWidth;
     width: 90%;
     height: $layoutWholeHeightGL5T;
+    -ms-grid-columns: 6fr 1fr 8fr;
     grid-template-columns: 6fr 1fr 8fr;
+    -ms-grid-rows: 
+    1fr
+    1.6fr
+    1fr;
     grid-template-rows: 
     1fr
     1.6fr

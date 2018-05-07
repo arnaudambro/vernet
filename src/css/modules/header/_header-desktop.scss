@@ -18,6 +18,7 @@
       &--company {
         -ms-grid-row: 1;
         -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
 
         width: 100px;
         margin-left: 1vw;
@@ -53,7 +54,7 @@
 
         -ms-grid-row: 1;
         -ms-grid-column: 6;
-        // -ms-grid-column-span: 5;
+        -ms-grid-column-span: 1;
 
         -ms-grid-column-align: end;
         justify-self: end;

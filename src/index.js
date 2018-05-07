@@ -2,6 +2,7 @@
 
 import './js/handleClickAndTouch';
 import './js/testingJs';
+import './js/classListPolyfill';
 import './js/language';
 
 import './js/loading';

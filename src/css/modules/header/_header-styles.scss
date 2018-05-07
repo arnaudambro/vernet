@@ -21,7 +21,7 @@
     background-position: center center;
     @extend %headerMenuBgColor;
     overflow: hidden;
--ms-scroll-limit: 0 0 0 0;
+    -ms-scroll-limit: 0 0 0 0;
 
     /*background-image: url('../img/home/hero.png');*/
   }
@@ -40,6 +40,9 @@
   &__top {
 
     &--company {
+      -ms-grid-row: 12;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 5;
       grid-area: companylogo;
       -ms-grid-column-align: start;
       justify-self: start;
@@ -70,6 +73,9 @@
     }
 
     &--infos {
+      -ms-grid-row: 13;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 5;
       grid-area: infos;
 
       display: flex;
@@ -156,11 +162,15 @@
   }
 
   &__slogan {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+
     grid-area: slogan;
     -ms-grid-column-align: center;
-justify-self: center;
+    justify-self: center;
     -ms-grid-row-align: end;
-align-self: end;
+    align-self: end;
     letter-spacing: 1px;
     font-family: $headerSlogan;
     font-weight: 400;
@@ -181,9 +191,9 @@ align-self: end;
   &__carnet {
     grid-area: carnet;
     -ms-grid-column-align: center;
-justify-self: center;
+    justify-self: center;
     -ms-grid-row-align: end;
-align-self: end;
+    align-self: end;
     font-family: $headerCarnet;
     font-weight: 400;
     font-style: italic;
@@ -208,7 +218,7 @@ align-self: end;
   &__call-to-scroll {
     grid-area: calltoscroll;
     -ms-grid-column-align: center;
-justify-self: center;
+    justify-self: center;
 
     height: 100%;
 
@@ -232,14 +242,17 @@ justify-self: center;
 
 
   &__menu {
-
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: menu;
     /***** LAYOUT *****/
     display: flex;
     justify-content: center;
     align-items: center;
     -ms-grid-row-align: start;
-align-self: start;
+    align-self: start;
 
 
     &--hamburger {

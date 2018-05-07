@@ -6,6 +6,9 @@
       display: none;
     }
     &__header--reservation-restaurant {
+      -ms-grid-row: 4;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 3;
       flex-direction: row;
       > :first-child {
         margin-right: 40px;

@@ -6,7 +6,23 @@
 
 
     /**********GRID SETUP************/
+    -ms-grid-columns: 40px $hamWidth1575 1fr $hamWidth1575 40px;
     grid-template-columns: 40px $hamWidth1575 1fr $hamWidth1575 40px;
+    -ms-grid-rows: 
+    $topHeightTab
+    $menuHeightTab
+    calc((100vh - 35px - 35px - 45px - 65px ) * 0.35)
+    $sloganHeightTab 
+    calc((100vh - 35px - 35px - 45px - 65px ) * 0.15)
+    $reservationHeightTab
+    calc((100vh - 35px - 35px - 45px - 65px ) * 0.5)
+    1fr
+    $footerTopHeightTab
+    $footerBottomHeightTab
+    /* calc($companyLogoHeight + 30px) */
+    $companyLogoHeightWithMargin
+    $topHeightInBottomTab; 
+
     grid-template-rows: 
     $topHeightTab
     $menuHeightTab

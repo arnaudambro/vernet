@@ -11,9 +11,9 @@
     display: none;
   }
   &__header--reservation-restaurant {
-    -ms-grid-row: 4;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 3;
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
     grid-area: reservation;
     display: flex;
     flex-direction: column;

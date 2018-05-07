@@ -30,7 +30,7 @@
       background-image: url('../img/logos/vernet-logo-half-white.png');
       &.hotel-logo-full { display: none }
       &.hotel-logo-half {
-        pointer-events: initial;
+        pointer-events: auto;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -125,7 +125,7 @@
 
     &.active-mobile {
       max-height: 100vh;
-      pointer-events: initial;
+      pointer-events: auto;
 
       @media all and (max-width: $less-than-desktop-break) {
         transition: opacity $hamMenuTransDuration ease-in-out $hamTransDuration, max-height 0s ease-in-out $hamMenuTransDuration;
@@ -188,7 +188,7 @@
       top: $stickyMenuMobile;
       left: $hamburgerLeftMobile;
       transition: transform $hamMenuTransDuration ease-in-out $hamTransDuration;
-      pointer-events: initial;
+      pointer-events: auto;
       opacity: 1 !important;
 
       &.active-mobile {
@@ -213,7 +213,7 @@
       @media all and (max-width: 400px) {
         right: $hamburgerLeftMiniMobile;
       }
-      pointer-events: initial;
+      pointer-events: auto;
       transition: opacity $hamMenuTransDuration ease-in-out $hamMenuTransDuration ;
 
     }
