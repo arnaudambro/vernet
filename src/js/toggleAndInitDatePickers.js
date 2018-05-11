@@ -63,8 +63,8 @@ if (reservationContainer) {
         moment.locale(`${lang}`);
         const clickedDate = this.getMoment();
         if (type === 'checkin') {
-          var i = document.querySelector('#checkin-input');
-          var a = i.attributes['data-format'].value;
+          const i = document.querySelector('#checkin-input');
+          const a = i.dataset.format;
           i.setAttribute('value', clickedDate.format(a));
           // const otherPosition = (position === 'fixed' ? 'mobile' : 'fixed');
           renderContainers.forEach(container => container.querySelector('.weekday').innerText = clickedDate.format('ddd').replace('.', ''));
@@ -84,8 +84,8 @@ if (reservationContainer) {
               }
           });
         } else {
-          var i = document.querySelector('#checkout-input');
-          var a = i.attributes['data-format'].value;
+          const i = document.querySelector('#checkout-input');
+          const a = i.dataset.format;
           i.setAttribute('value', clickedDate.format(a));
           renderContainers.forEach(container => container.querySelector('.weekday').innerText = clickedDate.format('ddd').replace('.', ''));
           renderContainers.forEach(container => container.querySelector('.day-month').innerText = clickedDate.format('D MMM').replace('.', ''));
